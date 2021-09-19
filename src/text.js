@@ -1000,7 +1000,7 @@ const text = {
           <td>Fusion</td>
         </tr>
         <tr>
-          <td>9 pm - 11 pm</td>
+          <td>5 pm - 7 pm</td>
           <td>McMillan Cafe</td>
           <td>Lion</td>
         </tr>
