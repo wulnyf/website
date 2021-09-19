@@ -189,7 +189,7 @@ const text = {
     2022: {
       image: "havenofgrace",
       title: "Haven of Grace",
-      money: "$6750",
+      money: undefined,
       description:
         '"Serving women who are pregnant and homeless, The Haven of Grace provides a safe, nurturing home, educational programs and long-term support for mother and child. Founded in faith, we instill hope, dignity and the pride of independence, one family at a time."',
       link: "https://havenofgracestl.org/",
@@ -197,7 +197,7 @@ const text = {
     2021: {
       image: "fosterandadoptive",
       title: "Foster & Adoptive Care Coalition",
-      money: "$7,000",
+      money: "$6,750",
       description:
         '"The Foster & Adoptive Care Coalition strives to create permanency in foster children’s lives by recruiting and supporting foster and adoptive families in the metropolitan St. Louis region."',
       link: "https://www.foster-adopt.org/",
