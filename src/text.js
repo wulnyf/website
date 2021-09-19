@@ -930,10 +930,16 @@ const text = {
             <td>McMillan Cafe</td>
             <td>Standing Drums</td>
           </tr>
+          <tr>
+            <td>Monday 9/27</td>
+            <td>7 pm - 9 pm</td>
+            <td>McMillan Cafe</td>
+            <td>*Lion</td>
+          </tr>
         </Table>
         <p>
-          *These have callbacks so you must attend the first event to be
-          eligible
+          *These have callbacks so you must attend at least one of the main
+          auditions to be eligible
         </p>
       </>
     ),
@@ -946,15 +952,10 @@ const text = {
           <th>Act</th>
         </tr>
         <tr>
-          <td rowspan="2">Monday 9/27</td>
+          <td rowspan="1">Monday 9/27</td>
           <td>5 pm - 7 pm</td>
           <td>Mudd MPR</td>
           <td>Lotus/Vietnamese Hats</td>
-        </tr>
-        <tr>
-          <td>7 pm - 9 pm</td>
-          <td>Mudd MPR</td>
-          <td>Lion</td>
         </tr>
         <tr>
           <td rowspan="3">Tuesday 9/28</td>
