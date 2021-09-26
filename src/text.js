@@ -933,7 +933,7 @@ const text = {
           <tr>
             <td>Monday 9/27</td>
             <td>7 pm - 9 pm</td>
-            <td>McMillan Cafe</td>
+            <td>Mudd MPR</td>
             <td>*Lion</td>
           </tr>
         </Table>
