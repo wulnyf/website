@@ -12,11 +12,6 @@ const StyledContainer = styled(Container)`
   padding-top: 30px;
 `;
 
-const StyledHeader = styled(Typography)`
-  margin-top: 30px;
-  margin-bottom: 20px;
-`;
-
 const AuditionsPage = () => {
   return (
     <Layout>
@@ -24,10 +19,7 @@ const AuditionsPage = () => {
       <StyledContainer>
         <Typography variant="h2">Auditions Schedule</Typography>
         <Underline />
-        <StyledHeader variant="h6">Auditions</StyledHeader>
-        {text.schedule.auditions}
-        <StyledHeader variant="h6">Makeups</StyledHeader>
-        {text.schedule.makeups}
+        {text.schedule.content}
       </StyledContainer>
     </Layout>
   );

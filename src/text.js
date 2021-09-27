@@ -21,6 +21,11 @@ const Table = styled.table`
   }
 `;
 
+const StyledHeader = styled(Typography)`
+  margin-top: 30px;
+  margin-bottom: 20px;
+`;
+
 // FORMATTING GUIDELINES
 // {
 //   links: {
@@ -863,8 +868,19 @@ const text = {
   },
   schedule: {
     active: true,
-    auditions: (
+    content: (
       <>
+        <p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMFzvhLddCGuBK26SnS3L0TT64HlmnzztWf3FeUDi8A5iLjw/viewform">
+            Liability Waiver
+          </a>
+        </p>
+        <p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4w9n9q8ekWLKC6VWNc-kiP4qNv_t-7KInVobpAr1PPnBvwA/viewform">
+            Audition Preference
+          </a>
+        </p>
+        <StyledHeader variant="h6">Auditions</StyledHeader>
         <Table>
           <tr>
             <th>Date</th>
@@ -941,71 +957,70 @@ const text = {
           *These have callbacks so you must attend at least one of the main
           auditions to be eligible
         </p>
+        <StyledHeader variant="h6">Makeups</StyledHeader>
+        <Table>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th>Act</th>
+          </tr>
+          <tr>
+            <td rowspan="1">Monday 9/27</td>
+            <td>5 pm - 7 pm</td>
+            <td>Mudd MPR</td>
+            <td>Lotus/Vietnamese Hats</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Tuesday 9/28</td>
+            <td>5 pm - 7 pm</td>
+            <td>Mudd MPR</td>
+            <td>Dai</td>
+          </tr>
+          <tr>
+            <td>7 pm - 9 pm</td>
+            <td>Mudd MPR</td>
+            <td>Samulnori</td>
+          </tr>
+          <tr>
+            <td>9 pm - 11 pm</td>
+            <td>Mudd MPR</td>
+            <td>Skit</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Wednesday 9/29</td>
+            <td>5 pm - 7 pm</td>
+            <td>Mudd MPR</td>
+            <td>Tinikling</td>
+          </tr>
+          <tr>
+            <td>7 pm - 9 pm</td>
+            <td>Mudd MPR</td>
+            <td>Yoyo</td>
+          </tr>
+          <tr>
+            <td>9 pm - 11 pm</td>
+            <td>Mudd MPR</td>
+            <td>Chinese Fan</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Friday 10/1</td>
+            <td>5 pm - 7 pm</td>
+            <td>Mudd MPR</td>
+            <td>Standing Drums</td>
+          </tr>
+          <tr>
+            <td>7 pm - 9 pm</td>
+            <td>Mudd MPR</td>
+            <td>Fusion</td>
+          </tr>
+          <tr>
+            <td>5 pm - 7 pm</td>
+            <td>McMillan Cafe</td>
+            <td>Lion</td>
+          </tr>
+        </Table>
       </>
-    ),
-    makeups: (
-      <Table>
-        <tr>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Location</th>
-          <th>Act</th>
-        </tr>
-        <tr>
-          <td rowspan="1">Monday 9/27</td>
-          <td>5 pm - 7 pm</td>
-          <td>Mudd MPR</td>
-          <td>Lotus/Vietnamese Hats</td>
-        </tr>
-        <tr>
-          <td rowspan="3">Tuesday 9/28</td>
-          <td>5 pm - 7 pm</td>
-          <td>Mudd MPR</td>
-          <td>Dai</td>
-        </tr>
-        <tr>
-          <td>7 pm - 9 pm</td>
-          <td>Mudd MPR</td>
-          <td>Samulnori</td>
-        </tr>
-        <tr>
-          <td>9 pm - 11 pm</td>
-          <td>Mudd MPR</td>
-          <td>Skit</td>
-        </tr>
-        <tr>
-          <td rowspan="3">Wednesday 9/29</td>
-          <td>5 pm - 7 pm</td>
-          <td>Mudd MPR</td>
-          <td>Tinikling</td>
-        </tr>
-        <tr>
-          <td>7 pm - 9 pm</td>
-          <td>Mudd MPR</td>
-          <td>Yoyo</td>
-        </tr>
-        <tr>
-          <td>9 pm - 11 pm</td>
-          <td>Mudd MPR</td>
-          <td>Chinese Fan</td>
-        </tr>
-        <tr>
-          <td rowspan="3">Friday 10/1</td>
-          <td>5 pm - 7 pm</td>
-          <td>Mudd MPR</td>
-          <td>Standing Drums</td>
-        </tr>
-        <tr>
-          <td>7 pm - 9 pm</td>
-          <td>Mudd MPR</td>
-          <td>Fusion</td>
-        </tr>
-        <tr>
-          <td>5 pm - 7 pm</td>
-          <td>McMillan Cafe</td>
-          <td>Lion</td>
-        </tr>
-      </Table>
     ),
   },
 };
