@@ -18,9 +18,7 @@ const FilterColumn = styled.div`
 `;
 
 const FilterContent = styled.div`
-  @media (min-width: 800px) {
-    padding: 20px 0;
-  }
+  padding: 20px 0;
 `;
 
 const ContentColumn = styled.div`

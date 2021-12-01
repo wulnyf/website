@@ -12,6 +12,15 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const AuditionButton = styled(Button)`
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  @media (min-width: 800px) {
+    margin-bottom: 0px;
+  }
+`;
+
 const Table = styled.table`
   border: 1px solid black;
   td,
@@ -126,9 +135,9 @@ const text = {
         <Link to="/events">
           <StyledButton white>Events</StyledButton>
         </Link>
-        <Link to="/auditions">
-          <Button white>Auditions</Button>
-        </Link>
+        <a href="https://wustl.app.box.com/s/pz47cqqnfnmkmc3bxf0ulhhqacb4d7tx?page=20">
+          <Button white>Banquet Photos</Button>
+        </a>
       </>
     ),
     aboutText: (
@@ -162,12 +171,52 @@ const text = {
   },
   events: [
     {
-      month: "Sep",
-      day: "16",
-      title: "General Body Meeting",
-      caption: "Ursa's Fireside | 7:00 PM - 8:30 PM",
+      month: "Dec",
+      day: "12",
+      title: "Letter Writing",
+      caption: "AMC Suite (Olin Women's Building) | 3:00 PM - 5:00 PM",
       description:
-        "Come out to the first general body meeting of the year! Learn more about LNYF, upcoming events, and how you can get involved.",
+        "Drop by the AMC suite to write letters with us and drop off your donations for Haven of Grace",
+    },
+    {
+      month: "Nov\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Dec",
+      day: "29-12",
+      title: "LNYF x Haven of Grace x SWAP Donation Drive",
+      caption: "AMC Suite (Olin Women's Building) / SWAP",
+      description:
+        "LNYF will be hosting drive for mothers and children at the Haven of Grace! These mothers are often coming into the Haven with just the clothes they are wearing so any and all donations are helpful. Good donations includ toys / stuffed animals, medium / large clothing items, tennis shoes, hygiene items for moms & babies, and letters / picture books / comics.",
+    },
+    {
+      month: "Dec",
+      day: "4",
+      title: "Vitality Bowls Benefit Night",
+      caption: "8029 Dale Ave. | 10:00 AM - 7:00 PM",
+      description:
+        "Vitality Bowls (8029 Dale Ave.) will donate 15% of sales to LNYF. Those who participate in the benefit night should mention that they are with WashU Lunar New Year Festival before placing their order. For online orders, mention in the notes that you are with LNYF.",
+    },
+    {
+      month: "Nov",
+      day: "7",
+      title: "Mod Pizza Benefit Night",
+      caption: "8855K Ladue Rd. or Online | 10:30 AM - 10:00 PM",
+      description:
+        "MOD Pizza (8855K Ladue Rd) will donate 20% of sales to LNYF. Those who participate in the benefit night should mention that they are with WashU Lunar New Year Festival before placing their order. For online orders, use coupon code “GR202365W.”",
+    },
+    {
+      month: "Oct",
+      day: "20",
+      title: "Seoul Taco Benefit Night",
+      caption: "Delmar Loop | 5:00 PM - 8:00 PM",
+      description:
+        "Seoul Taco Delmar will donate 15% of sales from orders over $12 to LNYF. Those who participate in the benefit night must mention they would like their order to beincluded in the benefit night prior to placing their order/submitting payment. For online orders, use coupon code “LNYF21”.",
+    },
+    {
+      month: "Oct",
+      day: "16",
+      title: "Volunteer w/ Haven of Grace",
+      caption: undefined,
+      description:
+        "Our philanthropy partner -- Haven of Grace -- is hosting a scavenger hunt and needs volunteers to help organize the event. Contact us if you're interested!",
     },
     {
       month: "Sep",
@@ -177,17 +226,17 @@ const text = {
       description: (
         <>
           Try out to become a performer at LNYF!{" "}
-          <Link to="/schedule">Here</Link> is the link to the schedule
+          <Link to="/auditios">Here</Link> is the link to the schedule
         </>
       ),
     },
     {
-      month: "Oct",
+      month: "Sep",
       day: "16",
-      title: "Volunteer w/ Haven of Grace",
-      caption: undefined,
+      title: "General Body Meeting",
+      caption: "Ursa's Fireside | 7:00 PM - 8:30 PM",
       description:
-        "Our philanthropy partner -- Haven of Grace -- is hosting a scavenger hunt and needs volunteers to help organize the event. Contact us if you're interested!",
+        "Come out to the first general body meeting of the year! Learn more about LNYF, upcoming events, and how you can get involved.",
     },
   ],
   philanthropy: {
@@ -282,16 +331,10 @@ const text = {
       title: "Juggling",
       image: "juggling",
       performers: [
-        "Adam Litwin (Choreo)",
+        "Eddie Quan (Choreo)",
         "Michael Lin (Choreo)",
-        "Mike Hogarty",
-        "Pavan Narahari",
-        "Eddie Quan",
-        "Mo Sasaki",
-        "Walker Sexton",
-        "Ryan Miller",
-        "Sam Ginsberg",
-        "Jared Zirkes",
+        "Walker Sexton (Choreo)",
+        "and the Juggling Club",
       ],
     },
     {
@@ -382,8 +425,8 @@ const text = {
       title: "Lion",
       image: "lion",
       performers: [
-        "Julie Chan",
-        "Anh Le",
+        "Julie Chan (Choreo)",
+        "Anh Le (Choreo)",
         "Lily Luu (h)",
         "Helen Ye (h)",
         "Wenting Yu (h)",
@@ -434,18 +477,33 @@ const text = {
     },
   ],
   store: {
-    caption: "Note: Store is closed for the summer",
+    caption: undefined,
     items: [
       {
-        title: "Zodiac Animals Tote Bag",
-        subtitle: '(15"x16")',
-        images: [{ image: "tote", alt: "Tote Bag" }],
+        title: "Postcard",
+        subtitle: "Design 1",
+        images: [
+          { image: "post-a-front", alt: "Postcard Design 1 Front Side" },
+          { image: "post-a-mock", alt: "Postcard Design 1 Mockup" },
+        ],
         subImages: undefined,
-        price: "$12.00",
+        price: "$1.50",
+        soldOut: false,
+      },
+      {
+        title: "Postcard",
+        subtitle: "Design 2",
+        images: [
+          { image: "post-b-front", alt: "Postcard Design 2 Front Side" },
+          { image: "post-b-mock", alt: "Postcard Design 2 Mockup" },
+        ],
+        subImages: undefined,
+        price: "$1.50",
         soldOut: false,
       },
       {
         title: "Long Sleeve Shirt",
+        subtitle: "(Only in person)",
         images: [
           { image: "long-back", alt: "Long Sleeve Back Side" },
           { image: "long-front", alt: "Long Sleeve Front Side" },
@@ -456,21 +514,22 @@ const text = {
       },
       {
         title: "Short Sleeve T-Shirt",
+        subtitle: "(Only in person)",
         images: [
-          { image: "short_back", alt: "Long Sleeve Back Side" },
-          { image: "short_front", alt: "Long Sleeve Front Side" },
+          { image: "short-back", alt: "Short Sleeve Back Side" },
+          { image: "short-front", alt: "Short Sleeve Front Side" },
         ],
         subImages: undefined,
         price: "$15.00",
         soldOut: false,
       },
-      {
-        title: "Shirt Bundle",
-        images: [{ image: "shirt-bundle", alt: "Shirt Bundle" }],
-        subImages: undefined,
-        price: "$35.00",
-        soldOut: false,
-      },
+      // {
+      //   title: "Shirt Bundle",
+      //   images: [{ image: "shirt-bundle", alt: "Shirt Bundle" }],
+      //   subImages: undefined,
+      //   price: "$35.00",
+      //   soldOut: false,
+      // },
       {
         title: "Food Puns Sticker Sheet",
         images: [
@@ -486,14 +545,14 @@ const text = {
         price: "$7.00",
         soldOut: false,
       },
-      {
-        title: "Mystery Box",
-        subtitle: "(5 Stickers in a Red Envelope)",
-        images: [{ image: "mystery", alt: "Mystery Stickers" }],
-        subImages: undefined,
-        price: "$10.00",
-        soldOut: false,
-      },
+      // {
+      //   title: "Mystery Box",
+      //   subtitle: "(5 Stickers in a Red Envelope)",
+      //   images: [{ image: "mystery", alt: "Mystery Stickers" }],
+      //   subImages: undefined,
+      //   price: "$10.00",
+      //   soldOut: false,
+      // },
       {
         title: "Performance Stickers",
         images: [{ image: "animals", alt: "Performance Stickers" }],
@@ -514,7 +573,7 @@ const text = {
           { image: "tinikling", name: "Tinikling Sticker" },
           { image: "yoyo", name: "Yo Yo Sticker" },
         ],
-        price: "$3.00/ea",
+        price: "$2.00/ea",
         soldOut: false,
       },
       {
@@ -536,41 +595,41 @@ const text = {
           { image: "zodiac_snake", name: "Snake Sticker" },
           { image: "zodiac_tiger", name: "Tiger Sticker" },
         ],
-        price: "$3.00/ea",
+        price: "$1.00/ea",
         soldOut: false,
       },
       {
-        title: "LNYF Sticker ",
+        title: "LNYF Sticker",
         subtitle: '(2"x2")',
         images: [
           { image: "lnyf-first", alt: "LNYF Sticker Yellow Background" },
           { image: "sticker_lnyf", alt: "LNYF Sticker Grey Background" },
         ],
         subImages: undefined,
-        price: "$2.00",
+        price: "$1.00",
         soldOut: false,
       },
-      {
-        title: "Unwavering Sticker",
-        subtitle: '(2"x2")',
-        images: [
-          { image: "ox-first", alt: "Unwavering Sticker Orange Background" },
-          { image: "sticker_ox", alt: "Unwavering Sticker Grey Background" },
-        ],
-        subImages: undefined,
-        price: "$2.00",
-        soldOut: false,
-      },
-      {
-        title: "LNYF Sticker Bundle",
-        images: [
-          { image: "stickers-bundle", alt: "LNYF Sticker Bundle" },
-          { image: "stickers-mockup", alt: "LNYF Sticker Bundle Mockup" },
-        ],
-        subImages: undefined,
-        price: "$3.00",
-        soldOut: false,
-      },
+      // {
+      //   title: "Unwavering Sticker",
+      //   subtitle: '(2"x2")',
+      //   images: [
+      //     { image: "ox-first", alt: "Unwavering Sticker Orange Background" },
+      //     { image: "sticker_ox", alt: "Unwavering Sticker Grey Background" },
+      //   ],
+      //   subImages: undefined,
+      //   price: "$2.00",
+      //   soldOut: false,
+      // },
+      // {
+      //   title: "LNYF Sticker Bundle",
+      //   images: [
+      //     { image: "stickers-bundle", alt: "LNYF Sticker Bundle" },
+      //     { image: "stickers-mockup", alt: "LNYF Sticker Bundle Mockup" },
+      //   ],
+      //   subImages: undefined,
+      //   price: "$3.00",
+      //   soldOut: false,
+      // },
     ],
   },
   people: {
@@ -753,6 +812,32 @@ const text = {
   },
   gallery: {
     2021: {
+      photos: [
+        {
+          image: "2021_DSC_6632",
+          caption: "Banquet photos",
+        },
+        {
+          image: "2021_DSC_6669",
+          caption: "Banquet photos",
+        },
+        {
+          image: "2021_DSC_6776",
+          caption: "Banquet photos",
+        },
+        {
+          image: "2021_DSC_6800",
+          caption: "Banquet photos",
+        },
+        {
+          image: "2021_DSC_6818",
+          caption: "Banquet photos",
+        },
+        {
+          image: "2021_DSC_6834",
+          caption: "Banquet photos",
+        },
+      ],
       videos: [
         {
           link: "https://www.youtube.com/embed/ZlceeNnXLls",
@@ -933,19 +1018,15 @@ const text = {
     },
   },
   schedule: {
-    active: true,
+    active: false,
     content: (
       <>
-        <p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMFzvhLddCGuBK26SnS3L0TT64HlmnzztWf3FeUDi8A5iLjw/viewform">
-            Liability Waiver
-          </a>
-        </p>
-        <p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4w9n9q8ekWLKC6VWNc-kiP4qNv_t-7KInVobpAr1PPnBvwA/viewform">
-            Audition Preference
-          </a>
-        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMFzvhLddCGuBK26SnS3L0TT64HlmnzztWf3FeUDi8A5iLjw/viewform">
+          <AuditionButton>Liability Waiver</AuditionButton>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4w9n9q8ekWLKC6VWNc-kiP4qNv_t-7KInVobpAr1PPnBvwA/viewform">
+          <AuditionButton>Audition Preference</AuditionButton>
+        </a>
         <StyledHeader variant="h6">Auditions</StyledHeader>
         <Table>
           <tr>

@@ -24,7 +24,6 @@ const IconWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  color: white;
   font-size: 20px;
 `;
 
@@ -42,6 +41,11 @@ const SoldOut = styled.div`
   top: 8px;
   left: 8px;
   background: ${({ theme }) => theme.palette.alert};
+`;
+
+const StyledI = styled.i`
+  color: white;
+  text-shadow: 0 0 3px #000;
 `;
 
 const StoreThumbnail = ({
@@ -78,10 +82,10 @@ const StoreThumbnail = ({
       {images.length > 1 && (
         <IconWrapper>
           <Icon onClick={handlePrev}>
-            <i className="fas fa-chevron-left"></i>
+            <StyledI className="fas fa-chevron-left"></StyledI>
           </Icon>
           <Icon onClick={handleNext}>
-            <i className="fas fa-chevron-right"></i>
+            <StyledI className="fas fa-chevron-right"></StyledI>
           </Icon>
         </IconWrapper>
       )}

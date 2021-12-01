@@ -181,7 +181,7 @@ export const query = graphql`
     imgData: allFile(
       filter: {
         sourceInstanceName: { eq: "images" }
-        relativeDirectory: { eq: "gallery" }
+        relativeDirectory: { regex: "/gallery.*/" }
       }
     ) {
       nodes {
