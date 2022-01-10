@@ -367,7 +367,6 @@ const text = {
         "Adela Cho",
         "Arko Dhar",
         "Steve Li",
-        "Christopher Wang",
       ],
     },
     {
@@ -545,14 +544,6 @@ const text = {
         price: "$7.00",
         soldOut: false,
       },
-      // {
-      //   title: "Mystery Box",
-      //   subtitle: "(5 Stickers in a Red Envelope)",
-      //   images: [{ image: "mystery", alt: "Mystery Stickers" }],
-      //   subImages: undefined,
-      //   price: "$10.00",
-      //   soldOut: false,
-      // },
       {
         title: "Performance Stickers",
         images: [{ image: "animals", alt: "Performance Stickers" }],
@@ -609,27 +600,6 @@ const text = {
         price: "$1.00",
         soldOut: false,
       },
-      // {
-      //   title: "Unwavering Sticker",
-      //   subtitle: '(2"x2")',
-      //   images: [
-      //     { image: "ox-first", alt: "Unwavering Sticker Orange Background" },
-      //     { image: "sticker_ox", alt: "Unwavering Sticker Grey Background" },
-      //   ],
-      //   subImages: undefined,
-      //   price: "$2.00",
-      //   soldOut: false,
-      // },
-      // {
-      //   title: "LNYF Sticker Bundle",
-      //   images: [
-      //     { image: "stickers-bundle", alt: "LNYF Sticker Bundle" },
-      //     { image: "stickers-mockup", alt: "LNYF Sticker Bundle Mockup" },
-      //   ],
-      //   subImages: undefined,
-      //   price: "$3.00",
-      //   soldOut: false,
-      // },
     ],
   },
   people: {
