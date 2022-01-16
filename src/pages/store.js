@@ -97,13 +97,15 @@ const StorePage = ({ data }) => {
         title="Store"
         buttons={
           <>
-            <a
-              href={text.links.store}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button>Purchase</Button>
-            </a>
+            {text.links.store && (
+              <a
+                href={text.links.store}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>Purchase</Button>
+              </a>
+            )}
             {text.store.caption && (
               <StyledCaption variant="caption">
                 {text.store.caption}

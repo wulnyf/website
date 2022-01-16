@@ -124,7 +124,8 @@ const text = {
     facebook: "https://www.facebook.com/WULNYF/",
     instagram: "https://www.instagram.com/wu.lnyf/?hl=en",
     youtube: "https://www.youtube.com/user/LNYF",
-    store: "https://commerce.cashnet.com/SULUNAR",
+    store: undefined,
+    // store: "https://commerce.cashnet.com/SULUNAR",
   },
   index: {
     jumbotronTop: "Lunar New Year Festival 2022",
@@ -476,7 +477,8 @@ const text = {
     },
   ],
   store: {
-    caption: undefined,
+    caption:
+      "The store is closed temporarily. Please check back soon. Apologies for any inconvenience.",
     items: [
       {
         title: "Postcard",
@@ -486,7 +488,7 @@ const text = {
           { image: "post-a-mock", alt: "Postcard Design 1 Mockup" },
         ],
         subImages: undefined,
-        price: "$1.50",
+        price: "$2.00",
         soldOut: false,
       },
       {
@@ -497,7 +499,7 @@ const text = {
           { image: "post-b-mock", alt: "Postcard Design 2 Mockup" },
         ],
         subImages: undefined,
-        price: "$1.50",
+        price: "$2.00",
         soldOut: false,
       },
       {
