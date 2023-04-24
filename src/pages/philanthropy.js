@@ -31,6 +31,22 @@ const StyledAnchor = styled.a`
   display: block;
 `;
 
+const VideoContainer = styled.div`
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+  border: ${({ theme }) => theme.decoration.border};
+  box-shadow: ${({ theme }) => theme.decoration.boxShadow};
+`;
+
+const Video = styled.iframe`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+`;
+
 const PhilanthropyPage = ({ data }) => {
   const { imgData } = data;
   const { nodes } = imgData;
@@ -61,10 +77,23 @@ const PhilanthropyPage = ({ data }) => {
           </>
         }
       >
-        <StyledImage
+        {text.philanthropy[year].image && (
+          <StyledImage
           image={img}
           alt={text.philanthropy[year].title}
-        ></StyledImage>
+          ></StyledImage>
+        )}
+        {text.philanthropy[year].video && (
+          <VideoContainer>
+          <Video
+            src={text.philanthropy[year].video}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></Video>
+        </VideoContainer>
+        )}
         <StyledHeader variant="h4">
           {text.philanthropy[year].title}
         </StyledHeader>

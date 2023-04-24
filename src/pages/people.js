@@ -146,6 +146,9 @@ const PeoplePage = ({ data }) => {
         <Typography variant="p">Major: {person.major}</Typography>
         <Typography variant="p">Zodiac Animal: {person.zodiac}</Typography>
         <Typography variant="p">
+          What LNYF means to you: {person.lnyf}
+        </Typography>
+        <Typography variant="p">
           Favorite Asian Treat: {person.favTreat}
         </Typography>
       </ImageOverlay>
