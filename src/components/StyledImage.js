@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const StyledImage = styled(GatsbyImage)`
   border: ${({ theme }) => theme.decoration.border};
-  box-shadow: ${({ theme }) => theme.decoration.boxShadow};
 
   ${({ clickable, theme }) => {
     return (
@@ -11,7 +10,7 @@ const StyledImage = styled(GatsbyImage)`
       `
       cursor: pointer;
       &:hover {
-        box-shadow: ${theme.decoration.boxShadowHover};
+        border: ${theme.decoration.borderHover};
       }`
     );
   }}

@@ -9,6 +9,7 @@ const theme = {
   },
   decoration: {
     border: "5px solid #000",
+    borderHover: "5px solid #0CB1BC",
     boxShadowHover: "5px 5px 0px #0CB1BC",
     boxShadow: "5px 5px 0px #000",
   },
