@@ -113,7 +113,7 @@ const GalleryPage = ({ data }) => {
             />
             <MediaLabel variant="subtitle">Media</MediaLabel>
             {"photos" in text.gallery[year] && (
-              <StyledButton
+              <StyledButton white
                 onClick={() => setMedia("photos")}
                 active={media === "photos"}
               >
@@ -121,7 +121,7 @@ const GalleryPage = ({ data }) => {
               </StyledButton>
             )}
             {"videos" in text.gallery[year] && (
-              <Button
+              <Button white
                 onClick={() => setMedia("videos")}
                 active={media === "videos"}
               >

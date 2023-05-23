@@ -108,7 +108,7 @@ const PhilanthropyPage = ({ data }) => {
           href={text.philanthropy[year].link}
           rel="noopener noreferrer"
         >
-          <Button>See More</Button>
+          <Button white>See More</Button>
         </StyledAnchor>
       </InnerPage>
     </Layout>

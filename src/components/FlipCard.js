@@ -25,9 +25,9 @@ const Back = styled.div`
     width: 100%;
     box-sizing: border-box;
     background: $new-white;
-    box-shadow: 10px 10px 5px rgb(95, 77, 99);
     position: absolute !important;
     border-radius: 10px;
+    border: ${({ theme }) => theme.decoration.borderHover};
     backface-visibility: hidden;
     transform-style: preserve-3d;
     transition: -webkit-transform ease 500ms;
@@ -36,12 +36,12 @@ const Back = styled.div`
     transform: rotateY(-180deg);
     padding: 5px;
     font-size: 10vw;
+    background-color: ${({ theme }) => theme.palette.secondarybackground};
+    color: ${({ theme }) => theme.palette.secondaryfont};
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    border: ${({ theme }) => theme.decoration.border};
 
   ${({ clickable, theme }) => {
     return (
@@ -61,7 +61,6 @@ const ImageThumbnail = styled(StyledImage)`
     box-sizing: border-box;
     display: block !important;
     background: $new-white;
-    box-shadow: 5px 5px 5px rgb(95, 77, 99);
     position: absolute !important;
     border-radius: 10px;
     backface-visibility: hidden;

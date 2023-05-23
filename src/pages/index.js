@@ -18,7 +18,7 @@ import Waves from "../components/Waves";
 const StyledBackgroundImage = styled(BackgroundImage)`
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.8);
+  opacity: .9;
 `;
 
 const StyledWaves = styled(Waves)`

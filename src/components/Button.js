@@ -9,21 +9,21 @@ const Wrapper = styled.button`
   font-weight: 500;
   color: ${({ white, active }) => {
     if (white && !active) {
-      return "white";
+      return ({ theme }) => theme.palette.font;
     } else if (white && active) {
-      return "black";
+      return ({ theme }) => theme.palette.secondaryfont;
     } else if (!white && active) {
-      return "white";
+      return ({ theme }) => theme.palette.font;
     } else {
-      return "black";
+      return ({ theme }) => theme.palette.secondaryfont;
     }
   }};
   border-radius: 30px;
   background: ${({ white, active }) => {
     if (!white && active) {
-      return "black";
+      return ({ theme }) => theme.palette.background;
     } else if (white && active) {
-      return "white";
+      return ({ theme }) => theme.palette.secondarybackground;
     } else {
       return "transparent";
     }
@@ -32,13 +32,13 @@ const Wrapper = styled.button`
   height: 40px;
   font-size: 16px;
   line-height: 16px;
-  border: 4px solid ${({ white }) => (white ? "white" : "black")};
+  border: 4px solid ${({ white }) => (white ? ({ theme }) => theme.palette.secondarybackground : ({ theme }) => theme.palette.background)};
   &:hover {
     background: ${({ white }) => (white ? "white" : "black")};
     color: ${({ white }) => (white ? "black" : "white")};
   }
   @media (min-width: 800px) {
-    border: 5px solid ${({ white }) => (white ? "white" : "black")};
+    border: 5px solid ${({ white }) => (white ? ({ theme }) => theme.palette.secondarybackground : ({ theme }) => theme.palette.background)};
     line-height: 20px;
     font-size: 20px;
   }

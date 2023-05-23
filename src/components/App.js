@@ -8,6 +8,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    color: ${theme.palette.font};
+    background-color: ${theme.palette.background};
   }
 `;
 
