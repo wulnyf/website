@@ -1,29 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Menu from "../components/Menu";
-import Button from "../components/Button";
 import Typography from "../components/Typography";
 import Container from "../components/Container";
-import useScrollPosition from "../utils/useScrollPosition";
 import { AnimateState } from "./Menu.js";
 import text from "../text";
 import Waves from "./Waves";
+import theme from "../theme";
+import Menu from "./Menu";
 
-const Navbar = styled.nav`
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  background: ${({ transparent }) => (transparent ? "transparent" : "white")};
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: ${({ scrollPos }) =>
-    scrollPos > 5 ? "0px 2px 8px rgba(0, 0, 0, 0.25)" : undefined};
+const LogoSection = styled.div`
+  margin-left: 15px;
+`;
+
+const LinkSection = styled.div`
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  margin-right: 30px;
+  @media (min-width: 800px) {
+    display: flex;
+  }
+`;
+
+const NavBarLink = styled(Typography)`
+  margin-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;
 
 const NavOverlay = styled.div`
@@ -33,31 +43,12 @@ const NavOverlay = styled.div`
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: white;
+  background: ${theme.palette.background};
   padding-top: 50px;
 `;
 
-const NavbarLink = styled(Typography)`
+const NavOverlayLink = styled(Typography)`
   margin-bottom: 10px;
-`;
-
-const NavbarSection = styled.div`
-  display: flex;
-  width: 33.33%;
-  align-items: center;
-  justify-content: ${(props) => props.justifyContent};
-`;
-
-const LogoSection = styled(NavbarSection)`
-  display: none;
-  @media (min-width: 800px) {
-    display: flex;
-  }
-`;
-
-const NavbarSectionWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
 `;
 
 const Page = styled.main`
@@ -68,18 +59,6 @@ const Page = styled.main`
 
 const Content = styled.div`
   flex-grow: 2;
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-  font-size: 28px;
-  display: block;
-  line-height: 28px;
-  @media (min-width: 800px) {
-    font-size: 50px;
-    line-height: 50px;
-  }
 `;
 
 const Footer = styled.div`
@@ -105,16 +84,43 @@ const StyledAnchor = styled.a`
   color: inherit;
 `;
 
-const IconLink = styled(Link)`
-  margin-right: 20px;
-`;
-
 const StyledWaves = styled(Waves)`
   margin-top: 40px;
 `;
 
-const Layout = ({ children, transparent, noWaves }) => {
-  const { redIconData, whiteIconData, blackBagData, whiteBagData } =
+const Header = ({transparent}) => {
+  const [visible, setVisible] = useState(true);
+  const [prevPos, setPrevPos] = useState(0);
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  const handleScroll = debounce(() => {
+    const scrollY = window.pageYOffset;
+    
+    console.log(prevPos, scrollY);
+    setVisible(scrollY < 100 || scrollY < prevPos);
+    setPrevPos(scrollY);
+  }, 10);
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, [prevPos, visible, handleScroll]);
+
+  const { redIconData } =
     useStaticQuery(graphql`
       query LayoutQuery {
         redIconData: file(
@@ -130,158 +136,226 @@ const Layout = ({ children, transparent, noWaves }) => {
             )
           }
         }
-        whiteIconData: file(
-          name: { eq: "lnyf_white_favicon" }
-          sourceInstanceName: { eq: "images" }
-        ) {
-          childImageSharp {
-            gatsbyImageData(
-              height: 40
-              width: 40
-              placeholder: BLURRED
-              layout: FIXED
-            )
-          }
-        }
-        blackBagData: file(
-          name: { eq: "bag_black" }
-          sourceInstanceName: { eq: "images" }
-        ) {
-          childImageSharp {
-            gatsbyImageData(
-              height: 40
-              width: 40
-              placeholder: BLURRED
-              layout: FIXED
-            )
-          }
-        }
-        whiteBagData: file(
-          name: { eq: "bag_white" }
-          sourceInstanceName: { eq: "images" }
-        ) {
-          childImageSharp {
-            gatsbyImageData(
-              height: 40
-              width: 40
-              placeholder: BLURRED
-              layout: FIXED
-            )
-          }
-        }
       }
     `);
+
   const redIconImg = getImage(redIconData);
-  const whiteIconImg = getImage(whiteIconData);
-  const blackBagImg = getImage(blackBagData);
-  const whiteBagImg = getImage(whiteBagData);
-  const scrollPos = useScrollPosition();
   const [open, setOpen] = useState(false);
   const [animate, setAnimate] = useState(AnimateState.INITIAL);
   const onMenuClick = () => {
-    setOpen((prevOpen) => !prevOpen);
-    setAnimate(
+      setOpen((prevOpen) => !prevOpen);
+      setAnimate(
       animate === AnimateState.INITIAL || animate === AnimateState.CLOSED
-        ? AnimateState.OPEN
-        : AnimateState.CLOSED
-    );
+          ? AnimateState.OPEN
+          : AnimateState.CLOSED
+      );
   };
-  if (scrollPos > 5 || open) {
-    transparent = false;
+  if (open) {
+      transparent = false;
   }
+
+  const navbarStyles = {
+    display: 'flex',
+    height: '60px',
+    width: '100%',
+    position: 'fixed',
+    zIndex: '100',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    background: transparent ? 'transparent' : theme.palette.background,
+    transition: 'top 0.6s'
+  }
+
   return (
-    <Page>
+    <div>
       {open && (
         <NavOverlay>
           <Container>
-            <NavbarLink variant="h4">
+            <NavOverlayLink variant="h4">
               <StyledLink to="/" onClick={onMenuClick}>
                 Home
               </StyledLink>
-            </NavbarLink>
-            <NavbarLink variant="h4">
-              <StyledLink to="/events" onClick={onMenuClick}>
-                Events
-              </StyledLink>
-            </NavbarLink>
+            </NavOverlayLink>
             {text.schedule.active && (
-              <NavbarLink variant="h4">
+              <NavOverlayLink variant="h4">
                 <StyledLink to="/auditions" onClick={onMenuClick}>
                   Auditions
                 </StyledLink>
-              </NavbarLink>
+              </NavOverlayLink>
             )}
-            <NavbarLink variant="h4">
-              <StyledLink to="/philanthropy" onClick={onMenuClick}>
-                Philanthropy
-              </StyledLink>
-            </NavbarLink>
-            <NavbarLink variant="h4">
+            <NavOverlayLink variant="h4">
               <StyledLink to="/performances" onClick={onMenuClick}>
-                Performances
+                Performers
               </StyledLink>
-            </NavbarLink>
-            <NavbarLink variant="h4">
+            </NavOverlayLink>
+            <NavOverlayLink variant="h4">
               <StyledLink to="/gallery" onClick={onMenuClick}>
                 Gallery
               </StyledLink>
-            </NavbarLink>
-            <NavbarLink variant="h4">
+            </NavOverlayLink>
+            <NavOverlayLink variant="h4">
               <StyledLink to="/people" onClick={onMenuClick}>
-                People
+                Exec
               </StyledLink>
-            </NavbarLink>
-            <NavbarLink variant="h4">
+            </NavOverlayLink>
+            <NavOverlayLink variant="h4">
+              <StyledLink to="/store" onClick={onMenuClick}>
+                Donate
+              </StyledLink>
+            </NavOverlayLink>
+            <NavOverlayLink variant="h4">
               <StyledLink to="/store" onClick={onMenuClick}>
                 Store
               </StyledLink>
-            </NavbarLink>
-            <NavbarLink variant="h4">
-              <StyledLink to="/contact" onClick={onMenuClick}>
-                Contact
-              </StyledLink>
-            </NavbarLink>
+            </NavOverlayLink>
           </Container>
         </NavOverlay>
       )}
-      <Navbar transparent={transparent} scrollPos={scrollPos}>
-        <Container>
-          <NavbarSectionWrapper>
-            <NavbarSection justifyContent="flex-start">
-              <Menu
-                onClick={onMenuClick}
-                white={transparent ? true : false}
-                animate={animate}
-                setAnimate={setAnimate}
-              />
-            </NavbarSection>
-            <LogoSection justifyContent="center">
+      <div style={{ ...navbarStyles, top: visible ? '0px' : '-60px' }}>
+        <LogoSection>
+            <Link to="/">
+                <GatsbyImage
+                  image={redIconImg}
+                  alt="icon"
+                />
+            </Link>
+        </LogoSection>
+        <Menu
+          onClick={onMenuClick}
+          animate={animate}
+          setAnimate={setAnimate}
+        />
+        <LinkSection>
+          <NavBarLink variant="linkfont">
+            <StyledLink to="/performances">
+              Performers
+            </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+            <StyledLink to="/gallery">
+              Gallery
+            </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+            <StyledLink to="/people">
+              Exec
+            </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+            <StyledLink to="/store">
+              Donate
+            </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+            <StyledLink to="/store">
+              Store
+            </StyledLink>
+          </NavBarLink>
+        </LinkSection>
+      </div>
+    </div>
+  );
+};
+
+const Layout = ({ children, transparent, noWaves }) => {
+  return (
+    <Page>
+        {/* {open && (
+          <NavOverlay>
+              <Container>
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/" onClick={onMenuClick}>
+                      Home
+                  </StyledLink>
+                  </NavOverlayLink>
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/events" onClick={onMenuClick}>
+                      Events
+                  </StyledLink>
+                  </NavOverlayLink>
+                  {text.schedule.active && (
+                  <NavOverlayLink variant="h4">
+                      <StyledLink to="/auditions" onClick={onMenuClick}>
+                      Auditions
+                      </StyledLink>
+                  </NavOverlayLink>
+                  )}
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/philanthropy" onClick={onMenuClick}>
+                      Philanthropy
+                  </StyledLink>
+                  </NavOverlayLink>
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/performances" onClick={onMenuClick}>
+                      Performances
+                  </StyledLink>
+                  </NavOverlayLink>
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/gallery" onClick={onMenuClick}>
+                      Gallery
+                  </StyledLink>
+                  </NavOverlayLink>
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/people" onClick={onMenuClick}>
+                      People
+                  </StyledLink>
+                  </NavOverlayLink>
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/store" onClick={onMenuClick}>
+                      Store
+                  </StyledLink>
+                  </NavOverlayLink>
+                  <NavOverlayLink variant="h4">
+                  <StyledLink to="/contact" onClick={onMenuClick}>
+                      Contact
+                  </StyledLink>
+                  </NavOverlayLink>
+              </Container>
+          </NavOverlay>
+      )}
+      <NavBar transparent={transparent}>
+          <LogoSection>
               <Link to="/">
-                <GatsbyImage
-                  image={transparent ? whiteIconImg : redIconImg}
+                  <GatsbyImage
+                  image={redIconImg}
                   alt="icon"
-                />
+                  />
               </Link>
-            </LogoSection>
-            <NavbarSection justifyContent="flex-end">
-              <IconLink to="/store">
-                <GatsbyImage
-                  image={transparent ? whiteBagImg : blackBagImg}
-                  objectFit="contain"
-                  alt="icon"
-                />
-              </IconLink>
-              <a
-                href={text.links.store}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button white={transparent ? true : false}>DONATE</Button>
-              </a>
-            </NavbarSection>
-          </NavbarSectionWrapper>
-        </Container>
-      </Navbar>
+          </LogoSection>
+          <Menu
+          onClick={onMenuClick}
+          animate={animate}
+          setAnimate={setAnimate}
+          />
+          <LinkSection>
+          <NavBarLink variant="linkfont">
+              <StyledLink to="/performers">
+              Performers
+              </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+              <StyledLink to="/gallery">
+              Gallery
+              </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+              <StyledLink to="/people">
+              Exec
+              </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+              <StyledLink to="/store">
+              Donate
+              </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
+              <StyledLink to="/store">
+              Store
+              </StyledLink>
+          </NavBarLink>
+          </LinkSection>
+      </NavBar> */}
+      <Header transparent/>
       <Content>{children}</Content>
       {!noWaves && <StyledWaves />}
       <Footer>

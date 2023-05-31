@@ -86,6 +86,15 @@ const Header6 = styled.h6`
   }
 `;
 
+const LinkFont = styled.p`
+  margin: 0;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+`;
+
 const Subtitle = styled.p`
   line-height: 20px;
   font-size: 20px;
@@ -158,6 +167,12 @@ const Typography = ({ variant, color, children, ...rest }) => {
         <Header6 color={color} {...rest}>
           {children}
         </Header6>
+      );
+    case "linkfont":
+      return (
+        <LinkFont color={color} {...rest}>
+          {children}
+        </LinkFont>
       );
     case "subtitle":
       return (

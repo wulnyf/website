@@ -36,8 +36,8 @@ const Back = styled.div`
     transform: rotateY(-180deg);
     padding: 5px;
     font-size: 10vw;
-    background-color: ${({ theme }) => theme.palette.secondarybackground};
-    color: ${({ theme }) => theme.palette.secondaryfont};
+    background-color: ${({ theme }) => theme.palette.primarybackground};
+    color: ${({ theme }) => theme.palette.primaryfont};
 
     display: flex;
     flex-direction: column;
