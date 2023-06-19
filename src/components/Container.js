@@ -2,8 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 
 const OuterWrapper = styled.div`
-  display: flex;
-  justify-content: center;
   padding: 0 20px;
 `;
 

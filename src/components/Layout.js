@@ -62,13 +62,13 @@ const Content = styled.div`
 `;
 
 const Footer = styled.div`
-  background: black;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 40px;
+  z-index: 1;
   > :nth-child(2) {
     margin: 0 20px;
   }
@@ -109,9 +109,7 @@ const Header = ({transparent}) => {
 
   const handleScroll = debounce(() => {
     const scrollY = window.pageYOffset;
-    
-    console.log(prevPos, scrollY);
-    setVisible(scrollY < 100 || scrollY < prevPos);
+    setVisible(scrollY < 20 || scrollY < prevPos);
     setPrevPos(scrollY);
   }, 10);
 
@@ -199,6 +197,16 @@ const Header = ({transparent}) => {
               </StyledLink>
             </NavOverlayLink>
             <NavOverlayLink variant="h4">
+              <StyledLink to="/philanthropy" onClick={onMenuClick}>
+                Philanthropy
+              </StyledLink>
+            </NavOverlayLink>
+            <NavOverlayLink variant="h4">
+              <StyledLink to="/events" onClick={onMenuClick}>
+                Events
+              </StyledLink>
+            </NavOverlayLink>
+            <NavOverlayLink variant="h4">
               <StyledLink to="/store" onClick={onMenuClick}>
                 Donate
               </StyledLink>
@@ -260,101 +268,6 @@ const Header = ({transparent}) => {
 const Layout = ({ children, transparent, noWaves }) => {
   return (
     <Page>
-        {/* {open && (
-          <NavOverlay>
-              <Container>
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/" onClick={onMenuClick}>
-                      Home
-                  </StyledLink>
-                  </NavOverlayLink>
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/events" onClick={onMenuClick}>
-                      Events
-                  </StyledLink>
-                  </NavOverlayLink>
-                  {text.schedule.active && (
-                  <NavOverlayLink variant="h4">
-                      <StyledLink to="/auditions" onClick={onMenuClick}>
-                      Auditions
-                      </StyledLink>
-                  </NavOverlayLink>
-                  )}
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/philanthropy" onClick={onMenuClick}>
-                      Philanthropy
-                  </StyledLink>
-                  </NavOverlayLink>
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/performances" onClick={onMenuClick}>
-                      Performances
-                  </StyledLink>
-                  </NavOverlayLink>
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/gallery" onClick={onMenuClick}>
-                      Gallery
-                  </StyledLink>
-                  </NavOverlayLink>
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/people" onClick={onMenuClick}>
-                      People
-                  </StyledLink>
-                  </NavOverlayLink>
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/store" onClick={onMenuClick}>
-                      Store
-                  </StyledLink>
-                  </NavOverlayLink>
-                  <NavOverlayLink variant="h4">
-                  <StyledLink to="/contact" onClick={onMenuClick}>
-                      Contact
-                  </StyledLink>
-                  </NavOverlayLink>
-              </Container>
-          </NavOverlay>
-      )}
-      <NavBar transparent={transparent}>
-          <LogoSection>
-              <Link to="/">
-                  <GatsbyImage
-                  image={redIconImg}
-                  alt="icon"
-                  />
-              </Link>
-          </LogoSection>
-          <Menu
-          onClick={onMenuClick}
-          animate={animate}
-          setAnimate={setAnimate}
-          />
-          <LinkSection>
-          <NavBarLink variant="linkfont">
-              <StyledLink to="/performers">
-              Performers
-              </StyledLink>
-          </NavBarLink>
-          <NavBarLink variant="linkfont">
-              <StyledLink to="/gallery">
-              Gallery
-              </StyledLink>
-          </NavBarLink>
-          <NavBarLink variant="linkfont">
-              <StyledLink to="/people">
-              Exec
-              </StyledLink>
-          </NavBarLink>
-          <NavBarLink variant="linkfont">
-              <StyledLink to="/store">
-              Donate
-              </StyledLink>
-          </NavBarLink>
-          <NavBarLink variant="linkfont">
-              <StyledLink to="/store">
-              Store
-              </StyledLink>
-          </NavBarLink>
-          </LinkSection>
-      </NavBar> */}
       <Header transparent/>
       <Content>{children}</Content>
       {!noWaves && <StyledWaves />}

@@ -128,7 +128,7 @@ const text = {
   },
   index: {
     jumbotronTop: "Lunar New Year Festival 2023",
-    jumbotronMiddle: "Chasing Dreams",
+    jumbotronMiddle: "Radiance",
     jumbotronBottom: undefined,
     jumbotronButtons: (
       <>
@@ -140,16 +140,7 @@ const text = {
     aboutText: (
       <>
         <Typography>
-          Lunar New Year Festival (LNYF) is an annual student-run production
-          staged in commemoration and celebration of the Lunar New Year.
-        </Typography>
-        <Typography>
-          LNYF seeks to leave a prolonged impact both on and off the stage.
-          Dynamic performances ranging from acting to dancing to martial arts
-          explore Asian heritage from both traditional and modern perspectives,
-          and acknowledge social issues prevalent in Asian communities. LNYF
-          partners with local non-profit organizations to offer sustainable
-          support to the greater St Louis community.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
         </Typography>
       </>
     ),
@@ -157,9 +148,7 @@ const text = {
     philanthropyText: (
       <>
         <Typography>
-        “Caring for Kids immediately provides essential resources to meet 
-        the urgent needs of abused, neglected or at-risk children in St. 
-        Louis County.”
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
         </Typography>
       </>
     ),

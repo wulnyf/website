@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     color: ${theme.palette.font};
     background-color: ${theme.palette.background};
+    scroll-behavior: smooth;
   }
 `;
 

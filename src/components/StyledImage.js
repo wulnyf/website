@@ -9,8 +9,10 @@ const StyledImage = styled(GatsbyImage)`
       (clickable === true || clickable === "true") &&
       `
       cursor: pointer;
+      transition: all .3s; 
       &:hover {
         border: ${theme.decoration.borderHover};
+        transform: scale(1.03);
       }`
     );
   }}

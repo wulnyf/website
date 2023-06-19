@@ -95,6 +95,15 @@ const LinkFont = styled.p`
   font-family: "Oswald", sans-serif;
 `;
 
+const FloatingButtonFont = styled.p`
+  margin: 0;
+  line-height: 17px;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+`;
+
 const Subtitle = styled.p`
   line-height: 20px;
   font-size: 20px;
@@ -173,6 +182,12 @@ const Typography = ({ variant, color, children, ...rest }) => {
         <LinkFont color={color} {...rest}>
           {children}
         </LinkFont>
+      );
+    case "floatingbuttonfont":
+      return (
+        <FloatingButtonFont color={color} {...rest}>
+          {children}
+        </FloatingButtonFont>
       );
     case "subtitle":
       return (

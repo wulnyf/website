@@ -4,50 +4,51 @@ import StyledImage from "../components/StyledImage";
 import Typography from "../components/Typography";
 
 const CardContainer = styled.div`
-    height: 0px;
-    padding-bottom: 125%;
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    box-sizing: border-box;
-    &.flipped {
-        .front {
-            transform: rotateY(180deg);
-        }
-        .back {
-            transform: rotateY(0deg);
-        }
-    }
+  height: 0px;
+  padding-bottom: 125%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  &.flipped {
+      .front {
+          transform: rotateY(180deg);
+      }
+      .back {
+          transform: rotateY(0deg);
+      }
+  }
 `;
 
 const Back = styled.div`
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    background: $new-white;
-    position: absolute !important;
-    border-radius: 10px;
-    border: ${({ theme }) => theme.decoration.borderHover};
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: -webkit-transform ease 500ms;
-    transition: transform ease 500ms;
-    background: $new-white;
-    transform: rotateY(-180deg);
-    padding: 5px;
-    font-size: 10vw;
-    background-color: ${({ theme }) => theme.palette.primarybackground};
-    color: ${({ theme }) => theme.palette.primaryfont};
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: $new-white;
+  position: absolute !important;
+  border-radius: 10px;
+  border: ${({ theme }) => theme.decoration.borderHover};
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  background: $new-white;
+  transform: rotateY(-180deg);
+  padding: 5px;
+  font-size: 10vw;
+  background-color: ${({ theme }) => theme.palette.primarybackground};
+  color: ${({ theme }) => theme.palette.primaryfont};
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   ${({ clickable, theme }) => {
     return (
       (clickable === true || clickable === "true") &&
       `
       cursor: pointer;
+      
       &:hover {
         border: ${theme.decoration.borderHover};
       }`
