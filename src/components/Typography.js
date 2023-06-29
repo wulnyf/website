@@ -139,6 +139,29 @@ const Paragraph = styled.p`
   }
 `;
 
+const FooterTitle = styled.p`
+  font-size: 10px;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #B8B3B0;
+  font-weight: 300;
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
+`;
+
+const FooterLink = styled.p`
+  font-size: 10px;
+  margin: 0;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
+`;
+
 const Typography = ({ variant, color, children, ...rest }) => {
   switch (variant) {
     case "h1":
@@ -200,6 +223,18 @@ const Typography = ({ variant, color, children, ...rest }) => {
         <Caption color={color} {...rest}>
           {children}
         </Caption>
+      );
+    case "footertitle":
+      return (
+        <FooterTitle color={color} {...rest}>
+          {children}
+        </FooterTitle>
+      );
+    case "footerlink":
+      return (
+        <FooterLink color={color} {...rest}>
+          {children}
+        </FooterLink>
       );
     default:
       return (

@@ -9,7 +9,6 @@ import styled from "styled-components";
 import Seo from "../components/Seo";
 import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import { convertToBgImage } from "gbimage-bridge";
 import text from "../text";
 import theme from "../theme";
 
@@ -399,13 +398,7 @@ const IndexPage = ({ data }) => {
             <TextContainer>{text.index.aboutText}</TextContainer>
             <ButtonContainer>
               <Link to="/gallery">
-                <StyledButton>GALLERY</StyledButton>
-              </Link>
-              <Link to="/gallery">
-                <StyledButton>GALLERY</StyledButton>
-              </Link>
-              <Link to="/gallery">
-                <StyledButton>GALLERY</StyledButton>
+                <StyledButton>Gallery</StyledButton>
               </Link>
             </ButtonContainer>
           </ContentColumn>

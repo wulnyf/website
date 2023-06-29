@@ -62,26 +62,22 @@ const Content = styled.div`
 `;
 
 const Footer = styled.div`
-  height: 100px;
+  padding-right: 22vw;
+  padding-left: 20px;
+  height: 350px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
   z-index: 1;
-  > :nth-child(2) {
-    margin: 0 20px;
-  }
-  > * {
-    cursor: pointer;
-  }
-  @media (min-width: 800px) {
-    font-size: 50px;
-  }
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(0,0,0,0.5328256302521008) 61%, rgba(0,0,0,1) 100%);  
 `;
 
-const StyledAnchor = styled.a`
-  color: inherit;
+const FooterDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 100px;
 `;
 
 const StyledWaves = styled(Waves)`
@@ -272,27 +268,46 @@ const Layout = ({ children, transparent, noWaves }) => {
       <Content>{children}</Content>
       {!noWaves && <StyledWaves />}
       <Footer>
-        <StyledAnchor
-          href={text.links.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-instagram-square"></i>
-        </StyledAnchor>
-        <StyledAnchor
-          href={text.links.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-facebook-square"></i>
-        </StyledAnchor>
-        <StyledAnchor
-          href={text.links.youtube}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-youtube-square"></i>
-        </StyledAnchor>
+        <FooterDiv>
+          <Typography variant="footertitle" style={{marginBottom: '10px'}}>Pages</Typography>
+          <Link to="/events" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Events</Typography>
+          </Link>
+          <Link to="/performers" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Performers</Typography>
+          </Link>
+          <Link to="/people" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Exec</Typography>
+          </Link>
+          <Link to="/store" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Donate</Typography>
+          </Link>
+          <Link to="/store" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Store</Typography>
+          </Link>
+          <Link to="philanthropy" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Philanthropy</Typography>
+          </Link>
+          <Link to="gallery" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Gallery</Typography>
+          </Link>
+        </FooterDiv>
+        <FooterDiv>
+          <Typography variant="footertitle" style={{marginBottom: '10px'}}>Socials</Typography>
+          <a href={text.links.instagram} style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Instagram</Typography>
+          </a>
+          <a href={text.links.youtube} style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">YouTube</Typography>
+          </a>
+          <a href={text.links.facebook} style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Facebook</Typography>
+          </a>
+        </FooterDiv>
+        <FooterDiv>
+          <Typography variant="footertitle" style={{marginBottom: '10px'}}>Contact Us</Typography>
+          <Typography variant="footerlink">wu.lnyf@gmail.com</Typography>
+        </FooterDiv>
       </Footer>
     </Page>
   );
