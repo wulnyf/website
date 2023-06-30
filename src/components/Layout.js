@@ -264,10 +264,9 @@ const Header = ({transparent}) => {
 const Layout = ({ children, transparent, noWaves }) => {
   return (
     <Page>
-      <Header transparent/>
+      {/* <Header transparent/> */}
       <Content>{children}</Content>
-      {!noWaves && <StyledWaves />}
-      <Footer>
+      {/* <Footer>
         <FooterDiv>
           <Typography variant="footertitle" style={{marginBottom: '10px'}}>Pages</Typography>
           <Link to="/events" style={{color: 'white', textDecoration: 'none'}}>
@@ -308,7 +307,7 @@ const Layout = ({ children, transparent, noWaves }) => {
           <Typography variant="footertitle" style={{marginBottom: '10px'}}>Contact Us</Typography>
           <Typography variant="footerlink">wu.lnyf@gmail.com</Typography>
         </FooterDiv>
-      </Footer>
+      </Footer> */}
     </Page>
   );
 };

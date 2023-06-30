@@ -11,15 +11,13 @@ import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import text from "../text";
 import theme from "../theme";
+import themeGIF from '../images/misc/themeGif1.png'
 
 const JumbotronContainer = styled(Container)`
-  min-height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  @media (min-width: 800px) {
-    min-height: 750px;
-  }
+  height: 100vh;
 `;
 
 const JumbotronButton = styled.div`
@@ -31,6 +29,7 @@ const ContentContainer = styled(Container)`
   z-index: 1;
   position: relative;
   max-width: 100%;
+  height: 90vh;
 `;
 
 const ContentColumn = styled.div`
@@ -60,7 +59,7 @@ const TextContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  margin-bottom: 150px;
+  margin-bottom: 5vh;
   z-index: 1;
 `;
 
@@ -97,7 +96,7 @@ const StyledButton = styled(Button)`
 
 const FloatingPageNav = styled.div`
   position: fixed;
-  top: 180px; 
+  top: 110px; 
   right: 0;
   z-index: 2;
   display: flex;
@@ -105,6 +104,7 @@ const FloatingPageNav = styled.div`
   margin-right: 2vw;
   @media (min-width: 1340px) {
     margin-right: 3vw;
+    top: 250px;
   }
   @media (max-width: 1000px) {
     display: none;
@@ -220,15 +220,126 @@ const EventLink = styled(Link)`
 const SpotlightBox = styled.div`
   width: 130px;
   height: 77px;
-  margin-right: 2vw;
   @media (min-width: 1340px) {
     width: 150px;
-    margin-right: 3vw;
   }
   @media (max-width: 1000px) {
     display: none;
   }
 `;
+
+const BlackoutContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 30px;
+  top: 5vh;
+  z-index: 1;
+  @media (max-width: 1000px) {
+    left: 0;
+    right: 0;
+  }
+`;
+
+const BlackoutBackground = styled.img`
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  @media (max-width: 1000px) {
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+  }
+  @media (max-width: 500px) {
+    bottom: 20vh;
+  }
+`;
+
+const TimerPane = styled.div`
+  width: 400px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  z-index: 1;
+  @media (max-width: 1000px) {
+    width: 80vw;
+  }
+`;
+
+const Timer = () => {
+  const [days, setDays] = React.useState(0);
+  const [hours, setHours] = React.useState(0);
+  const [minutes, setMinutes] = React.useState(0);
+  const [seconds, setSeconds] = React.useState(0);
+
+  const deadline = "2023-07-21T17:00:00-06:00";
+
+  const getTime = () => {
+    const time = Date.parse(deadline) - Date.now();    
+
+    setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+    setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+    setMinutes(Math.floor((time / 1000 / 60) % 60));
+    setSeconds(Math.floor((time / 1000) % 60));
+  };
+
+  React.useEffect(() => {
+    const interval = setInterval(() => getTime(deadline), 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const timerStyles = {
+    marginBottom: '20px'
+  }
+
+  return (
+    <div style={timerStyles}>
+      <Typography variant='h6' style={{textAlign: 'center'}}>
+        {days} days {hours} hours {minutes} minutes
+      </Typography>
+    </div>
+  );
+};
+
+const BlackoutPage = () => {
+  // For blacking out the page during the Summer
+  // To replace the homepage with the blackout page just change 'export default IndexPage'
+  // at the bottom of this file to 'export default BlackoutPage'
+  // Also it would prob be smart to comment out the header and footer in the Layout.js file
+  // so they can click on other links
+
+  const buttonContainerStyles = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+
+  return (
+    <BlackoutContainer>
+      <BlackoutBackground src={themeGIF} alt="LNYF Theme" />
+      <TimerPane>
+        <Timer></Timer>
+        <div style={buttonContainerStyles}>
+          <Link to="/people" style={{marginBottom: '7px'}}>
+            <StyledButton>Executive Board</StyledButton>
+          </Link>
+          <Link to="/philanthropy" style={{marginBottom: '7px'}}>
+            <StyledButton>2023 Performers</StyledButton>
+          </Link>
+        </div>
+      </TimerPane>
+    </BlackoutContainer>
+  );
+}
 
 function debounce(func, wait, immediate) {
   var timeout;
@@ -246,22 +357,22 @@ function debounce(func, wait, immediate) {
 };
 
 const MovingSpotlight = () => {
-  const [scrollTicker, setScrollTicker] = React.useState(180);
+  const [scrollTicker, setScrollTicker] = React.useState(77);
 
   const handleTick = debounce(() => {
-    const scrollPos = window.pageYOffset;
+    const scrollPos = window.scrollY;
 
     if (scrollPos < 400) {
-      setScrollTicker(180);
+      setScrollTicker(77);
     }
     else if (scrollPos < 1100) {
-      setScrollTicker(258.5);
+      setScrollTicker(155.5);
     }
     else if (scrollPos < 1800) {
-      setScrollTicker(337);
+      setScrollTicker(234);
     }
     else {
-      setScrollTicker(415.5); 
+      setScrollTicker(312.5); 
     }
   }, 10);
 
@@ -271,8 +382,7 @@ const MovingSpotlight = () => {
   }, [scrollTicker, handleTick]);
 
   const spotlightStyles = {
-    height: '77px',
-    position: 'fixed',
+    position: 'relative',
     top: scrollTicker + 'px', 
     right: '0',
     zIndex: '1',
@@ -297,6 +407,8 @@ const IndexPage = ({ data }) => {
   const instaImg = getImage(data.instagramData);
   const youtubeImg = getImage(data.youtubeData);
   const facebookImg = getImage(data.facebookData);
+
+
 
   function scrollLNYF() {
     window.scrollTo(0, 0);
@@ -373,6 +485,7 @@ const IndexPage = ({ data }) => {
         </TitleContainer>
       </JumbotronContainer>
       <FloatingPageNav>
+        <MovingSpotlight></MovingSpotlight>
         <FloatingButton onClick={scrollLNYF}>
           <Typography variant="floatingbuttonfont">LNYF</Typography>
         </FloatingButton>
@@ -389,7 +502,6 @@ const IndexPage = ({ data }) => {
           <Typography variant="floatingbuttonfont">Philanthropy</Typography>
         </BottomFloatingButton>
       </FloatingPageNav>
-      <MovingSpotlight></MovingSpotlight>
       <ContentContainer>
         <TwoColumn spacing={40}>
           <ContentColumn>
@@ -463,7 +575,7 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export default IndexPage;
+export default BlackoutPage;
 
 export const query = graphql`
   query IndexPageQuery {
