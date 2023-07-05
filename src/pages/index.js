@@ -11,7 +11,7 @@ import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import text from "../text";
 import theme from "../theme";
-import themeGIF from '../images/misc/themeGif1.png'
+import themeGIF from '../images/misc/themeGif1.gif'
 
 const JumbotronContainer = styled(Container)`
   display: flex;
@@ -240,6 +240,7 @@ const BlackoutContainer = styled.div`
   @media (max-width: 1000px) {
     left: 0;
     right: 0;
+    top: 20vh;
   }
 `;
 
@@ -254,17 +255,16 @@ const BlackoutBackground = styled.img`
     min-height: auto;
     height: auto;
     width: 100%;
-    bottom: 0;
   }
   @media (max-width: 500px) {
-    bottom: 20vh;
+    bottom: 25vh;
   }
 `;
 
 const TimerPane = styled.div`
   width: 400px;
   padding: 15px;
-  background-color: rgba(255, 255, 255, .15);  
+  background-color: rgba(255, 255, 255, .1);  
   backdrop-filter: blur(5px);
   border-radius: 20px;
   z-index: 1;
@@ -332,7 +332,7 @@ const BlackoutPage = () => {
           <Link to="/people" style={{marginBottom: '7px'}}>
             <StyledButton>Executive Board</StyledButton>
           </Link>
-          <Link to="/philanthropy" style={{marginBottom: '7px'}}>
+          <Link to="/performances" style={{marginBottom: '7px'}}>
             <StyledButton>2023 Performers</StyledButton>
           </Link>
         </div>
