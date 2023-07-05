@@ -257,14 +257,14 @@ const BlackoutBackground = styled.img`
     width: 100%;
   }
   @media (max-width: 500px) {
-    bottom: 25vh;
+    bottom: 22vh;
   }
 `;
 
 const TimerPane = styled.div`
   width: 400px;
   padding: 15px;
-  background-color: rgba(255, 255, 255, .1);  
+  background-color: rgba(255, 255, 255, .13);  
   backdrop-filter: blur(5px);
   border-radius: 20px;
   z-index: 1;
@@ -336,6 +336,9 @@ const BlackoutPage = () => {
             <StyledButton>2023 Performers</StyledButton>
           </Link>
         </div>
+        <Typography variant="creditfont">
+          Background by WashU Animation Association
+        </Typography>
       </TimerPane>
     </BlackoutContainer>
   );

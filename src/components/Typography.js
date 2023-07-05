@@ -162,6 +162,16 @@ const FooterLink = styled.p`
   }
 `;
 
+const CreditFont = styled.p`
+  font-size: 10px;
+  margin: 0;
+  color: #CFCBC9;
+  font-weight: 200;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-top: 15px;
+`;
+
 const Typography = ({ variant, color, children, ...rest }) => {
   switch (variant) {
     case "h1":
@@ -235,6 +245,12 @@ const Typography = ({ variant, color, children, ...rest }) => {
         <FooterLink color={color} {...rest}>
           {children}
         </FooterLink>
+      );
+    case "creditfont":
+      return (
+        <CreditFont color={color} {...rest}>
+          {children}
+        </CreditFont>
       );
     default:
       return (
