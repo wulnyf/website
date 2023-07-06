@@ -257,7 +257,7 @@ const BlackoutBackground = styled.img`
     width: 100%;
   }
   @media (max-width: 500px) {
-    bottom: 22vh;
+    bottom: 19vh;
   }
 `;
 

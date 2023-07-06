@@ -46,5 +46,6 @@
   "bugs": {
     "url": "https://github.com/wulnyf/website/issues"
   },
-  "homepage": "https://github.com/wulnyf/website#readme"
+  "homepage": "https://github.com/wulnyf/website#readme",
+  "devDependencies": {}
 }
