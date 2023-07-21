@@ -279,7 +279,7 @@ const Timer = () => {
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
 
-  const deadline = "2023-07-21T17:00:00-06:00";
+  const deadline = "2023-08-01T17:00:00-06:00";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();    
