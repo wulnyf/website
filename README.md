@@ -1,5 +1,7 @@
 # LNYF Website
 
+[Visit the website](https://lnyf.wustl.edu)
+
 ## Technologies
 
 - [Gatsby](https://www.gatsbyjs.com/) (a [React.js](https://reactjs.org/) framework)

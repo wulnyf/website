@@ -11,7 +11,9 @@ import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import text from "../text";
 import theme from "../theme";
-import themeGIF from '../images/misc/themeGif1.gif'
+import themeGIF2 from '../images/misc/themeGif2.gif'
+import transitionGIF from '../images/misc/transition.gif'
+
 
 const JumbotronContainer = styled(Container)`
   display: flex;
@@ -264,7 +266,7 @@ const BlackoutBackground = styled.img`
 const TimerPane = styled.div`
   width: 400px;
   padding: 15px;
-  background-color: rgba(255, 255, 255, .13);  
+  background-color: rgb(9 9 9 / 33%);  
   backdrop-filter: blur(5px);
   border-radius: 20px;
   z-index: 1;
@@ -279,7 +281,7 @@ const Timer = () => {
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
 
-  const deadline = "2023-08-01T17:00:00-06:00";
+  const deadline = "2023-08-18T19:00:00-06:00";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();    
@@ -316,16 +318,25 @@ const BlackoutPage = () => {
   // Also it would prob be smart to comment out the header and footer in the Layout.js file
   // so they can click on other links
 
+  const [currBackground, setCurrBackground] = React.useState(transitionGIF);
+
   const buttonContainerStyles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center'
-  }
+  };
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setCurrBackground(null);
+      setCurrBackground(themeGIF2);
+    }, 6790);
+  }, [])
 
   return (
     <BlackoutContainer>
-      <BlackoutBackground src={themeGIF} alt="LNYF Theme" />
+      <BlackoutBackground src={currBackground} alt="LNYF Theme" />
       <TimerPane>
         <Timer></Timer>
         <div style={buttonContainerStyles}>
