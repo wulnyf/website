@@ -29,6 +29,7 @@ const NavBarLink = styled(Typography)`
   margin-left: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.52);
 `;
 
 const StyledLink = styled(Link)`
@@ -77,7 +78,7 @@ const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 
 const StyledWaves = styled(Waves)`
@@ -118,7 +119,7 @@ const Header = ({transparent}) => {
     useStaticQuery(graphql`
       query LayoutQuery {
         redIconData: file(
-          name: { eq: "lnyf_red_favicon" }
+          name: { eq: "lnyf_white_favicon" }
           sourceInstanceName: { eq: "images" }
         ) {
           childImageSharp {
@@ -230,6 +231,13 @@ const Header = ({transparent}) => {
           setAnimate={setAnimate}
         />
         <LinkSection>
+          {text.schedule.active && (
+            <NavBarLink variant="linkfont">
+              <StyledLink to="/auditions">
+                Auditions
+              </StyledLink>
+            </NavBarLink>
+          )}
           <NavBarLink variant="linkfont">
             <StyledLink to="/performances">
               Performers
@@ -264,9 +272,9 @@ const Header = ({transparent}) => {
 const Layout = ({ children, transparent, noWaves }) => {
   return (
     <Page>
-      {/* <Header transparent/> */}
+      <Header transparent/>
       <Content>{children}</Content>
-      {/* <Footer>
+      <Footer>
         <FooterDiv>
           <Typography variant="footertitle" style={{marginBottom: '10px'}}>Pages</Typography>
           <Link to="/events" style={{color: 'white', textDecoration: 'none'}}>
@@ -307,7 +315,7 @@ const Layout = ({ children, transparent, noWaves }) => {
           <Typography variant="footertitle" style={{marginBottom: '10px'}}>Contact Us</Typography>
           <Typography variant="footerlink">wu.lnyf@gmail.com</Typography>
         </FooterDiv>
-      </Footer> */}
+      </Footer>
     </Page>
   );
 };

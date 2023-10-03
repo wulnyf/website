@@ -11,8 +11,8 @@ import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import text from "../text";
 import theme from "../theme";
-import themeGIF2 from '../images/misc/themeGif2.gif'
-import transitionGIF from '../images/misc/transition.gif'
+import themeGIF from '../images/misc/loop3.gif'
+import transitionGIF from '../images/misc/final comp_1.gif'
 
 
 const JumbotronContainer = styled(Container)`
@@ -31,7 +31,6 @@ const ContentContainer = styled(Container)`
   z-index: 1;
   position: relative;
   max-width: 100%;
-  height: 90vh;
 `;
 
 const ContentColumn = styled.div`
@@ -62,6 +61,7 @@ const TextContainer = styled.div`
 
 const TitleContainer = styled.div`
   margin-bottom: 5vh;
+  
   z-index: 1;
 `;
 
@@ -75,7 +75,7 @@ const StyledIcon = styled(GatsbyImage)`
 `;
 
 const StyledBackgroundImage = styled(GatsbyImage)`
-  position: fixed;
+  position: fixed !important;
   background-position: center;
   -webkit-background-size: cover;
   width: 100%;
@@ -115,11 +115,11 @@ const FloatingPageNav = styled.div`
 
 const FloatingButton = styled(Button)`
   border: none;
+  background-color: rgba(0, 0, 0, 0.32);
   text-align: center;
   padding: 30px 0;
   width: 130px;
   height: auto;
-  border-radius: 0px;
   @media (min-width: 1340px) {
     width: 150px;
   }
@@ -127,9 +127,8 @@ const FloatingButton = styled(Button)`
     display: none;
   }
   &:hover {
-    background-color: rgba(255, 255, 255, .15);
+    background-color: rgba(0, 0, 0, 0.52);
     border: none;
-    border-radius: 25px;
     color: ${theme.palette.font};
   }
 `;
@@ -250,16 +249,19 @@ const BlackoutBackground = styled.img`
   min-height: 100%;
   width: 100%;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: 0;
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     min-height: auto;
     height: auto;
     width: 100%;
   }
   @media (max-width: 500px) {
-    bottom: 19vh;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    top: 30vh;
   }
 `;
 
@@ -330,7 +332,7 @@ const BlackoutPage = () => {
   React.useEffect(() => {
     setTimeout(() => {
       setCurrBackground(null);
-      setCurrBackground(themeGIF2);
+      setCurrBackground(themeGIF);
     }, 6790);
   }, [])
 
@@ -382,7 +384,7 @@ const MovingSpotlight = () => {
     else if (scrollPos < 1100) {
       setScrollTicker(155.5);
     }
-    else if (scrollPos < 1800) {
+    else if (scrollPos < 1900) {
       setScrollTicker(234);
     }
     else {
@@ -400,8 +402,8 @@ const MovingSpotlight = () => {
     top: scrollTicker + 'px', 
     right: '0',
     zIndex: '1',
-    backgroundColor: 'rgba(251,243,237,0.3)',
-    borderRadius: '25px',
+    backgroundColor: 'rgba(251,243,237,0.4)',
+    borderRadius: '15px',
     transition: 'all 0.3s ease-out'
   }
 
@@ -414,31 +416,23 @@ const MovingSpotlight = () => {
 const IndexPage = ({ data }) => {
   const [scrollPos, setScrollPos] = React.useState(0);
 
-  const img = getImage(data.backgroundData);
+  // All code used for transition animations, may not be used in the future
+  // const [currBackground, setCurrBackground] = React.useState(transitionGIF);
+
+  // React.useEffect(() => {
+  //   setTimeout(() => {
+  //     setCurrBackground(null);
+  //     setCurrBackground(themeGIF);
+  //   }, 9700);
+  // }, [])
+
   const blurredImg = getImage(data.blurredBackgroundData);
   const aboutImg = getImage(data.aboutData);
   const philanthropyImg = getImage(data.philanthropyData);
   const instaImg = getImage(data.instagramData);
   const youtubeImg = getImage(data.youtubeData);
   const facebookImg = getImage(data.facebookData);
-
-
-
-  function scrollLNYF() {
-    window.scrollTo(0, 0);
-  }
-
-  function scrollAbout() {
-    window.scrollTo(0, 780);
-  }
-
-  function scrollEvents() {
-    window.scrollTo(0, 1500);
-  }
-
-  function scrollPhilanthropy() {
-    window.scrollTo(0, 2150);
-  }
+  const currBackground = themeGIF;
 
   const handleScroll = debounce(() => {
     const scrollY = window.pageYOffset;
@@ -453,22 +447,20 @@ const IndexPage = ({ data }) => {
   return (
     <Layout transparent noWaves>
       <Seo title="Home" />
-      <StyledBackgroundImage 
-        image={img}
-        alt="Image"
-      />
+      <BlackoutBackground src={currBackground}/>
       <div style={{opacity: scrollPos/300}}>
         <StyledBackgroundImage
+          style={{"top": "0px"}}
           image={blurredImg}
           alt="Image"
         />
       </div>
-      <JumbotronContainer>
+      <JumbotronContainer id="section-1">
         <TitleContainer>
-          <Typography variant="h5" color="white">
+          <Typography style={{"text-shadow": "2px 2px 5px rgba(0, 0, 0, 0.52)"}} variant="h5" color="white">
             {text.index.jumbotronTop}
           </Typography>
-          <Typography variant="h1" color="white">
+          <Typography style={{"text-shadow": "2px 2px 5px rgba(0, 0, 0, 0.52)"}} variant="h1" color="white">
             {text.index.jumbotronMiddle}
           </Typography>
           {text.index.jumbotronBottom && (
@@ -500,23 +492,31 @@ const IndexPage = ({ data }) => {
       </JumbotronContainer>
       <FloatingPageNav>
         <MovingSpotlight></MovingSpotlight>
-        <FloatingButton onClick={scrollLNYF}>
-          <Typography variant="floatingbuttonfont">LNYF</Typography>
-        </FloatingButton>
+        <a href="#section-1">
+          <FloatingButton style={{"borderRadius": "15px 15px 0px 0px"}}>
+            <Typography variant="floatingbuttonfont">LNYF</Typography>
+          </FloatingButton>
+        </a>
         <FloatingDivider></FloatingDivider>
-        <FloatingButton onClick={scrollAbout}>
-          <Typography variant="floatingbuttonfont">About</Typography>
-        </FloatingButton>
+        <a href="#section-2">
+          <FloatingButton style={{"borderRadius": "0px"}}>
+            <Typography variant="floatingbuttonfont">About</Typography>
+          </FloatingButton>
+        </a>
         <FloatingDivider></FloatingDivider>
-        <FloatingButton onClick={scrollEvents}>
-          <Typography variant="floatingbuttonfont">Events</Typography>
-        </FloatingButton>
+        <a href="#section-3">
+          <FloatingButton style={{"borderRadius": "0px"}}>
+            <Typography variant="floatingbuttonfont">Events</Typography>
+          </FloatingButton>
+        </a>
         <FloatingDivider></FloatingDivider>
-        <BottomFloatingButton onClick={scrollPhilanthropy}>
-          <Typography variant="floatingbuttonfont">Philanthropy</Typography>
-        </BottomFloatingButton>
+        <a href="#section-4">
+          <BottomFloatingButton style={{"borderRadius": "0px 0px 15px 15px"}}>
+            <Typography variant="floatingbuttonfont">Philanthropy</Typography>
+          </BottomFloatingButton>
+        </a>
       </FloatingPageNav>
-      <ContentContainer>
+      <ContentContainer id="section-2">
         <TwoColumn spacing={40}>
           <ContentColumn>
             <Typography variant="h2">About LNYF</Typography>
@@ -529,12 +529,12 @@ const IndexPage = ({ data }) => {
             </ButtonContainer>
           </ContentColumn>
           <ImageColumn>
-            <GatsbyImage image={aboutImg} alt=""></GatsbyImage>
+            <GatsbyImage style={{"width": "80%"}} image={aboutImg} alt=""></GatsbyImage>
           </ImageColumn>
           <EmptyColumn></EmptyColumn>
         </TwoColumn>
       </ContentContainer>
-      <ContentContainer>
+      <ContentContainer id="section-3">
         <Typography variant="h2">Events</Typography>
         <Underline />
         <EventText variant="linkfont" color="secondary2">
@@ -564,7 +564,7 @@ const IndexPage = ({ data }) => {
           </EventPane>
         </EventLink>
       </ContentContainer>
-      <ContentContainer>
+      <ContentContainer id="section-4">
         <TwoColumn spacing={40}>
           <ContentColumn>
             <Typography variant="h6" color="secondary2">
@@ -589,7 +589,7 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export default BlackoutPage;
+export default IndexPage;
 
 export const query = graphql`
   query IndexPageQuery {
@@ -657,7 +657,7 @@ export const query = graphql`
       }
     }
     blurredBackgroundData: file(
-      name: { eq: "blurred-background" }
+      name: { eq: "blurred-background-new" }
       sourceInstanceName: { eq: "images" }
       relativeDirectory: { eq: "misc" }
     ) {

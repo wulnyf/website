@@ -22,11 +22,11 @@ const AuditionButton = styled(Button)`
 `;
 
 const Table = styled.table`
-  border: 1px solid black;
+  border: 1px solid white;
   td,
   th {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
   }
 `;
 
@@ -140,71 +140,74 @@ const text = {
     aboutText: (
       <>
         <Typography>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+        Lunar New Year Festival (LNYF) is an annual student-run production staged in commemoration and celebration of the Lunar New Year.
+        LNYF seeks to leave a prolonged impact both on and off the stage. Dynamic performances ranging from acting to dancing to martial arts explore Asian heritage from both traditional and modern perspectives, and acknowledge social issues prevalent in Asian communities. LNYF partners with local non-profit organizations to offer sustainable support to the greater St Louis community.
         </Typography>
       </>
     ),
-    philanthropyTitle: "Caring for Kids",
+    philanthropyTitle: "Prison Performing Arts",
     philanthropyText: (
       <>
         <Typography>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+        LNYF is proud to partner with Prison Performing Arts as its philanthropy for the Year of the Dragon.
+        About the Philanthropy:
+        “Prison Performing Arts is a multi-discipline, literacy and performing arts program dedicated to enriching the lives of youth and adults in Missouri’s criminal and juvenile justice systems. They foster individual and social change by providing incarcerated adults, justice-involved youth, and returning citizens with opportunities to participate in the arts as artists, students, and audience members. Participants learn creative and constructive ways to express emotions, build trust, and work in collaboration with one another. Programs aim to improve literacy and communication skills, instill responsibility to self and others, and to promote non-violent expression of emotion.”
         </Typography>
       </>
     ),
-    philanthropyLink: "https://caringforkids-stl.org/",
+    philanthropyLink: "https://www.prisonperformingarts.org/",
   },
   events: [
     {
-      month: "Feb",
-      day: "3-4",
-      title: "LNYF Show",
-      caption: "Edison Theater | 2:00PM , 7:00 PM",
+      month: "Sep",
+      day: "1",
+      title: "Activities Fair",
+      caption: "3-5 PM @ Mudd Field",
       description:
-        "Come watch our show!",
-    },
-    {
-      month: "Jan",
-      day: "28",
-      title: "AMC Fireworks x LNYF",
-      caption: "Tisch Commons | 6:00 PM",
-      description:
-        "Come celebrate the Lunar New Year!",
+        "Come find the LNYF booth and sign up to be on our mailing list!",
     },
     {
       month: "Sep",
-      day: "17-18",
-      title: "Auditions",
-      caption: "Various Places | 2:00 PM - 10:00 PM",
-      description:
-        "Try out to become a performer at LNYF!",
-    },
-    {
-      month: "Sep",
-      day: "16",
-      title: "Mid-Autumn Festival",
-      caption: "Clocktower | 4:00 PM - 6:00 PM",
-      description:
-        "Come join the festival to celebrate Mid-Autumn festival and find out more about LNYF!",
-    },
-    {
-      month: "Sep",
-      day: "15",
+      day: "14",
       title: "General Body Meeting",
-      caption: "Ursa's Fireside | 6:00 PM",
+      caption: "6 PM @ Ursa's",
       description:
         "Come join our first GBM to find out more about how we celebrate Lunar New Year through performance, fundraising, and other events!",
     },
     {
       month: "Sep",
-      day: "2",
-      title: "Activities Fair",
-      caption: "Mudd Field | 3:00 PM - 5:00 PM",
+      day: "15",
+      title: "LNYF @ AMC's Mid-Autumn Festival",
+      caption: "3-5 PM @ Ursa's",
       description:
-        "Come find the LNYF booth and sign up to be on our mailing list!",
+        "Come to the LNYF Booth to play games and learn more about LNYF!",
+    },
+    {
+      month: "Sep",
+      day: "16-22",
+      title: "Auditions",
+      caption: "More info to come",
+      description:
+        "Try out to become a performer at LNYF!",
+    },
+    {
+      month: "TBA",
+      day: "",
+      title: "LNYF Show",
+      caption: "TBA",
+      description:
+        "Come watch our show!",
     },
   ],
   philanthropy: {
+    2024: {
+      image: "ppa",
+      title: "Prison Performing Arts",
+      money: undefined,
+      description:
+        'Prison Performing Arts is a multi-discipline, literacy and performing arts program dedicated to enriching the lives of youth and adults in Missouri’s criminal and juvenile justice systems. They foster individual and social change by providing incarcerated adults, justice-involved youth, and returning citizens with opportunities to participate in the arts as artists, students, and audience members. Participants learn creative and constructive ways to express emotions, build trust, and work in collaboration with one another. Programs aim to improve literacy and communication skills, instill responsibility to self and others, and to promote non-violent expression of emotion.',
+      link: "https://www.prisonperformingarts.org/",
+    },
     2023: {
       video: "https://www.youtube.com/embed/c9vfyap0Jqs",
       title: "Caring for Kids",
@@ -264,99 +267,58 @@ const text = {
   },
   performances: [
     {
-      title: "Chinese Fan",
-      image: "cfan",
-      performers: [
-        "Amanda Taylor (Choreo)",
-        "Emily Shen (Choreo)",
-        "Anna Li",
-        "Benjamin Yi",
-        "Bridget Sun",
-        "Caleb Lee",
-        "Ching Ching Zhang",
-        "Christina Cai",
-        "Jessica Li",
-        "Rachel Lu",
-        "Rachel Tian",
-        "Rachel Wei",
-      ],
-    },
-    {
       title: "Standing Drums",
       image: "standingdrums",
       performers: [
+        "Alex Liu (Choreo)",
         "Grace Lai (Choreo)",
-        "Yoon Kim (Choreo)",
-        "Alex Liu",
-        "Brian Sohn",
         "Connor Park",
-        "Emily Shen",
         "Harry Gao",
-        "Lily Luu",
-        "Matthew Du",
-        "Sang-Mi Lee",
+        "Claire Pan",
+        "Deanna Wu",
+        "Dexter Chen",
+        "Jasmine Yang",
+        "Ken Soe",
+        "Wenting Yu"
       ],
     },
     {
-      title: "Lotus & Hats",
+      title: "Lotus",
       image: "lotusvietnamese",
       performers: [
+        "Tietchan Dang (Choreo)",
         "Vicki Truong (Choreo)",
-        "Grace Nelson (Choreo)",
-        "Alexia Zheng",
-        "Emily Lu",
-        "Emma Shen",
-        "Isa Yang",
-        "Jiwon Choi",
-        "Julie Xu",
-        "Karinne Summers",
-        "Sophia Dykstra",
-        "Tiana Mao",
-        "Tietchan Dang",
+        "Cece Ly",
+        "Celine Vuong",
+        "Grace Nelson",
+        "Helen Ha",
+        "Nhi Ly",
+        "Sydney Hwang",
+        "Theresa Xuan Nguyen",
+        "Tiana Mao"
       ],
     },
     {
       title: "Samulnori",
       image: "samulnori",
       performers: [
-        "Jaz Choi (Choreo)",
-        "Sangwook Suh (Choreo)",
-        "Joy Choi (j)",
-        "Andrew Yu (b,k)",
-        "Hillary Fujimoto (b)",
-        "Jace Park (b)",
-        "Jane Zhang (b)",
-        "Josh Chen (b)",
-        "Minjung Song (b)",
-        "Minwoo Kwon (b)",
-        "Chelsea Chun (j)",
-        "Emily So (j)",
-        "Grace Choi (j)",
-        "Jay Won (j)",
-        "Linus Lee (j)",
-        "Sebastian Lee (j)",
-        "Susie Choi (j)",
-      ],
-    },
-    {
-      title: "Fusion",
-      image: "fusion",
-      performers: [
-        "Amanda Zhu (Choreo)",
-        "Amelia Kung (Choreo)",
-        "Amy Xue",
-        "Carrie Lo",
-        "Emily Shen",
-        "Grace Chen",
-        "Isabel Lee",
-        "Isabelle Xu",
-        "Jamie Xu",
-        "Josh Hou",
-        "Kelly Kim",
-        "Michelle Chen",
-        "Raymond Dai",
-        "Shawn Fong",
-        "Vivian Nguyen",
+        "Andrew Yu (Choreo)",
+        "Jane Zhang (Choreo)",
+        "Alana Depaz",
+        "Amanda Zhu",
+        "Chelsea Chun",
+        "Elysia Quah",
+        "Emily So",
+        "Grace Choi",
+        "Hillary Fujimoto",
+        "Jace Park",
+        "Jay Won",
+        "Joy Choi",
+        "Linus Lee",
+        "Minjung Song",
+        "Rachel Wei",
+        "Sebastian Lee",
+        "Seoyoung Bae"
       ],
     },
     {
@@ -364,86 +326,177 @@ const text = {
       image: "kfan",
       performers: [
         "Sarah Kim (Choreo)",
-        "Adela Cho",
-        "Alexandria Flojo",
-        "Eileen Li",
-        "Jenny Park",
-        "Jessie Luo",
-        "Kaitlyn Wang",
+        "Andrea Ham",
+        "Audrey Tsai",
+        "Catherine Zhao",
+        "Jessica Lee",
+        "Kalea Lee",
+        "Katie Zhou",
         "Madison Wang",
         "Maki Oh",
-        "Sarah Cao",
-        "Sophie Lee",
-        "Vicky Cadena",
+        "Michelle Chen",
+        "Min-suh Kwak",
+        "Vicky Cadena"
       ],
     },
     {
       title: "Tinikling",
       image: "tinikling",
       performers: [
-        "Guenevere Chang (Choreo)",
-        "Jiwon Choi (Choreo)",
         "Aaron Wang (Choreo)",
-        "Amanda Young",
-        "Evelyn Song",
+        "Noelle Casem (Choreo)",
+        "Paula Glaser (Choreo)",
+        "Alicia Huang",
+        "Annie Chang",
+        "Gwyneth Noel",
         "Jane Liang",
-        "Noelle Casem",
-        "Paula Glaser",
+        "Malaya Hill",
         "Sophie Leong",
-        "Alex Xu",
-        "Andrew Choi",
-        "James Law",
-        "Max Francisco",
+        "Alex Fang",
+        "John Paul Pineda",
+        "Kellen Wang",
+        "Miguel Cadiz",
+        "Nathan Suh",
         "Ricky Wang",
-        "Ritvik Illindala",
-        "William Yin",
+        "Tanner Sharon"
       ],
     },
     {
       title: "Lion",
       image: "lion",
       performers: [
-        "Helen Ye (Choreo)",
-        "Matthew Du (Choreo)",
-        "Amanda Taylor (h)",
-        "Birdie Lee (h)",
-        "Wenting Yu (h)",
-        "Dan Du (t)",
-        "Justin Lan (t)",
-        "Wesley Yin (t)",
-        "Alex Joggerst (p)",
-        "Joanna Chen (p)",
+        "Wenting Yu (H) (Choreo)",
+        "Matthew Du (T) (Choreo)",
+        "Amanda Taylor (H)",
+        "Birdie Lee (H)",
+        "Cindy Li (H)",
+        "Justin Lan (T)",
+        "Richard Yang (T)",
+        "William Yin (T)",
+        "Dora Chen (P)",
+        "Stephane Cui (P)"
       ],
     },
     {
-      title: "Yo Yo",
+      title: "Yoyo",
       image: "yoyo",
       performers: [
         "Benjamin Yi (Choreo)",
         "Emily Shen (Choreo)",
         "Raymond Dai (Choreo)",
-        "Cadi Zhang",
-        "Calvin Xie",
+        "Ashtin Wang",
+        "David Zhu",
         "Demi Zhuang",
-        "Jihoon Kiel",
-        "Kyle Tran",
         "Megan Guo",
         "Nevin Song",
+        "Reina Xu",
         "Sharon Shen",
-        "Thomas Lang",
+        "Tiffany Chen",
+        "William Chen"
       ],
     },
     {
       title: "Juggling",
       image: "juggling",
       performers: [
-        "Walker Sexton (Choreo)",
+        "Jeremy Cho (Choreo)",
         "Matthew Yu (Choreo)",
-        "Matthew Turbin",
+        "William Chen (Choreo)",
+        "Daniel Chen",
         "Grant Kaplan",
-        "William Chen",
-        "Marta Cholewa",
-        "TBD"
+        "Matthew Turbin",
+        "Sandro Xiao",
+        "Shawn Fong"
+      ],
+    },
+    {
+      title: "Fashion Show",
+      image: "fashionshow",
+      performers: [
+        "Maki Oh (Choreo)",
+        "Michelle Chen (Choreo)",
+        "Sophia Dykstra (Choreo)",
+        "BaoVy Nguyen",
+        "Coco Wu",
+        "Dung Tran",
+        "Emily Hao",
+        "Hailey Kim",
+        "Joye Zheng",
+        "Kelly Gan",
+        "Lynn Yuan",
+        "Nikki Nguyen",
+        "Sangmi Lee",
+        "Sophie Lee"
+      ],
+    },
+    {
+      title: "Chinese Contemporary",
+      image: "chinesecontemp",
+      performers: [
+        "Addie Li (Choreo)",
+        "Amanda Taylor (Choreo)",
+        "Sophia Chow (Choreo)",
+        "Andria Luo",
+        "Anna Li",
+        "Celina Liu",
+        "Elizabeth Jin",
+        "Emily Shen",
+        "Hongyu Li",
+        "Morgan Ye",
+        "Prerana Acharyya",
+        "Rachel Tian"
+      ],
+    },
+    {
+      title: "Watersleeves",
+      image: "watersleeves",
+      performers: [
+        "Amanda Taylor (Choreo)",
+        "Anna Li (Choreo)",
+        "Ching Ching Zhang (Choreo)",
+        "Addie Li",
+        "Annabel Shen",
+        "Benjamin Yi",
+        "Caleb Lee",
+        "Gioia Wang",
+        "Grace Chen",
+        "Jessica Li"
+      ],
+    },
+    {
+      title: "Taekwondo",
+      image: "taekwondo",
+      performers: [
+        "Jonathan Tsao (Choreo)",
+        "Priyanka Deka (Choreo)",
+        "Sayf Fadil (Choreo)",
+        "Allison Rea",
+        "Daniel Oh",
+        "Elizabeth Chen",
+        "James Law",
+        "Julie Baguio",
+        "Michael Nguyen",
+        "Nathan Zhou",
+        "Ray Adelstein",
+        "Sarah Cai"
+      ],
+    },
+    {
+      title: "Dai",
+      image: "dai",
+      performers: [
+        "Judy Li (Choreo)",
+        "Sarah Cao (Choreo)",
+        "Alex Flojo",
+        "Cynthia Zhi",
+        "Eileen Li",
+        "Emily Hu",
+        "Isabel Lee",
+        "Jessie Luo",
+        "Lisa Ji",
+        "Sophia Dykstra",
+        "Tavia Liu",
+        "Victoria Li"
       ],
     },
   ],
@@ -984,14 +1037,14 @@ const text = {
     },
   },
   schedule: {
-    active: false,
+    active: true,
     content: (
       <>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMFzvhLddCGuBK26SnS3L0TT64HlmnzztWf3FeUDi8A5iLjw/viewform">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf31P_qiT1jEkPz9lX368duUezPVGjCPW0V9IhmI5FNGfkkmQ/viewform?usp=sf_link">
           <AuditionButton>Liability Waiver</AuditionButton>
         </a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4w9n9q8ekWLKC6VWNc-kiP4qNv_t-7KInVobpAr1PPnBvwA/viewform">
-          <AuditionButton>Audition Preference</AuditionButton>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2upzA51d3ucJWSJ5T0Ngm59yzu4ebT_e_-kBebQl6t2VDig/viewform?usp=sf_link">
+          <AuditionButton>Audition Attendance</AuditionButton>
         </a>
         <StyledHeader variant="h6">Auditions</StyledHeader>
         <Table>
@@ -1002,74 +1055,73 @@ const text = {
             <th>Act</th>
           </tr>
           <tr>
-            <td rowspan="5">Saturday 9/25</td>
-            <td>1 pm - 3 pm</td>
+            <td rowspan="6">Saturday 9/16</td>
+            <td>10AM - 12PM</td>
             <td>Mudd MPR</td>
             <td>Dai</td>
           </tr>
           <tr>
-            <td>3 pm - 5 pm</td>
+            <td>12PM - 2PM</td>
             <td>Mudd MPR</td>
-            <td>Yoyo</td>
+            <td>Lotus</td>
           </tr>
           <tr>
-            <td>5 pm - 7 pm</td>
+            <td>2PM - 4PM</td>
             <td>Mudd MPR</td>
-            <td>Lotus/Vietnamese Hats</td>
+            <td>Fashion Show</td>
           </tr>
           <tr>
-            <td>7 pm - 9 pm</td>
+            <td>4PM - 6PM</td>
             <td>Mudd MPR</td>
-            <td>Tinikling</td>
+            <td>Chinese Contemporary</td>
           </tr>
           <tr>
-            <td>7 pm - 9 pm</td>
-            <td>Olin Studio 2</td>
-            <td>*Lion</td>
+            <td>6PM - 8PM</td>
+            <td>Mudd MPR</td>
+            <td>Korean Fan</td>
           </tr>
           <tr>
-            <td rowspan="5">Sunday 9/26</td>
-            <td>1 pm - 3 pm</td>
+            <td>8PM - 10PM</td>
             <td>Mudd MPR</td>
-            <td>Chinese Fan</td>
+            <td>Watersleeves</td>
           </tr>
           <tr>
-            <td>3 pm - 5 pm</td>
-            <td>Mudd MPR</td>
-            <td>Fusion</td>
-          </tr>
-          <tr>
-            <td>5 pm - 7 pm</td>
-            <td>Mudd MPR</td>
+            <td rowspan="7">Sunday 9/17</td>
+            <td>10AM - 12PM</td>
+            <td>Malli 302 & 303</td>
             <td>Samulnori</td>
           </tr>
           <tr>
-            <td>7 pm - 9 pm</td>
-            <td>Mudd MPR</td>
-            <td>
-              *Skit (Sign up{" "}
-              <a href="https://www.signupgenius.com/go/8050b4baaae22a2ff2-lnyf">
-                here
-              </a>
-              )
-            </td>
-          </tr>
-          <tr>
-            <td>5 pm - 8 pm</td>
+            <td>12PM - 2PM</td>
             <td>McMillan Cafe</td>
-            <td>Standing Drums</td>
+            <td>Tinikling</td>
           </tr>
           <tr>
-            <td>Monday 9/27</td>
-            <td>7 pm - 9 pm</td>
-            <td>Mudd MPR</td>
-            <td>*Lion</td>
+            <td>2PM - 4PM</td>
+            <td>McMillan Cafe</td>
+            <td>Standing Drum</td>
+          </tr>
+          <tr>
+            <td>4PM - 6PM</td>
+            <td>McMillan Cafe</td>
+            <td>Taekwondo</td>
+          </tr>
+          <tr>
+            <td>6PM - 8PM</td>
+            <td>McMillan Cafe</td>
+            <td>Juggling</td>
+          </tr>
+          <tr>
+            <td>8PM - 10PM</td>
+            <td>McMillan Cafe</td>
+            <td>Lion</td>
+          </tr>
+          <tr>
+            <td>10PM - 12AM</td>
+            <td>McMillan Cafe</td>
+            <td>Yoyo</td>
           </tr>
         </Table>
-        <p>
-          *These have callbacks so you must attend at least one of the main
-          auditions to be eligible
-        </p>
         <StyledHeader variant="h6">Makeups</StyledHeader>
         <Table>
           <tr>
@@ -1079,58 +1131,79 @@ const text = {
             <th>Act</th>
           </tr>
           <tr>
-            <td rowspan="1">Monday 9/27</td>
-            <td>5 pm - 7 pm</td>
-            <td>Mudd MPR</td>
-            <td>Lotus/Vietnamese Hats</td>
+            <td rowspan="3">Monday 9/18</td>
+            <td>8PM - 10PM</td>
+            <td>Lopata MPR</td>
+            <td>Fashion Show</td>
           </tr>
           <tr>
-            <td rowspan="3">Tuesday 9/28</td>
-            <td>5 pm - 7 pm</td>
+            <td>10PM - 12AM</td>
             <td>Mudd MPR</td>
             <td>Dai</td>
           </tr>
           <tr>
-            <td>7 pm - 9 pm</td>
-            <td>Mudd MPR</td>
+            <td>10PM - 12AM</td>
+            <td>McMillan Cafe</td>
+            <td>Lion</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Tuesday 9/19</td>
+            <td>8PM - 10PM</td>
+            <td>Malli 302 & 303</td>
             <td>Samulnori</td>
           </tr>
           <tr>
-            <td>9 pm - 11 pm</td>
-            <td>Mudd MPR</td>
-            <td>Skit</td>
-          </tr>
-          <tr>
-            <td rowspan="3">Wednesday 9/29</td>
-            <td>5 pm - 7 pm</td>
+            <td>8PM - 10PM</td>
             <td>Mudd MPR</td>
             <td>Tinikling</td>
           </tr>
           <tr>
-            <td>7 pm - 9 pm</td>
+            <td>10PM - 12AM</td>
             <td>Mudd MPR</td>
+            <td>Chinese Contemporary</td>
+          </tr>
+          <tr>
+            <td rowspan="4">Wednesday 9/20</td>
+            <td>6PM - 8PM</td>
+            <td>McMillan Cafe</td>
+            <td>Juggling</td>
+          </tr>
+          <tr>
+            <td>8PM - 10PM</td>
+            <td>McMillan Cafe</td>
             <td>Yoyo</td>
           </tr>
           <tr>
-            <td>9 pm - 11 pm</td>
-            <td>Mudd MPR</td>
-            <td>Chinese Fan</td>
+            <td>10PM - 12AM</td>
+            <td>Olin 1</td>
+            <td>Watersleeves</td>
           </tr>
           <tr>
-            <td rowspan="3">Friday 10/1</td>
-            <td>5 pm - 7 pm</td>
-            <td>Mudd MPR</td>
-            <td>Standing Drums</td>
-          </tr>
-          <tr>
-            <td>7 pm - 9 pm</td>
-            <td>Mudd MPR</td>
-            <td>Fusion</td>
-          </tr>
-          <tr>
-            <td>5 pm - 7 pm</td>
+            <td>10PM - 12AM</td>
             <td>McMillan Cafe</td>
-            <td>Lion</td>
+            <td>Standing Drum</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Thursday 9/21</td>
+            <td>8PM - 10PM</td>
+            <td>Mudd MPR</td>
+            <td>Korean Fan</td>
+          </tr>
+          <tr>
+            <td>10PM - 12AM</td>
+            <td>Mudd MPR</td>
+            <td>Lotus</td>
+          </tr>
+          <tr>
+            <td>10PM - 12AM</td>
+            <td>Olin 1</td>
+            <td>Taekwondo</td>
+          </tr>
+          <tr>
+            <td>Friday 9/22</td>
+            <td>6PM - 8PM</td>
+            <td>TBD</td>
+            <td>Lion (Callbacks)</td>
           </tr>
         </Table>
       </>
