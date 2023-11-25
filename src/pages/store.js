@@ -4,7 +4,7 @@ import InnerPage from "../components/InnerPage";
 import ImageOverlay from "../components/ImageOverlay";
 import StoreThumbnail from "../components/StoreThumbnail";
 import Seo from "../components/Seo";
-// import Button from "../components/Button";
+import Button from "../components/Button";
 import text from "../text";
 import convertImgArrToMap from "../utils/convertImgArrToMap";
 import { graphql } from "gatsby";
@@ -97,7 +97,7 @@ const StorePage = ({ data }) => {
         title="Store"
         buttons={
           <>
-            {/* {text.links.store && (
+            {text.links.store && (
               <a
                 href={text.links.store}
                 target="_blank"
@@ -105,12 +105,12 @@ const StorePage = ({ data }) => {
               >
                 <Button>Purchase</Button>
               </a>
-            )} */}
-            {text.store.caption && (
+            )}
+            {/* {text.store.caption && (
               <StyledCaption variant="caption">
                 {text.store.caption}
               </StyledCaption>
-            )}
+            )} */}
           </>
         }
       >

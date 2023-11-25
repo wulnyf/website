@@ -529,7 +529,7 @@ const IndexPage = ({ data }) => {
             </ButtonContainer>
           </ContentColumn>
           <ImageColumn>
-            <GatsbyImage style={{"width": "80%"}} image={aboutImg} alt=""></GatsbyImage>
+            <GatsbyImage style={{"width": "100%"}} image={aboutImg} alt=""></GatsbyImage>
           </ImageColumn>
           <EmptyColumn></EmptyColumn>
         </TwoColumn>

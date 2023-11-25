@@ -507,58 +507,40 @@ const text = {
       {
         title: "Long Sleeve Shirt",
         images: [
-          { image: "mockuplongsleeveback", alt: "Long Sleeve Back Side" },
-          { image: "mockuplongsleevefront", alt: "Long Sleeve Front Side" },
+          { image: "shirt-pic", alt: "Long Sleeve" },
+          { image: "shirt-pic-2", alt: "Long Sleeve" },
         ],
         subImages: undefined,
         price: "$27.00",
         soldOut: false,
       },
       {
-        title: "Short Sleeve Shirt",
+        title: "Tote Bag",
         images: [
-          { image: "shortsleeveback1", alt: "Short Sleeve Back Side" },
-          { image: "shortsleevefront1", alt: "Short Sleeve Front Side" },
+          { image: "tote-pic", alt: "LNYF Tote" },
+          { image: "tote-pic-2", alt: "LNYF Tote" },
         ],
         subImages: undefined,
-        price: "$16.00",
+        price: "$18.00",
         soldOut: false,
       },
       {
-        title: "Zodiac Stickers",
+        title: "Sweatpants",
         images: [
-          { image: "lnyfstickermockup", alt: "LNYF Zodiac Stickers" }
+          { image: "pants-pic", alt: "Sweatpants" },
+          { image: "pants-pic-2", alt: "Sweatpants" },
         ],
         subImages: undefined,
-        price: "$1.00",
+        price: "$45.00",
         soldOut: false,
       },
       {
-        title: "LNYF Tote",
+        title: "Keychain",
         images: [
-          { image: "lnyftotemockup", alt: "LNYF Tote side" },
-          { image: "lnyftotemockup2", alt: "LNYF Tote Upright" },
+          { image: "keychain-pic", alt: "Keychain" },
         ],
         subImages: undefined,
-        price: "$16.00",
-        soldOut: false,
-      },
-      {
-        title: "Beanie",
-        images: [
-          { image: "beanie_mockup", alt: "Beanie" },
-        ],
-        subImages: undefined,
-        price: "$19.00",
-        soldOut: false,
-      },
-      {
-        title: "Poster",
-        images: [
-          { image: "poster_mockup", alt: "Poster" },
-        ],
-        subImages: undefined,
-        price: "$8.00",
+        price: "$5.00",
         soldOut: false,
       },
     ],
@@ -758,6 +740,140 @@ const text = {
     ],
   },
   gallery: {
+    2023: {
+      photos: [
+        {
+          image: "1V2A9954",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A1695",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A1629",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A9865",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A1098",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A0945",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A0859",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A0565",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A1788",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A0417",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A8994",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A3759",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A3718",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A3616",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A3590",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A3322",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A2743",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A2670",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A2323",
+          caption: "Show photos"
+        },
+        {
+          image: "1V2A9818",
+          caption: "Show photos"
+        },
+      ],
+      videos: [
+        {
+          link: "https://www.youtube.com/embed/2VTpOkWIoeY",
+        },
+        {
+          link: "https://www.youtube.com/embed/weO73kyAmRk",
+        },
+        {
+          link: "https://www.youtube.com/embed/WCd9g1zGXZQ",
+        },
+        {
+          link: "https://www.youtube.com/embed/qRLrd1a_B6E",
+        },
+        {
+          link: "https://www.youtube.com/embed/aZx5jwIDprM"
+        },
+        {
+          link: "https://www.youtube.com/embed/-9fvYJvDxJM",
+        },
+        {
+          link: "https://www.youtube.com/embed/ZsvyOUwWPdU",
+        },
+        {
+          link: "https://www.youtube.com/embed/Xu7DilnHcP8",
+        },
+        {
+          link: "https://www.youtube.com/embed/s7WaJIDiyOY",
+        },
+        {
+          link: "https://www.youtube.com/embed/WeujnG0tfms",
+        },
+        {
+          link: "https://www.youtube.com/embed/3iohBylHwro",
+        },
+        {
+          link: "https://www.youtube.com/embed/aHvbKOrQ_Bg",
+        },
+        {
+          link: "https://www.youtube.com/embed/Aa6VIrrJODI",
+        },
+        {
+          link: "https://www.youtube.com/embed/gb5E58bqvUw",
+        },
+        {
+          link: "https://www.youtube.com/embed/Z7bn_4fzMzk",
+        },
+        {
+          link: "https://www.youtube.com/embed/2Sv3wCfyF4w",
+        },
+      ],
+    },
     2022: {
       photos: [
         {
