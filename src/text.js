@@ -191,10 +191,10 @@ const text = {
         "Try out to become a performer at LNYF!",
     },
     {
-      month: "TBA",
-      day: "",
+      month: "Feb",
+      day: "9-10",
       title: "LNYF Show",
-      caption: "TBA",
+      caption: "Find more info on our instagram",
       description:
         "Come watch our show!",
     },
