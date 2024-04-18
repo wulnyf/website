@@ -127,7 +127,7 @@ const text = {
     store: "https://commerce.cashnet.com/SULUNAR",
   },
   index: {
-    jumbotronTop: "Lunar New Year Festival 2023",
+    jumbotronTop: "Lunar New Year Festival 2024",
     jumbotronMiddle: "Radiance",
     jumbotronBottom: undefined,
     jumbotronButtons: (
