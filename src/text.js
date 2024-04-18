@@ -158,45 +158,53 @@ const text = {
     philanthropyLink: "https://www.prisonperformingarts.org/",
   },
   events: [
-    {
-      month: "Sep",
-      day: "1",
-      title: "Activities Fair",
-      caption: "3-5 PM @ Mudd Field",
-      description:
-        "Come find the LNYF booth and sign up to be on our mailing list!",
-    },
-    {
-      month: "Sep",
-      day: "14",
-      title: "General Body Meeting",
-      caption: "6 PM @ Ursa's",
-      description:
-        "Come join our first GBM to find out more about how we celebrate Lunar New Year through performance, fundraising, and other events!",
-    },
-    {
-      month: "Sep",
-      day: "15",
-      title: "LNYF @ AMC's Mid-Autumn Festival",
-      caption: "3-5 PM @ Ursa's",
-      description:
-        "Come to the LNYF Booth to play games and learn more about LNYF!",
-    },
-    {
-      month: "Sep",
-      day: "16-22",
-      title: "Auditions",
-      caption: "More info to come",
-      description:
-        "Try out to become a performer at LNYF!",
-    },
+    // {
+    //   month: "Sep",
+    //   day: "1",
+    //   title: "Activities Fair",
+    //   caption: "3-5 PM @ Mudd Field",
+    //   description:
+    //     "Come find the LNYF booth and sign up to be on our mailing list!",
+    // },
+    // {
+    //   month: "Sep",
+    //   day: "14",
+    //   title: "General Body Meeting",
+    //   caption: "6 PM @ Ursa's",
+    //   description:
+    //     "Come join our first GBM to find out more about how we celebrate Lunar New Year through performance, fundraising, and other events!",
+    // },
+    // {
+    //   month: "Sep",
+    //   day: "15",
+    //   title: "LNYF @ AMC's Mid-Autumn Festival",
+    //   caption: "3-5 PM @ Ursa's",
+    //   description:
+    //     "Come to the LNYF Booth to play games and learn more about LNYF!",
+    // },
+    // {
+    //   month: "Sep",
+    //   day: "16-22",
+    //   title: "Auditions",
+    //   caption: "More info to come",
+    //   description:
+    //     "Try out to become a performer at LNYF!",
+    // },
     {
       month: "Feb",
       day: "9-10",
       title: "LNYF Show",
-      caption: "Find more info on our instagram",
+      caption: "Find more info on our instagram!",
       description:
         "Come watch our show!",
+    },
+    {
+      month: "April",
+      day: "21",
+      title: "Choreo Info Session Panel",
+      caption: "2-3 PM @ DUC 233",
+      description:
+        "Come to learn more!",
     },
   ],
   philanthropy: {
