@@ -561,7 +561,7 @@ const text = {
         position: "Executive Director",
         major: "Communication Design and Business of the Arts",
         zodiac: "Horse",
-        facts: "To me, LNYF is a celebration of an amazingly diverse range of East Asian and Southeast Asian cultures and traditions. We always have such a talented and dedicated group of people working together all year round, and it culminates in a show weekend that is always a really great way to celebrate an important holiday for our communities at WashU and throughout St. Louis.",
+        facts: "LNYF is a celebration of a really diverse range of East Asian and Southeast Asian cultures and traditions, and it’s always exciting to see it bring all kinds of people together!",
       },
       {
         image: "emilyshen",
@@ -646,12 +646,12 @@ const text = {
         facts: "It means a community of driven individuals coming together to a singular goal of spreading Asian culture all for a good cause.",
       },
       {
-        image: "harrygao",
-        name: "Harry Gao",
+        image: "janeliang",
+        name: "Jane Liang",
         position: "Webmaster",
         major: "Biomedical Engineering with Computer Science Minor",
-        zodiac: "Horse",
-        facts: "I'm colorblind and a little bit scared of the dark",
+        zodiac: "Goat",
+        facts: "It is community of some of my best friends, and it is celebration of the asian cultures bringing in the new year.",
       },
     ],
     dev: [
@@ -748,6 +748,19 @@ const text = {
     ],
   },
   gallery: {
+    2024: {
+      photos: [
+        {
+          image: "2024_lion",
+          caption: "Lion Dance"
+        },
+      ],
+      videos: [
+        {
+          link: "https://www.youtube.com/embed/Kw91dbtjtEc?si=fMv-HQsciqZWvCTw",
+        },
+      ],
+    },
     2023: {
       photos: [
         {

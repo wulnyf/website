@@ -131,6 +131,21 @@ const Caption = styled.p`
   }
 `;
 
+
+const Caption2 = styled.p`
+  line-height: 12px;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  text-transform: none;
+  color: ${({ color }) => color};
+  @media (min-width: 800px) {
+    line-height: 17px;
+    font-size: 17px;
+  }
+`;
+
 const Paragraph = styled.p`
   font-size: 16px;
   margin: 0;
@@ -233,6 +248,12 @@ const Typography = ({ variant, color, children, ...rest }) => {
         <Caption color={color} {...rest}>
           {children}
         </Caption>
+      );
+    case "caption2":
+      return (
+        <Caption2 color={color} {...rest}>
+          {children}
+        </Caption2>
       );
     case "footertitle":
       return (

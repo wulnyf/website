@@ -106,8 +106,8 @@ class FlipCard extends React.Component {
                     <Typography variant="caption">{this.props.zodiac}</Typography>
                 </div>
                 <div>
-                    <SecTitle variant="subtitle">What LNYF means to me</SecTitle>
-                    <Typography variant="caption">{this.props.facts}</Typography>
+                    <SecTitle variant="subtitle">What LNYF means to me:</SecTitle>
+                    <Typography variant="caption2">{this.props.facts}</Typography>
                 </div>
             </Back>
         </CardContainer>
