@@ -11,8 +11,8 @@ import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import text from "../text";
 import theme from "../theme";
-import themeGIF from '../images/misc/loop3.gif'
-import transitionGIF from '../images/misc/final comp_1.gif'
+import themeGIF from '../images/misc/blurred-background-new.jpg' //final theme
+import transitionGIF from '../images/misc/blurred-background-new.jpg' //transition to final theme
 
 
 const JumbotronContainer = styled(Container)`
@@ -235,8 +235,10 @@ const BlackoutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   position: fixed;
-  left: 30px;
-  top: 5vh;
+  // left: 30px;
+  left: 0;        //centers timepane
+  right: 0;
+  top: 15vh;      //vertical alignment
   z-index: 1;
   @media (max-width: 1000px) {
     left: 0;
@@ -283,7 +285,7 @@ const Timer = () => {
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
 
-  const deadline = "2023-08-18T19:00:00-06:00";
+  const deadline = "2024-08-15T19:00:00-06:00";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();    
@@ -346,12 +348,12 @@ const BlackoutPage = () => {
             <StyledButton>Executive Board</StyledButton>
           </Link>
           <Link to="/performances" style={{marginBottom: '7px'}}>
-            <StyledButton>2023 Performers</StyledButton>
+            <StyledButton>2024 Performers</StyledButton>
           </Link>
         </div>
-        <Typography variant="creditfont">
+        {/* <Typography variant="creditfont">
           Background by WashU Animation Association
-        </Typography>
+        </Typography> */}
       </TimerPane>
     </BlackoutContainer>
   );
@@ -589,7 +591,8 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export default IndexPage;
+// export default IndexPage;
+export default BlackoutPage
 
 export const query = graphql`
   query IndexPageQuery {
