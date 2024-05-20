@@ -32,6 +32,7 @@
     "gbimage-bridge": "^0.1.4",
     "intersection-observer": "^0.12.0",
     "package.json": "^2.0.1",
+    "punycode": "^2.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
