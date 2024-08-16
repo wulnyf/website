@@ -11,13 +11,15 @@ import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import text from "../text";
 import theme from "../theme";
-import themeGIF from '../images/misc/blurred-background-new.jpg' //final theme
-import transitionGIF from '../images/misc/blurred-background-new.jpg' //transition to final theme
+import themeGIF from '../images/misc/theme.png' //final theme
+import transitionGIF from '../images/misc/blurred-theme.png' //transition to final theme
 
 
 const JumbotronContainer = styled(Container)`
   display: flex;
+  align-items: center;
   flex-direction: column;
+  text-align: right;
   justify-content: flex-end;
   height: 100vh;
 `;
@@ -27,10 +29,17 @@ const JumbotronButton = styled.div`
 `;
 
 const ContentContainer = styled(Container)`
-  padding: 100px 0;
+  padding: 75px 0;
   z-index: 1;
   position: relative;
   max-width: 100%;
+
+  @media (min-width: 1000px) {
+    .events {
+      padding: 75px 10px 75px 13vw;
+    }
+  }
+  
 `;
 
 const ContentColumn = styled.div`
@@ -48,11 +57,12 @@ const ImageColumn = styled.div`
 
 const EmptyColumn = styled.div`
   display: flex;
-  flex-grow: 1;
+  width: 0%;
+  flex-grow: 0.8;
 `;
 
 const TextContainer = styled.div`
-  margin: 40px 0;
+  margin: 25px 25px 25px 0px;
   z-index: 1;
   > * {
     margin: 20px 0;
@@ -61,14 +71,14 @@ const TextContainer = styled.div`
 
 const TitleContainer = styled.div`
   margin-bottom: 5vh;
-  
+  width: 95vw;
   z-index: 1;
 `;
 
 const StyledIcon = styled(GatsbyImage)`
   margin-right: 10px;
   width: 35px;
-  @media (min-width: 800px) {
+  @media (min-width: 1000px) {
     width: 50px;
     margin-right: 20px;
   }
@@ -98,14 +108,14 @@ const StyledButton = styled(Button)`
 
 const FloatingPageNav = styled.div`
   position: fixed;
-  top: 110px; 
-  right: 0;
+  left: 0;
+  top: 250px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  margin-right: 2vw;
+  margin-left: 2vw;
   @media (min-width: 1340px) {
-    margin-right: 3vw;
+    margin-left: 3vw;
     top: 250px;
   }
   @media (max-width: 1000px) {
@@ -118,7 +128,7 @@ const FloatingButton = styled(Button)`
   background-color: rgba(0, 0, 0, 0.32);
   text-align: center;
   padding: 30px 0;
-  width: 130px;
+  width: 120px;
   height: auto;
   @media (min-width: 1340px) {
     width: 150px;
@@ -136,7 +146,7 @@ const FloatingButton = styled(Button)`
 const FloatingDivider = styled.div`
   background-color: ${theme.palette.font};
   height: 1.5px;
-  width: 130px;
+  width: 120px;
   @media (min-width: 1340px) {
     width: 150px;
   }
@@ -153,7 +163,7 @@ const EventPane = styled.div`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   transition: all .3s; 
   @media (max-width: 1000px) {
-    width: 90vw;
+    width: 96vw;
   }
   &:hover {
     transform: scale(1.01);
@@ -219,7 +229,7 @@ const EventLink = styled(Link)`
 `;
 
 const SpotlightBox = styled.div`
-  width: 130px;
+  width: 120px;
   height: 77px;
   @media (min-width: 1340px) {
     width: 150px;
@@ -229,6 +239,7 @@ const SpotlightBox = styled.div`
   }
 `;
 
+/*
 const BlackoutContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -245,7 +256,7 @@ const BlackoutContainer = styled.div`
     right: 0;
     top: 20vh;
   }
-`;
+`;*/
 
 const BlackoutBackground = styled.img`
   min-height: 100%;
@@ -267,6 +278,7 @@ const BlackoutBackground = styled.img`
   }
 `;
 
+/*
 const TimerPane = styled.div`
   width: 400px;
   padding: 15px;
@@ -313,51 +325,52 @@ const Timer = () => {
       </Typography>
     </div>
   );
-};
+};*/
 
-const BlackoutPage = () => {
-  // For blacking out the page during the Summer
-  // To replace the homepage with the blackout page just change 'export default IndexPage'
-  // at the bottom of this file to 'export default BlackoutPage'
-  // Also it would prob be smart to comment out the header and footer in the Layout.js file
-  // so they can click on other links
 
-  const [currBackground, setCurrBackground] = React.useState(transitionGIF);
+// const BlackoutPage = () => {
+//   // For blacking out the page during the Summer
+//   // To replace the homepage with the blackout page just change 'export default IndexPage'
+//   // at the bottom of this file to 'export default BlackoutPage'
+//   // Also it would prob be smart to comment out the header and footer in the Layout.js file
+//   // so they can click on other links
 
-  const buttonContainerStyles = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center'
-  };
+//   const [currBackground, setCurrBackground] = React.useState(transitionGIF);
 
-  React.useEffect(() => {
-    setTimeout(() => {
-      setCurrBackground(null);
-      setCurrBackground(themeGIF);
-    }, 6790);
-  }, [])
+//   const buttonContainerStyles = {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   };
 
-  return (
-    <BlackoutContainer>
-      <BlackoutBackground src={currBackground} alt="LNYF Theme" />
-      <TimerPane>
-        <Timer></Timer>
-        <div style={buttonContainerStyles}>
-          <Link to="/people" style={{marginBottom: '7px'}}>
-            <StyledButton>Executive Board</StyledButton>
-          </Link>
-          <Link to="/performances" style={{marginBottom: '7px'}}>
-            <StyledButton>2024 Performers</StyledButton>
-          </Link>
-        </div>
-        {/* <Typography variant="creditfont">
-          Background by WashU Animation Association
-        </Typography> */}
-      </TimerPane>
-    </BlackoutContainer>
-  );
-}
+//   React.useEffect(() => {
+//     setTimeout(() => {
+//       setCurrBackground(null);
+//       setCurrBackground(themeGIF);
+//     }, 6790);
+//   }, [])
+
+//   return (
+//     <BlackoutContainer>
+//       <BlackoutBackground src={currBackground} alt="LNYF Theme" />
+//       <TimerPane>
+//         <Timer></Timer>
+//         <div style={buttonContainerStyles}>
+//           <Link to="/people" style={{marginBottom: '7px'}}>
+//             <StyledButton>Executive Board</StyledButton>
+//           </Link>
+//           <Link to="/performances" style={{marginBottom: '7px'}}>
+//             <StyledButton>2024 Performers</StyledButton>
+//           </Link>
+//         </div>
+//         {/* <Typography variant="creditfont">
+//           Background by WashU Animation Association
+//         </Typography> */}
+//       </TimerPane>
+//     </BlackoutContainer>
+//   );
+// }
 
 function debounce(func, wait, immediate) {
   var timeout;
@@ -519,7 +532,8 @@ const IndexPage = ({ data }) => {
         </a>
       </FloatingPageNav>
       <ContentContainer id="section-2">
-        <TwoColumn spacing={40}>
+        <TwoColumn spacing={0}>
+        <EmptyColumn></EmptyColumn>
           <ContentColumn>
             <Typography variant="h2">About LNYF</Typography>
             <Underline />
@@ -531,12 +545,12 @@ const IndexPage = ({ data }) => {
             </ButtonContainer>
           </ContentColumn>
           <ImageColumn>
-            <GatsbyImage style={{"width": "100%"}} image={aboutImg} alt=""></GatsbyImage>
+            <GatsbyImage style={{"width": "97%"}} image={aboutImg} alt=""></GatsbyImage>
           </ImageColumn>
-          <EmptyColumn></EmptyColumn>
         </TwoColumn>
       </ContentContainer>
       <ContentContainer id="section-3">
+        <div class="events">
         <Typography variant="h2">Events</Typography>
         <Underline />
         <EventText variant="linkfont" color="secondary2">
@@ -565,9 +579,11 @@ const IndexPage = ({ data }) => {
             </EventBar>
           </EventPane>
         </EventLink>
+        </div>
       </ContentContainer>
       <ContentContainer id="section-4">
-        <TwoColumn spacing={40}>
+        <TwoColumn spacing={0}>
+        <EmptyColumn></EmptyColumn>
           <ContentColumn>
             <Typography variant="h6" color="secondary2">
               Philanthropy
@@ -582,17 +598,16 @@ const IndexPage = ({ data }) => {
             </ButtonContainer>
           </ContentColumn>
           <ImageColumn>
-            <GatsbyImage image={philanthropyImg} alt=""></GatsbyImage>
+            <GatsbyImage image={philanthropyImg} alt="SQSH"></GatsbyImage>
           </ImageColumn>
-          <EmptyColumn></EmptyColumn>
         </TwoColumn>
       </ContentContainer>
     </Layout>
   );
 };
 
-// export default IndexPage;
-export default BlackoutPage
+export default IndexPage;
+// export default BlackoutPage
 
 export const query = graphql`
   query IndexPageQuery {
@@ -660,7 +675,7 @@ export const query = graphql`
       }
     }
     blurredBackgroundData: file(
-      name: { eq: "blurred-background-new" }
+      name: { eq: "blurred-theme" }
       sourceInstanceName: { eq: "images" }
       relativeDirectory: { eq: "misc" }
     ) {

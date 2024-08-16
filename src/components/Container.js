@@ -6,7 +6,6 @@ const OuterWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  max-width: 1200px;
   width: 100%;
 `;
 

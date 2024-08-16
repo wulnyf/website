@@ -35,6 +35,9 @@ const NavBarLink = styled(Typography)`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
+  &:hover {
+    text-decoration: underline; 
+  }
 `;
 
 const NavOverlay = styled.div`
@@ -63,8 +66,8 @@ const Content = styled.div`
 `;
 
 const Footer = styled.div`
-  padding-right: 22vw;
-  padding-left: 20px;
+  padding-left: 15vw;
+  padding-right: 15vw;
   height: 350px;
   display: flex;
   align-items: flex-start;
@@ -85,24 +88,24 @@ const StyledWaves = styled(Waves)`
   margin-top: 40px;
 `;
 
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
 const Header = ({transparent}) => {
   const [visible, setVisible] = useState(true);
   const [prevPos, setPrevPos] = useState(0);
-
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
 
   const handleScroll = debounce(() => {
     const scrollY = window.pageYOffset;
@@ -158,7 +161,8 @@ const Header = ({transparent}) => {
     alignItems: 'center',
     justifyContent: 'space-between',
     background: transparent ? 'transparent' : theme.palette.background,
-    transition: 'top 0.6s'
+    'background-color': 'rgba(0, 0, 0, 0.45)',
+    transition: 'top 0.6s',
   }
 
   return (
@@ -280,8 +284,11 @@ const Layout = ({ children, transparent, noWaves }) => {
           <Link to="/events" style={{color: 'white', textDecoration: 'none'}}>
             <Typography variant="footerlink">Events</Typography>
           </Link>
-          <Link to="/performers" style={{color: 'white', textDecoration: 'none'}}>
-            <Typography variant="footerlink">Performers</Typography>
+          <Link to="/performances" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Performances</Typography>
+          </Link>
+          <Link to="/gallery" style={{color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink">Gallery</Typography>
           </Link>
           <Link to="/people" style={{color: 'white', textDecoration: 'none'}}>
             <Typography variant="footerlink">Exec</Typography>
@@ -292,11 +299,8 @@ const Layout = ({ children, transparent, noWaves }) => {
           <Link to="/store" style={{color: 'white', textDecoration: 'none'}}>
             <Typography variant="footerlink">Store</Typography>
           </Link>
-          <Link to="philanthropy" style={{color: 'white', textDecoration: 'none'}}>
+          <Link to="/philanthropy" style={{color: 'white', textDecoration: 'none'}}>
             <Typography variant="footerlink">Philanthropy</Typography>
-          </Link>
-          <Link to="gallery" style={{color: 'white', textDecoration: 'none'}}>
-            <Typography variant="footerlink">Gallery</Typography>
           </Link>
         </FooterDiv>
         <FooterDiv>

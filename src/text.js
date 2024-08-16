@@ -127,8 +127,8 @@ const text = {
     store: "https://commerce.cashnet.com/SULUNAR",
   },
   index: {
-    jumbotronTop: "Lunar New Year Festival 2024",
-    jumbotronMiddle: "Radiance",
+    jumbotronTop: "Lunar New Year Festival 2025",
+    jumbotronMiddle: "Interwoven",
     jumbotronBottom: undefined,
     jumbotronButtons: (
       <>
@@ -145,27 +145,36 @@ const text = {
         </Typography>
       </>
     ),
-    philanthropyTitle: "Prison Performing Arts",
+    philanthropyTitle: "SQSH",
     philanthropyText: (
       <>
         <Typography>
-        LNYF is proud to partner with Prison Performing Arts as its philanthropy for the Year of the Dragon.
-        About the Philanthropy:
-        “Prison Performing Arts is a multi-discipline, literacy and performing arts program dedicated to enriching the lives of youth and adults in Missouri’s criminal and juvenile justice systems. They foster individual and social change by providing incarcerated adults, justice-involved youth, and returning citizens with opportunities to participate in the arts as artists, students, and audience members. Participants learn creative and constructive ways to express emotions, build trust, and work in collaboration with one another. Programs aim to improve literacy and communication skills, instill responsibility to self and others, and to promote non-violent expression of emotion.”
+        LNYF is proud to partner with St. Louis Queer Support & Healing (SQSH) as its philanthropy for the Year of the Snake.
         </Typography>
+
+        <Typography style={{"font-weight": "bold"}}> About the Philanthropy: </Typography>
+
+        <Typography>
+        A group of dedicated queer St. Louisans founded SQSH on June 1, 2019, after a community needs assessment demonstrated that the St. Louis LGBTQIA+ community faces increased rates of violence, discrimination, substance use, and insecurity in employment and housing; disparities in medical, mental, and sexual health; and barriers to accessing the identity-affirming resources needed to meet those needs.
+        </Typography>
+        <Typography>
+        SQSH’s mission is to strengthen the St. Louis queer community by building collective skills for peer support, active listening, and navigating conflict. It operates a telephone support line five days a week, builds deep connections within the local community, and partners with civil rights organizations to advocate for LGBTQIA+ needs. SQSH aims to create alternative models, strategies, and practices that moves the LGBTQIA+ community closer to collective liberation.
+        </Typography>
+
+        
       </>
     ),
-    philanthropyLink: "https://www.prisonperformingarts.org/",
+    philanthropyLink: "https://www.thesqsh.org/",
   },
   events: [
-    // {
-    //   month: "Sep",
-    //   day: "1",
-    //   title: "Activities Fair",
-    //   caption: "3-5 PM @ Mudd Field",
-    //   description:
-    //     "Come find the LNYF booth and sign up to be on our mailing list!",
-    // },
+    {
+      month: "Aug",
+      day: "20",
+      title: "Activities Fair",
+      caption: "3-5 PM @ Mudd Field",
+      description:
+        "Come find the LNYF booth and sign up to be on our mailing list!",
+    },
     // {
     //   month: "Sep",
     //   day: "14",
@@ -190,24 +199,32 @@ const text = {
     //   description:
     //     "Try out to become a performer at LNYF!",
     // },
-    {
-      month: "Feb",
-      day: "9-10",
-      title: "LNYF Show",
-      caption: "Find more info on our instagram!",
-      description:
-        "Come watch our show!",
-    },
-    {
-      month: "April",
-      day: "21",
-      title: "Choreo Info Session Panel",
-      caption: "2-3 PM @ DUC 233",
-      description:
-        "Come to learn more!",
-    },
+    // {
+    //   month: "Feb",
+    //   day: "9-10",
+    //   title: "LNYF Show",
+    //   caption: "Find more info on our instagram!",
+    //   description:
+    //     "Come watch our show!",
+    // },
+    // {
+    //   month: "April",
+    //   day: "21",
+    //   title: "Choreo Info Session Panel",
+    //   caption: "2-3 PM @ DUC 233",
+    //   description:
+    //     "Come to learn more!",
+    // },
   ],
   philanthropy: {
+    2025: {
+      image: "SQSH",
+      title: "St. Louis Queer SUpport &amp Healing",
+      money: undefined,
+      description:
+      'SQSH’s mission is to strengthen the St. Louis queer community by building collective skills for peer support, active listening, and navigating conflict. It operates a telephone support line five days a week, builds deep connections within the local community, and partners with civil rights organizations to advocate for LGBTQIA+ needs. SQSH aims to create alternative models, strategies, and practices that moves the LGBTQIA+ community closer to collective liberation.',
+      link: "https://www.thesqsh.org/",
+    },
     2024: {
       image: "ppa",
       title: "Prison Performing Arts",
@@ -753,6 +770,14 @@ const text = {
         {
           image: "2024_lion",
           caption: "Lion Dance"
+        },
+        {
+          image: "2024_dai",
+          caption: "Dai"
+        },
+        {
+          image: "2024_standing",
+          caption: "Standing Drums"
         },
       ],
       videos: [

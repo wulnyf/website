@@ -4,10 +4,15 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
+  margin-left: 10px;
   > :first-child {
-    margin-bottom: ${({ spacing }) => spacing}px;
+    margin-bottom: ${({ spacing }) => spacing + 20}px;
   }
-  @media (min-width: 800px) {
+  > :last-child {
+    margin-top: ${({ spacing }) => spacing + 40}px;
+  }
+  @media (min-width: 1000px) {
     flex-direction: row;
     > :first-child {
       margin-bottom: 0px;

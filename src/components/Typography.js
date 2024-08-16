@@ -155,7 +155,7 @@ const Paragraph = styled.p`
 `;
 
 const FooterTitle = styled.p`
-  font-size: 10px;
+  font-size: 15px;
   margin: 0;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
