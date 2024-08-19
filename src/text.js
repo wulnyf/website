@@ -178,7 +178,7 @@ const text = {
     {
       month: "Aug",
       day: "31",
-      title: "Choreo Applications",
+      title: "Choreo Apps",
       caption: "Due 11:59 pm",
       description:
         "Apply to choreograph a dance in the upcoming 2025 show!",

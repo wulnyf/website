@@ -22,6 +22,7 @@ const Grid = styled.div`
   }
   @media (min-width: 1140px) {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 70px;
   }
 `;
 

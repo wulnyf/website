@@ -12,7 +12,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import text from "../text";
 import theme from "../theme";
 import themeGIF from '../images/misc/theme.png' //final theme
-import transitionGIF from '../images/misc/blurred-theme.png' //transition to final theme
+//import transitionGIF from '../images/misc/blurred-theme.png' //transition to final theme
 
 
 const JumbotronContainer = styled(Container)`
