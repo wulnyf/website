@@ -169,11 +169,19 @@ const text = {
   events: [
     {
       month: "Aug",
-      day: "20",
+      day: "30",
       title: "Activities Fair",
       caption: "3-5 PM @ Mudd Field",
       description:
         "Come find the LNYF booth and sign up to be on our mailing list!",
+    },
+    {
+      month: "Aug",
+      day: "31",
+      title: "Choreo Applications",
+      caption: "Due 11:59 pm",
+      description:
+        "Apply to choreograph a dance in the upcoming 2025 show!",
     },
     // {
     //   month: "Sep",
@@ -292,19 +300,107 @@ const text = {
   },
   performances: [
     {
-      title: "Standing Drums",
-      image: "standingdrums",
+      title: "Chinese Contemporary",
+      image: "chinesecontemp",
       performers: [
-        "Alex Liu (Choreo)",
-        "Grace Lai (Choreo)",
-        "Connor Park",
-        "Harry Gao",
-        "Claire Pan",
-        "Deanna Wu",
-        "Dexter Chen",
-        "Jasmine Yang",
-        "Ken Soe",
-        "Wenting Yu"
+        "Addie Li (Choreo)",
+        "Amanda Taylor (Choreo)",
+        "Sophia Chow (Choreo)",
+        "Andria Luo",
+        "Anna Li",
+        "Celina Liu",
+        "Elizabeth Jin",
+        "Emily Shen",
+        "Hongyu Li",
+        "Morgan Ye",
+        "Prerana Acharyya",
+        "Rachel Tian"
+      ],
+    },
+    {
+      title: "Dai",
+      image: "dai",
+      performers: [
+        "Judy Li (Choreo)",
+        "Sarah Cao (Choreo)",
+        "Alex Flojo",
+        "Cynthia Zhi",
+        "Eileen Li",
+        "Emily Hu",
+        "Isabel Lee",
+        "Jessie Luo",
+        "Lisa Ji",
+        "Sophia Dykstra",
+        "Tavia Liu",
+        "Victoria Li"
+      ],
+    },
+    {
+      title: "Fashion Show",
+      image: "fashionshow",
+      performers: [
+        "Maki Oh (Choreo)",
+        "Michelle Chen (Choreo)",
+        "Sophia Dykstra (Choreo)",
+        "BaoVy Nguyen",
+        "Coco Wu",
+        "Dung Tran",
+        "Emily Hao",
+        "Hailey Kim",
+        "Joye Zheng",
+        "Kelly Gan",
+        "Lynn Yuan",
+        "Nikki Nguyen",
+        "Sangmi Lee",
+        "Sophie Lee"
+      ],
+    },
+    {
+      title: "Juggling",
+      image: "juggling",
+      performers: [
+        "Jeremy Cho (Choreo)",
+        "Matthew Yu (Choreo)",
+        "William Chen (Choreo)",
+        "Daniel Chen",
+        "Grant Kaplan",
+        "Matthew Turbin",
+        "Sandro Xiao",
+        "Shawn Fong"
+      ],
+    },
+    {
+      title: "Korean Fan",
+      image: "kfan",
+      performers: [
+        "Sarah Kim (Choreo)",
+        "Andrea Ham",
+        "Audrey Tsai",
+        "Catherine Zhao",
+        "Jessica Lee",
+        "Kalea Lee",
+        "Katie Zhou",
+        "Madison Wang",
+        "Maki Oh",
+        "Michelle Chen",
+        "Min-suh Kwak",
+        "Vicky Cadena"
+      ],
+    },
+    {
+      title: "Lion",
+      image: "lion",
+      performers: [
+        "Wenting Yu (H) (Choreo)",
+        "Matthew Du (T) (Choreo)",
+        "Amanda Taylor (H)",
+        "Birdie Lee (H)",
+        "Cindy Li (H)",
+        "Justin Lan (T)",
+        "Richard Yang (T)",
+        "William Yin (T)",
+        "Dora Chen (P)",
+        "Stephane Cui (P)"
       ],
     },
     {
@@ -347,21 +443,19 @@ const text = {
       ],
     },
     {
-      title: "Korean Fan",
-      image: "kfan",
+      title: "Standing Drums",
+      image: "standingdrums",
       performers: [
-        "Sarah Kim (Choreo)",
-        "Andrea Ham",
-        "Audrey Tsai",
-        "Catherine Zhao",
-        "Jessica Lee",
-        "Kalea Lee",
-        "Katie Zhou",
-        "Madison Wang",
-        "Maki Oh",
-        "Michelle Chen",
-        "Min-suh Kwak",
-        "Vicky Cadena"
+        "Alex Liu (Choreo)",
+        "Grace Lai (Choreo)",
+        "Connor Park",
+        "Harry Gao",
+        "Claire Pan",
+        "Deanna Wu",
+        "Dexter Chen",
+        "Jasmine Yang",
+        "Ken Soe",
+        "Wenting Yu"
       ],
     },
     {
@@ -387,19 +481,37 @@ const text = {
       ],
     },
     {
-      title: "Lion",
-      image: "lion",
+      title: "Taekwondo",
+      image: "taekwondo",
       performers: [
-        "Wenting Yu (H) (Choreo)",
-        "Matthew Du (T) (Choreo)",
-        "Amanda Taylor (H)",
-        "Birdie Lee (H)",
-        "Cindy Li (H)",
-        "Justin Lan (T)",
-        "Richard Yang (T)",
-        "William Yin (T)",
-        "Dora Chen (P)",
-        "Stephane Cui (P)"
+        "Jonathan Tsao (Choreo)",
+        "Priyanka Deka (Choreo)",
+        "Sayf Fadil (Choreo)",
+        "Allison Rea",
+        "Daniel Oh",
+        "Elizabeth Chen",
+        "James Law",
+        "Julie Baguio",
+        "Michael Nguyen",
+        "Nathan Zhou",
+        "Ray Adelstein",
+        "Sarah Cai"
+      ],
+    },
+    {
+      title: "Watersleeves",
+      image: "watersleeves",
+      performers: [
+        "Amanda Taylor (Choreo)",
+        "Anna Li (Choreo)",
+        "Ching Ching Zhang (Choreo)",
+        "Addie Li",
+        "Annabel Shen",
+        "Benjamin Yi",
+        "Caleb Lee",
+        "Gioia Wang",
+        "Grace Chen",
+        "Jessica Li"
       ],
     },
     {
@@ -420,110 +532,6 @@ const text = {
         "William Chen"
       ],
     },
-    {
-      title: "Juggling",
-      image: "juggling",
-      performers: [
-        "Jeremy Cho (Choreo)",
-        "Matthew Yu (Choreo)",
-        "William Chen (Choreo)",
-        "Daniel Chen",
-        "Grant Kaplan",
-        "Matthew Turbin",
-        "Sandro Xiao",
-        "Shawn Fong"
-      ],
-    },
-    {
-      title: "Fashion Show",
-      image: "fashionshow",
-      performers: [
-        "Maki Oh (Choreo)",
-        "Michelle Chen (Choreo)",
-        "Sophia Dykstra (Choreo)",
-        "BaoVy Nguyen",
-        "Coco Wu",
-        "Dung Tran",
-        "Emily Hao",
-        "Hailey Kim",
-        "Joye Zheng",
-        "Kelly Gan",
-        "Lynn Yuan",
-        "Nikki Nguyen",
-        "Sangmi Lee",
-        "Sophie Lee"
-      ],
-    },
-    {
-      title: "Chinese Contemporary",
-      image: "chinesecontemp",
-      performers: [
-        "Addie Li (Choreo)",
-        "Amanda Taylor (Choreo)",
-        "Sophia Chow (Choreo)",
-        "Andria Luo",
-        "Anna Li",
-        "Celina Liu",
-        "Elizabeth Jin",
-        "Emily Shen",
-        "Hongyu Li",
-        "Morgan Ye",
-        "Prerana Acharyya",
-        "Rachel Tian"
-      ],
-    },
-    {
-      title: "Watersleeves",
-      image: "watersleeves",
-      performers: [
-        "Amanda Taylor (Choreo)",
-        "Anna Li (Choreo)",
-        "Ching Ching Zhang (Choreo)",
-        "Addie Li",
-        "Annabel Shen",
-        "Benjamin Yi",
-        "Caleb Lee",
-        "Gioia Wang",
-        "Grace Chen",
-        "Jessica Li"
-      ],
-    },
-    {
-      title: "Taekwondo",
-      image: "taekwondo",
-      performers: [
-        "Jonathan Tsao (Choreo)",
-        "Priyanka Deka (Choreo)",
-        "Sayf Fadil (Choreo)",
-        "Allison Rea",
-        "Daniel Oh",
-        "Elizabeth Chen",
-        "James Law",
-        "Julie Baguio",
-        "Michael Nguyen",
-        "Nathan Zhou",
-        "Ray Adelstein",
-        "Sarah Cai"
-      ],
-    },
-    {
-      title: "Dai",
-      image: "dai",
-      performers: [
-        "Judy Li (Choreo)",
-        "Sarah Cao (Choreo)",
-        "Alex Flojo",
-        "Cynthia Zhi",
-        "Eileen Li",
-        "Emily Hu",
-        "Isabel Lee",
-        "Jessie Luo",
-        "Lisa Ji",
-        "Sophia Dykstra",
-        "Tavia Liu",
-        "Victoria Li"
-      ],
-    },
   ],
   store: {
     caption:
@@ -537,9 +545,9 @@ const text = {
         ],
         subImages: undefined,
         price: "$27.00",
-        soldOut: false,
+        soldOut: true,
       },
-      {
+      /*{
         title: "Tote Bag",
         images: [
           { image: "tote-pic", alt: "LNYF Tote" },
@@ -547,7 +555,7 @@ const text = {
         ],
         subImages: undefined,
         price: "$18.00",
-        soldOut: false,
+        soldOut: true,
       },
       {
         title: "Sweatpants",
@@ -557,7 +565,7 @@ const text = {
         ],
         subImages: undefined,
         price: "$45.00",
-        soldOut: false,
+        soldOut: true,
       },
       {
         title: "Keychain",
@@ -566,8 +574,8 @@ const text = {
         ],
         subImages: undefined,
         price: "$5.00",
-        soldOut: false,
-      },
+        soldOut: true,
+      },*/
     ],
   },
   people: {
@@ -767,23 +775,56 @@ const text = {
   gallery: {
     2024: {
       photos: [
-        {
-          image: "2024_lion",
-          caption: "Lion Dance"
-        },
-        {
-          image: "2024_dai",
-          caption: "Dai"
-        },
-        {
-          image: "2024_standing",
-          caption: "Standing Drums"
-        },
+        { image: "2024_lion", caption: "Lion Dance"},
+        { image: "2024_dai", caption: "Dai"},
+        { image: "2024_standing", caption: "Standing Drums"},
+        { image: "2024_chinese_contemp", caption: "chinese_contemp"},
+        { image: "2024_fashionshow", caption: "fashion_show"},
+        { image: "2024_juggling", caption: "juggling"},
+        { image: "2024_kfan", caption: "kfan"},
+        { image: "2024_lotus", caption: "lotus"},
+        { image: "2024_samulnori", caption: "samulnori"},
+        { image: "2024_senior", caption: "senior_dance"},
+        { image: "2024_taekwondo", caption: "taekwondo"},
+        { image: "2024_tinikling", caption: "tinikling"},
+        { image: "2024_watersleeves", caption: "watersleeves"},
+        { image: "2024_yoyo", caption: "yoyo"},
+        { image: "backstage_one", caption: "backstage_one"},
+        { image: "backstage_two", caption: "backstage_two"},
+        { image: "curtain-call", caption: "curtain-call"},
+        { image: "chinese_contemp", caption: "chinese_contemp"},
+        { image: "dai", caption: "dai"},
+        { image: "kfan", caption: "kfan"},
+        { image: "lion", caption: "lion"},
+        { image: "lotus", caption: "lotus"},
+        { image: "senior-dance", caption: "senior-dance"},
+        { image: "sensasions", caption: "sensasions"},
+        { image: "standing", caption: "standing"},
+        { image: "taekwondo", caption: "taekwondo"},
+        { image: "taekwondo_one", caption: "taekwondo_one"},
+        { image: "tinikles_girls", caption: "tinikles_girls"},
+        { image: "tinikling_end", caption: "tinikling_end"},
+        { image: "watersleeves", caption: "watersleeves"},
+        { image: "yoyo", caption: "yoyo"},
       ],
       videos: [
-        {
-          link: "https://www.youtube.com/embed/Kw91dbtjtEc?si=fMv-HQsciqZWvCTw",
-        },
+        {link: "https://www.youtube.com/embed/Kw91dbtjtEc?si=fMv-HQsciqZWvCTw",},
+        {link: "https://www.youtube.com/embed/Mm4hct7hbJk?si=6GBychD59p9n96KX",},
+        {link: "https://www.youtube.com/embed/Ol1HRSY6Vw0?si=LgtLTuPUSHHA0Ra2",},
+        {link: "https://www.youtube.com/embed/8v1Uq4HlSqs?si=iK5zx6jyuKXDPxGv",},
+        {link: "https://www.youtube.com/embed/Lf94GmRdHkI?si=r5A1XbszXAC3JXeB",},
+        {link: "https://www.youtube.com/embed/uii1T0CZiDM?si=yk7Xwo7Y9VUFEdqi",},
+        {link: "https://www.youtube.com/embed/1R7FMHiNlCs?si=j-mT6lwUB9EyJDzv",},
+        {link: "https://www.youtube.com/embed/LEcB1Zf1K-0?si=kg0UvPCIOwZMrwE9",},
+        {link: "https://www.youtube.com/embed/bnGW3G-DiT8?si=Mwdx9sQP3h-9tJtN",},
+        {link: "https://www.youtube.com/embed/sw5Tr0V0mTw?si=BRQQSKVx-W7AFFCV",},
+        {link: "https://www.youtube.com/embed/asftPbpUkcM?si=lxxjNFVXP2CsTwpA",},
+        {link: "https://www.youtube.com/embed/xani_y29DUs?si=Igd29xBYkosGvRC5",},
+        {link: "https://www.youtube.com/embed/QK9Y_1UU11E?si=M7HpCg0W5BwTcqTW",},
+        {link: "https://www.youtube.com/embed/tOXkPKdFj5I?si=xsY3CQhV9qSh-hfy",},
+        {link: "https://www.youtube.com/embed/CG5wx44Zt5A?si=MhKcGzlsun1CU8r8",},
+        {link: "https://www.youtube.com/embed/VkmbbAuj1a0?si=kQ7Ty70F4n142ZsN",},
+        {link: "https://www.youtube.com/embed/k-Z31jzyWcI?si=kj4D8TOE5ksJa13V",},
       ],
     },
     2023: {
@@ -1199,7 +1240,7 @@ const text = {
     },
   },
   schedule: {
-    active: true,
+    active: false,
     content: (
       <>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf31P_qiT1jEkPz9lX368duUezPVGjCPW0V9IhmI5FNGfkkmQ/viewform?usp=sf_link">

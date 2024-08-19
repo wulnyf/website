@@ -20,8 +20,15 @@ const JumbotronContainer = styled(Container)`
   align-items: center;
   flex-direction: column;
   text-align: right;
-  justify-content: flex-end;
+  padding-top: 25vh; 
+  justify-content: flex-start;
   height: 100vh;
+
+  @media (max-width: 500px) {
+    padding-top: 0vh; 
+    justify-content: flex-end;
+  }
+
 `;
 
 const JumbotronButton = styled.div`
