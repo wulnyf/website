@@ -13,7 +13,7 @@ const theme = {
   },
   decoration: {
     border: "5px solid #fef7f7",
-    borderHover: "5px solid #ED8666",
+    borderHover: "5px solid #376d9c",
     boxShadowHover: "5px 5px 0px #0CB1BC",
     boxShadow: "5px 5px 0px #000",
   },
