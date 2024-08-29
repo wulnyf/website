@@ -183,14 +183,14 @@ const text = {
       description:
         "Apply to choreograph a dance in the upcoming 2025 show!",
     },
-    // {
-    //   month: "Sep",
-    //   day: "14",
-    //   title: "General Body Meeting",
-    //   caption: "6 PM @ Ursa's",
-    //   description:
-    //     "Come join our first GBM to find out more about how we celebrate Lunar New Year through performance, fundraising, and other events!",
-    // },
+    {
+      month: "Sep",
+      day: "8",
+      title: "General Body Meeting",
+      caption: "3 PM @ Ursa's",
+      description:
+        "Come join our first GBM to find out more about how we celebrate Lunar New Year through performance, fundraising, and other events!",
+    },
     // {
     //   month: "Sep",
     //   day: "15",
@@ -199,14 +199,14 @@ const text = {
     //   description:
     //     "Come to the LNYF Booth to play games and learn more about LNYF!",
     // },
-    // {
-    //   month: "Sep",
-    //   day: "16-22",
-    //   title: "Auditions",
-    //   caption: "More info to come",
-    //   description:
-    //     "Try out to become a performer at LNYF!",
-    // },
+    {
+      month: "Sep",
+      day: "16-20",
+      title: "Auditions",
+      caption: "More info to come on the instagram!",
+      description:
+        "Try out to become a performer at LNYF!",
+    },
     // {
     //   month: "Feb",
     //   day: "9-10",
@@ -710,7 +710,7 @@ const text = {
         position: "Corporate Sponsorship Chair",
         major: "Psychology, Economics and Strategy, with CS Minor",
         zodiac: "Horse",
-        facts: "LNYF is an opportunity for me not only to support my friends (and also participate!) in their various performing arts endeavors, but also to really take a step back from life and enjoy what WashU has to offer on a cultural and fun frontier. It's has also been a great opportunity for me to meet new people and develop myself in many professional ways as well.",
+        facts: "LNYF has been an  opportunity for me to support my friends in their performing arts endeavors, meet new people and develop myself professionally, and also some fun while we're at it ^-^",
       },
       {
         image: "alexzhang",
