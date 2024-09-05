@@ -201,9 +201,17 @@ const text = {
     // },
     {
       month: "Sep",
-      day: "16-20",
+      day: "14-15",
       title: "Auditions",
-      caption: "More info to come on the instagram!",
+      caption: "More info to come on in the Auditions tab and Instagram!",
+      description:
+        "Try out to become a performer at LNYF!",
+    },
+    {
+      month: "Sep",
+      day: "16-20",
+      title: "Make-Up Auditions",
+      caption: "More info to come on in the Auditions tab and Instagram!",
       description:
         "Try out to become a performer at LNYF!",
     },
