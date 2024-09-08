@@ -167,7 +167,7 @@ const text = {
     philanthropyLink: "https://www.thesqsh.org/",
   },
   events: [
-    {
+    /*{
       month: "Aug",
       day: "30",
       title: "Activities Fair",
@@ -182,7 +182,7 @@ const text = {
       caption: "Due 11:59 pm",
       description:
         "Apply to choreograph a dance in the upcoming 2025 show!",
-    },
+    }, */
     {
       month: "Sep",
       day: "8",
@@ -545,7 +545,7 @@ const text = {
     caption:
       "The store is closed temporarily. Please check back soon. Apologies for any inconvenience.",
     items: [
-      {
+      /*{
         title: "Long Sleeve Shirt",
         images: [
           { image: "shirt-pic", alt: "Long Sleeve" },
@@ -555,7 +555,7 @@ const text = {
         price: "$27.00",
         soldOut: true,
       },
-      /*{
+      {
         title: "Tote Bag",
         images: [
           { image: "tote-pic", alt: "LNYF Tote" },
@@ -1248,84 +1248,89 @@ const text = {
     },
   },
   schedule: {
-    active: false,
+    active: true,
     content: (
       <>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf31P_qiT1jEkPz9lX368duUezPVGjCPW0V9IhmI5FNGfkkmQ/viewform?usp=sf_link">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSef97k_fA8FsUM8l63CSOiV2jQECn65NckuCTybw1MRFO-69g/viewform?usp=sf_link">
           <AuditionButton>Liability Waiver</AuditionButton>
         </a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2upzA51d3ucJWSJ5T0Ngm59yzu4ebT_e_-kBebQl6t2VDig/viewform?usp=sf_link">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScPyvY2naMK4-hb6rudJg0zBNUJeqvgvVd0hHshQrRxAL03dg/viewform?usp=sf_link">
           <AuditionButton>Audition Attendance</AuditionButton>
         </a>
         <StyledHeader variant="h6">Auditions</StyledHeader>
         <Table>
           <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Location</th>
-            <th>Act</th>
+            <th style={{width: '150px'}}>Date</th>
+            <th style={{width: '110px'}}>Time</th>
+            <th style={{width: '110px'}}>Location</th>
+            <th style={{width: '150px'}}>Act</th>
           </tr>
           <tr>
-            <td rowspan="6">Saturday 9/16</td>
+            <td rowspan="7">Saturday 9/14</td>
             <td>10AM - 12PM</td>
-            <td>Mudd MPR</td>
-            <td>Dai</td>
+            <td>Olin 1</td>
+            <td>Vietnamese Fan</td>
           </tr>
           <tr>
             <td>12PM - 2PM</td>
-            <td>Mudd MPR</td>
-            <td>Lotus</td>
-          </tr>
-          <tr>
-            <td>2PM - 4PM</td>
-            <td>Mudd MPR</td>
-            <td>Fashion Show</td>
-          </tr>
-          <tr>
-            <td>4PM - 6PM</td>
-            <td>Mudd MPR</td>
-            <td>Chinese Contemporary</td>
-          </tr>
-          <tr>
-            <td>6PM - 8PM</td>
-            <td>Mudd MPR</td>
-            <td>Korean Fan</td>
-          </tr>
-          <tr>
-            <td>8PM - 10PM</td>
-            <td>Mudd MPR</td>
+            <td>Olin 1</td>
             <td>Watersleeves</td>
           </tr>
           <tr>
-            <td rowspan="7">Sunday 9/17</td>
+            <td>2PM - 4PM</td>
+            <td>Olin 2</td>
+            <td>Korean Fan</td>
+          </tr>
+          <tr>
+            <td>4PM - 6PM</td>
+            <td>Olin 2</td>
+            <td>Umbrella</td>
+          </tr>
+          <tr>
+            <td>6PM - 8PM</td>
+            <td>Olin 1</td>
+            <td>Lotus</td>
+          </tr>
+          <tr>
+            <td>8PM - 10PM</td>
+            <td>Olin 1</td>
+            <td>Contemp C-Fan</td>
+          </tr>
+          <tr>
+            <td>10PM - 12PM</td>
+            <td>Olin 1</td>
+            <td>Fashion Show</td>
+          </tr>
+          <tr>
+            <td rowspan="7">Sunday 9/15</td>
             <td>10AM - 12PM</td>
-            <td>Malli 302 & 303</td>
+            <td>Malli TBA</td>
             <td>Samulnori</td>
           </tr>
           <tr>
             <td>12PM - 2PM</td>
             <td>McMillan Cafe</td>
-            <td>Tinikling</td>
+            <td>Standing Drums</td>
           </tr>
           <tr>
             <td>2PM - 4PM</td>
             <td>McMillan Cafe</td>
-            <td>Standing Drum</td>
+            <td>Lion</td>
           </tr>
           <tr>
             <td>4PM - 6PM</td>
             <td>McMillan Cafe</td>
-            <td>Taekwondo</td>
+            <td>Tae Kwon Do</td>
           </tr>
           <tr>
             <td>6PM - 8PM</td>
             <td>McMillan Cafe</td>
-            <td>Juggling</td>
+            <td>Tinikling</td>
           </tr>
           <tr>
             <td>8PM - 10PM</td>
             <td>McMillan Cafe</td>
-            <td>Lion</td>
+            <td>Juggling</td>
           </tr>
           <tr>
             <td>10PM - 12AM</td>
@@ -1335,59 +1340,64 @@ const text = {
         </Table>
         <StyledHeader variant="h6">Makeups</StyledHeader>
         <Table>
-          <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Location</th>
-            <th>Act</th>
+        <tr>
+            <th style={{width: '150px'}}>Date</th>
+            <th style={{width: '110px'}}>Time</th>
+            <th style={{width: '110px'}}>Location</th>
+            <th style={{width: '150px'}}>Act</th>
           </tr>
           <tr>
-            <td rowspan="3">Monday 9/18</td>
-            <td>8PM - 10PM</td>
-            <td>Lopata MPR</td>
+            <td rowspan="3">Monday 9/16</td>
+            <td>6PM - 8PM</td>
+            <td>Mudd MPR</td>
             <td>Fashion Show</td>
           </tr>
           <tr>
-            <td>10PM - 12AM</td>
+            <td>8PM - 10AM</td>
             <td>Mudd MPR</td>
-            <td>Dai</td>
-          </tr>
-          <tr>
-            <td>10PM - 12AM</td>
-            <td>McMillan Cafe</td>
-            <td>Lion</td>
-          </tr>
-          <tr>
-            <td rowspan="3">Tuesday 9/19</td>
-            <td>8PM - 10PM</td>
-            <td>Malli 302 & 303</td>
-            <td>Samulnori</td>
-          </tr>
-          <tr>
-            <td>8PM - 10PM</td>
-            <td>Mudd MPR</td>
-            <td>Tinikling</td>
+            <td>Contemp C-Fan</td>
           </tr>
           <tr>
             <td>10PM - 12AM</td>
             <td>Mudd MPR</td>
-            <td>Chinese Contemporary</td>
+            <td>Tae Kwon Do</td>
           </tr>
           <tr>
-            <td rowspan="4">Wednesday 9/20</td>
+            <td rowspan="4">Tuesday 9/17</td>
             <td>6PM - 8PM</td>
             <td>McMillan Cafe</td>
             <td>Juggling</td>
           </tr>
-          <tr>
+          <tr>  
             <td>8PM - 10PM</td>
             <td>McMillan Cafe</td>
-            <td>Yoyo</td>
+            <td>Tinikling</td>
+          </tr>
+          <tr>
+            <td>8PM - 10PM</td>
+            <td>Olin 2</td>
+            <td>Lotus</td>
           </tr>
           <tr>
             <td>10PM - 12AM</td>
             <td>Olin 1</td>
-            <td>Watersleeves</td>
+            <td>Vietnamese Fan</td>
+          </tr>
+          <tr>
+            <td rowspan="4">Wednesday 9/18</td>
+            <td>6PM - 8PM</td>
+            <td>Mudd MPR</td>
+            <td>Umbrella</td>
+          </tr>
+          <tr>
+            <td>8PM - 10PM</td>
+            <td>Mudd MPR</td>
+            <td>Yoyo</td>
+          </tr>
+          <tr>
+            <td>10PM - 12AM</td>
+            <td>Mudd MPR</td>
+            <td>K-Fan</td>
           </tr>
           <tr>
             <td>10PM - 12AM</td>
@@ -1395,25 +1405,25 @@ const text = {
             <td>Standing Drum</td>
           </tr>
           <tr>
-            <td rowspan="3">Thursday 9/21</td>
+            <td rowspan="3">Thursday 9/19</td>
             <td>8PM - 10PM</td>
-            <td>Mudd MPR</td>
-            <td>Korean Fan</td>
+            <td>Mali TBA</td>
+            <td>Samulnori</td>
+          </tr>
+          <tr>
+            <td>10PM - 12AM</td>
+            <td>McMillan Cafe</td>
+            <td>Lion</td>
           </tr>
           <tr>
             <td>10PM - 12AM</td>
             <td>Mudd MPR</td>
-            <td>Lotus</td>
+            <td>Watersleeves</td>
           </tr>
           <tr>
-            <td>10PM - 12AM</td>
-            <td>Olin 1</td>
-            <td>Taekwondo</td>
-          </tr>
-          <tr>
-            <td>Friday 9/22</td>
+            <td>Friday 9/20</td>
             <td>6PM - 8PM</td>
-            <td>TBD</td>
+            <td>Olin 2</td>
             <td>Lion (Callbacks)</td>
           </tr>
         </Table>

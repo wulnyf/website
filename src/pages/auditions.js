@@ -8,8 +8,12 @@ import Seo from "../components/Seo";
 import text from "../text";
 
 const StyledContainer = styled(Container)`
+  text-align: center;
   margin-top: 60px;
   padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const AuditionsPage = () => {

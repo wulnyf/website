@@ -8,7 +8,7 @@ const StyledDiv = styled.div`
   margin-top: 10px;
   border-radius: 3px;
   @media (min-width: 800px) {
-    width: 150px;
+    width: 160px;
   }
 `;
 

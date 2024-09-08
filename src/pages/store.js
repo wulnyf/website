@@ -106,11 +106,11 @@ const StorePage = ({ data }) => {
                 <Button>Purchase</Button>
               </a>
             )}
-            {/* {text.store.caption && (
+            {text.store.caption && (
               <StyledCaption variant="caption">
                 {text.store.caption}
               </StyledCaption>
-            )} */}
+            )}
           </>
         }
       >
