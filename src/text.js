@@ -203,17 +203,17 @@ const text = {
       month: "Sep",
       day: "14-15",
       title: "Auditions",
-      caption: "More info to come on in the Auditions tab and Instagram!",
+      caption: "More info on the Auditions Page and LNYF's Instagram!",
       description:
-        "Try out to become a performer at LNYF!",
+        "Try out to become a performer at LNYF 2025!",
     },
     {
       month: "Sep",
       day: "16-20",
       title: "Make-Up Auditions",
-      caption: "More info to come on in the Auditions tab and Instagram!",
+      caption: "More info on the Auditions Page and LNYF's Instagram!",
       description:
-        "Try out to become a performer at LNYF!",
+        "In case you missed it, or for a second chance!",
     },
     // {
     //   month: "Feb",
