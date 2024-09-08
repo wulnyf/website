@@ -545,6 +545,15 @@ const text = {
     caption:
       "The store is closed temporarily. Please check back soon. Apologies for any inconvenience.",
     items: [
+      {
+        title: "COMING SOON",
+        images: [
+          { image: "coming-soon", alt: "Coming Soon" },
+        ],
+        subImages: undefined,
+        price: "free",
+        soldOut: false,
+      },
       /*{
         title: "Long Sleeve Shirt",
         images: [
@@ -1248,7 +1257,7 @@ const text = {
     },
   },
   schedule: {
-    active: true,
+    active: false,
     content: (
       <>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSef97k_fA8FsUM8l63CSOiV2jQECn65NckuCTybw1MRFO-69g/viewform?usp=sf_link">
