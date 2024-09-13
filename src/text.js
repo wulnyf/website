@@ -1257,7 +1257,7 @@ const text = {
     },
   },
   schedule: {
-    active: false,
+    active: true,
     content: (
       <>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSef97k_fA8FsUM8l63CSOiV2jQECn65NckuCTybw1MRFO-69g/viewform?usp=sf_link">
@@ -1306,14 +1306,14 @@ const text = {
             <td>Contemp C-Fan</td>
           </tr>
           <tr>
-            <td>10PM - 12PM</td>
+            <td>10PM - 12AM</td>
             <td>Olin 1</td>
             <td>Fashion Show</td>
           </tr>
           <tr>
             <td rowspan="7">Sunday 9/15</td>
             <td>10AM - 12PM</td>
-            <td>Malli TBA</td>
+            <td>Malli 303/305</td>
             <td>Samulnori</td>
           </tr>
           <tr>
@@ -1416,7 +1416,7 @@ const text = {
           <tr>
             <td rowspan="3">Thursday 9/19</td>
             <td>8PM - 10PM</td>
-            <td>Mali TBA</td>
+            <td>Malli 302/303</td>
             <td>Samulnori</td>
           </tr>
           <tr>
