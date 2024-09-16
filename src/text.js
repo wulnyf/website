@@ -1264,7 +1264,10 @@ const text = {
           <AuditionButton>Liability Waiver</AuditionButton>
         </a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScPyvY2naMK4-hb6rudJg0zBNUJeqvgvVd0hHshQrRxAL03dg/viewform?usp=sf_link">
-          <AuditionButton>Audition Attendance</AuditionButton>
+          <AuditionButton>Attendance Form</AuditionButton>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDLnYR7A67esGHGjW5TjIcSJICxdtdzQjp09wrYPoXpOxd9g/viewform">
+          <AuditionButton>Auditions Form</AuditionButton>
         </a>
         <StyledHeader variant="h6">Auditions</StyledHeader>
         <Table>
