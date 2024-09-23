@@ -1,8 +1,8 @@
-import React from "react";
-import Typography from "./components/Typography";
 import { Link } from "gatsby";
-import Button from "./components/Button";
+import React from "react";
 import styled from "styled-components";
+import Button from "./components/Button";
+import Typography from "./components/Typography";
 
 const StyledButton = styled(Button)`
   margin-right: 10px;
@@ -140,8 +140,8 @@ const text = {
     aboutText: (
       <>
         <Typography>
-        Lunar New Year Festival (LNYF) is an annual student-run production staged in commemoration and celebration of the Lunar New Year.
-        LNYF seeks to leave a prolonged impact both on and off the stage. Dynamic performances ranging from acting to dancing to martial arts explore Asian heritage from both traditional and modern perspectives, and acknowledge social issues prevalent in Asian communities. LNYF partners with local non-profit organizations to offer sustainable support to the greater St Louis community.
+          Lunar New Year Festival (LNYF) is an annual student-run production staged in commemoration and celebration of the Lunar New Year.
+          LNYF seeks to leave a prolonged impact both on and off the stage. Dynamic performances ranging from acting to dancing to martial arts explore Asian heritage from both traditional and modern perspectives, and acknowledge social issues prevalent in Asian communities. LNYF partners with local non-profit organizations to offer sustainable support to the greater St Louis community.
         </Typography>
       </>
     ),
@@ -149,19 +149,19 @@ const text = {
     philanthropyText: (
       <>
         <Typography>
-        LNYF is proud to partner with St. Louis Queer Support & Healing (SQSH) as its philanthropy for the Year of the Snake.
+          LNYF is proud to partner with St. Louis Queer Support & Healing (SQSH) as its philanthropy for the Year of the Snake.
         </Typography>
 
-        <Typography style={{"font-weight": "bold"}}> About the Philanthropy: </Typography>
+        <Typography style={{ "font-weight": "bold" }}> About the Philanthropy: </Typography>
 
         <Typography>
-        A group of dedicated queer St. Louisans founded SQSH on June 1, 2019, after a community needs assessment demonstrated that the St. Louis LGBTQIA+ community faces increased rates of violence, discrimination, substance use, and insecurity in employment and housing; disparities in medical, mental, and sexual health; and barriers to accessing the identity-affirming resources needed to meet those needs.
+          A group of dedicated queer St. Louisans founded SQSH on June 1, 2019, after a community needs assessment demonstrated that the St. Louis LGBTQIA+ community faces increased rates of violence, discrimination, substance use, and insecurity in employment and housing; disparities in medical, mental, and sexual health; and barriers to accessing the identity-affirming resources needed to meet those needs.
         </Typography>
         <Typography>
-        SQSH’s mission is to strengthen the St. Louis queer community by building collective skills for peer support, active listening, and navigating conflict. It operates a telephone support line five days a week, builds deep connections within the local community, and partners with civil rights organizations to advocate for LGBTQIA+ needs. SQSH aims to create alternative models, strategies, and practices that moves the LGBTQIA+ community closer to collective liberation.
+          SQSH’s mission is to strengthen the St. Louis queer community by building collective skills for peer support, active listening, and navigating conflict. It operates a telephone support line five days a week, builds deep connections within the local community, and partners with civil rights organizations to advocate for LGBTQIA+ needs. SQSH aims to create alternative models, strategies, and practices that moves the LGBTQIA+ community closer to collective liberation.
         </Typography>
 
-        
+
       </>
     ),
     philanthropyLink: "https://www.thesqsh.org/",
@@ -238,7 +238,7 @@ const text = {
       title: "St. Louis Queer SUpport &amp Healing",
       money: undefined,
       description:
-      'SQSH’s mission is to strengthen the St. Louis queer community by building collective skills for peer support, active listening, and navigating conflict. It operates a telephone support line five days a week, builds deep connections within the local community, and partners with civil rights organizations to advocate for LGBTQIA+ needs. SQSH aims to create alternative models, strategies, and practices that moves the LGBTQIA+ community closer to collective liberation.',
+        'SQSH’s mission is to strengthen the St. Louis queer community by building collective skills for peer support, active listening, and navigating conflict. It operates a telephone support line five days a week, builds deep connections within the local community, and partners with civil rights organizations to advocate for LGBTQIA+ needs. SQSH aims to create alternative models, strategies, and practices that moves the LGBTQIA+ community closer to collective liberation.',
       link: "https://www.thesqsh.org/",
     },
     2024: {
@@ -308,236 +308,110 @@ const text = {
   },
   performances: [
     {
-      title: "Chinese Contemporary",
-      image: "chinesecontemp",
+      title: "Chinese Contemporary Fan",
+      image: "ccfan",
       performers: [
-        "Addie Li (Choreo)",
-        "Amanda Taylor (Choreo)",
-        "Sophia Chow (Choreo)",
-        "Andria Luo",
-        "Anna Li",
-        "Celina Liu",
-        "Elizabeth Jin",
-        "Emily Shen",
-        "Hongyu Li",
-        "Morgan Ye",
-        "Prerana Acharyya",
-        "Rachel Tian"
+        "Rachel Wei (choreo)", "Jennifer Li (choreo)", "Alex Liu", "Catherine Zhao", "Eilene Liu", "Helen Ma", "Jessica Hu", "Julia Li", "Kathleen Weng", "Lisa Ji", "Maggie Cheng", "Ran Duan"
       ],
     },
     {
-      title: "Dai",
-      image: "dai",
+      title: "Chinese Umbrella",
+      image: "umbrella",
       performers: [
-        "Judy Li (Choreo)",
-        "Sarah Cao (Choreo)",
-        "Alex Flojo",
-        "Cynthia Zhi",
-        "Eileen Li",
-        "Emily Hu",
-        "Isabel Lee",
-        "Jessie Luo",
-        "Lisa Ji",
-        "Sophia Dykstra",
-        "Tavia Liu",
-        "Victoria Li"
+        "Emily Shen (choreo)", "Ching Ching Zhang (choreo)", "Amelia Kung", "Andria Luo", "Annie Zhao", "Celina Liu", "Claire Ku", "Gioia Wang", "Kiki Sakano", "Kylee Kest", "Theresa Xuan Nguyen", "Veronica Hsu"
       ],
     },
     {
       title: "Fashion Show",
       image: "fashionshow",
       performers: [
-        "Maki Oh (Choreo)",
-        "Michelle Chen (Choreo)",
-        "Sophia Dykstra (Choreo)",
-        "BaoVy Nguyen",
-        "Coco Wu",
-        "Dung Tran",
-        "Emily Hao",
-        "Hailey Kim",
-        "Joye Zheng",
-        "Kelly Gan",
-        "Lynn Yuan",
-        "Nikki Nguyen",
-        "Sangmi Lee",
-        "Sophie Lee"
+        "Kelly Gan (choreo)", "Bao Nguyen (choreo)", "Nikki Nguyen (choreo)", "Angel Truong", "Dung Tran", "Hailey Kim", "Hannah Chen", "Jacky Ta", "Jana Yan", "Jessica Chen", "Joye Zheng", "Madeleine Yeung", "Phi Chanda", "Sophie Lin", "William Li"
       ],
     },
     {
       title: "Juggling",
       image: "juggling",
       performers: [
-        "Jeremy Cho (Choreo)",
-        "Matthew Yu (Choreo)",
-        "William Chen (Choreo)",
-        "Daniel Chen",
-        "Grant Kaplan",
-        "Matthew Turbin",
-        "Sandro Xiao",
-        "Shawn Fong"
+        "Daniel Chen (choreo)", "Jeremy Cho (choreo)", "Grant Kaplan (choreo)", "Logan Sumitani", "Justin Xu", "Kevin Yan", "Lizzie Wagner", "Mandar Brahmbhatt", "Synoma Perea"
       ],
     },
     {
       title: "Korean Fan",
       image: "kfan",
       performers: [
-        "Sarah Kim (Choreo)",
-        "Andrea Ham",
-        "Audrey Tsai",
-        "Catherine Zhao",
-        "Jessica Lee",
-        "Kalea Lee",
-        "Katie Zhou",
-        "Madison Wang",
-        "Maki Oh",
-        "Michelle Chen",
-        "Min-suh Kwak",
-        "Vicky Cadena"
+        "Sarah Cao (choreo)", "Kalea Lee (choreo)", "Vicky Cadena (choreo)", "Andrea Ham", "Audrey Tsai", "Eric Montufar-Morales", "Frank Jiang", "Jamie Shin", "Jessica Lee", "Kaitlyn Wang", "Katie Zhou", "Min Suh Kwak", "Miranda Lee"
       ],
     },
     {
       title: "Lion",
       image: "lion",
       performers: [
-        "Wenting Yu (H) (Choreo)",
-        "Matthew Du (T) (Choreo)",
-        "Amanda Taylor (H)",
-        "Birdie Lee (H)",
-        "Cindy Li (H)",
-        "Justin Lan (T)",
+        "Birdie Lee (H) (choreo)",
+        "Justin Lan (T) (choreo)",
+        "Edward Hao (H)",
+        "Kelly Gan (H)",
+        "Wenting Yu (H)",
+        "Matthew Du (T)",
         "Richard Yang (T)",
         "William Yin (T)",
-        "Dora Chen (P)",
-        "Stephane Cui (P)"
+        "Kevin Si (P)",
+        "Lance Yeh (P)"
       ],
     },
     {
       title: "Lotus",
       image: "lotusvietnamese",
       performers: [
-        "Tietchan Dang (Choreo)",
-        "Vicki Truong (Choreo)",
-        "Cece Ly",
-        "Celine Vuong",
-        "Grace Nelson",
-        "Helen Ha",
-        "Nhi Ly",
-        "Sydney Hwang",
-        "Theresa Xuan Nguyen",
-        "Tiana Mao"
+        "Vicki Truong (choreo)", "Theresa Xuan Nguyen (choreo)", "Abby Tang", "Bao Nguyen", "Cassie Phan", "Emma Shen", "Kim Nguyen", "Nhi Ly", "Sydney Kim", "Sydney Kuo", "Tiffany Chan"
       ],
     },
     {
       title: "Samulnori",
       image: "samulnori",
       performers: [
-        "Andrew Yu (Choreo)",
-        "Jane Zhang (Choreo)",
-        "Alana Depaz",
-        "Amanda Zhu",
-        "Chelsea Chun",
-        "Elysia Quah",
-        "Emily So",
-        "Grace Choi",
-        "Hillary Fujimoto",
-        "Jace Park",
-        "Jay Won",
-        "Joy Choi",
-        "Linus Lee",
-        "Minjung Song",
-        "Rachel Wei",
-        "Sebastian Lee",
-        "Seoyoung Bae"
+        "Emily So (choreo)", "Sebastian Lee (choreo)", "Alex Zhang", "Alyssa Kim", "Andy Mun", "Chelsea Chun", "Elaine Yoo", "Emily Shen", "Jane Zhang", "Jasmine Li", "Jeremy Lin", "Juneseo Lee", "Justin Baek", "Nevin Song", "Sol Bae", "Steven Tao", "Yoon Shin"
       ],
     },
     {
       title: "Standing Drums",
       image: "standingdrums",
       performers: [
-        "Alex Liu (Choreo)",
-        "Grace Lai (Choreo)",
-        "Connor Park",
-        "Harry Gao",
-        "Claire Pan",
-        "Deanna Wu",
-        "Dexter Chen",
-        "Jasmine Yang",
-        "Ken Soe",
-        "Wenting Yu"
-      ],
-    },
-    {
-      title: "Tinikling",
-      image: "tinikling",
-      performers: [
-        "Aaron Wang (Choreo)",
-        "Noelle Casem (Choreo)",
-        "Paula Glaser (Choreo)",
-        "Alicia Huang",
-        "Annie Chang",
-        "Gwyneth Noel",
-        "Jane Liang",
-        "Malaya Hill",
-        "Sophie Leong",
-        "Alex Fang",
-        "John Paul Pineda",
-        "Kellen Wang",
-        "Miguel Cadiz",
-        "Nathan Suh",
-        "Ricky Wang",
-        "Tanner Sharon"
+        "Alex Liu (choreo)", "Harry Gao (choreo)", "Birdie Lee", "Daniel Yoo", "Dexter Chen", "Elysia Quah", "Iris Yang", "Justin Yu", "Lia Seo", "Richard Li"
       ],
     },
     {
       title: "Taekwondo",
       image: "taekwondo",
       performers: [
-        "Jonathan Tsao (Choreo)",
-        "Priyanka Deka (Choreo)",
-        "Sayf Fadil (Choreo)",
-        "Allison Rea",
-        "Daniel Oh",
-        "Elizabeth Chen",
-        "James Law",
-        "Julie Baguio",
-        "Michael Nguyen",
-        "Nathan Zhou",
-        "Ray Adelstein",
-        "Sarah Cai"
+        "Julie Baguio (choreo)", "Priyanka Deka (choreo)", "Sayf Fadil (choreo)", "Daniel Oh", "James Law", "Jason Ng", "Jonathan Leung", "Michael Nguyen", "Nathan Zhou", "Sarah Cai"
+      ],
+    },
+    {
+      title: "Tinikling",
+      image: "tinikling",
+      performers: [
+        "Jane Liang (choreo)", "Paula Glaser (choreo)", "Ricky Wang (choreo)", "Alexandria Flojo", "Amanda Young", "Cece Idinopulos", "Claudine Noel", "Julie Baguio", "Noelle Casem", "Sophie Leong", "Aaron Wang", "Darian Liu", "Eric Liu", "John Glaser", "Max Francisco", "Noah Sagum", "Ronak Chandiwala"
+      ],
+    },
+    {
+      title: "Vietnamese Fan",
+      image: "vfan",
+      performers: [
+        "Tietchan Dang (choreo)", "Vivian Nguyen (choreo)", "Charlotte Chen", "Emily Hao", "Nikki Nguyen", "Sarah You", "Tiffany Ly", "Vy Nguyen"
       ],
     },
     {
       title: "Watersleeves",
       image: "watersleeves",
       performers: [
-        "Amanda Taylor (Choreo)",
-        "Anna Li (Choreo)",
-        "Ching Ching Zhang (Choreo)",
-        "Addie Li",
-        "Annabel Shen",
-        "Benjamin Yi",
-        "Caleb Lee",
-        "Gioia Wang",
-        "Grace Chen",
-        "Jessica Li"
+        "Celina Liu (choreo)", "Andria Luo (choreo)", "Caleb Lee", "Cynthia Chen", "Cynthia Zhi", "Ella Jang", "Esther Wang", "Jocelyn Liao", "Keyuan Song", "Vicki Truong"
       ],
     },
     {
       title: "Yoyo",
       image: "yoyo",
       performers: [
-        "Benjamin Yi (Choreo)",
-        "Emily Shen (Choreo)",
-        "Raymond Dai (Choreo)",
-        "Ashtin Wang",
-        "David Zhu",
-        "Demi Zhuang",
-        "Megan Guo",
-        "Nevin Song",
-        "Reina Xu",
-        "Sharon Shen",
-        "Tiffany Chen",
-        "William Chen"
+        "Emily Shen (choreo)", "Demi Zhuang (choreo)", "Nevin Song (choreo)", "Brandon Lin", "David Zhu", "Ivy Huang", "Madison Wang", "Megan Guo", "Peter Chang", "Reina Xu", "Ryan Lin", "Sharon Shen", "Thomas Lang"
       ],
     },
   ],
@@ -792,56 +666,56 @@ const text = {
   gallery: {
     2024: {
       photos: [
-        { image: "2024_lion", caption: "Lion Dance"},
-        { image: "2024_dai", caption: "Dai"},
-        { image: "2024_standing", caption: "Standing Drums"},
-        { image: "2024_chinese_contemp", caption: "chinese_contemp"},
-        { image: "2024_fashionshow", caption: "fashion_show"},
-        { image: "2024_juggling", caption: "juggling"},
-        { image: "2024_kfan", caption: "kfan"},
-        { image: "2024_lotus", caption: "lotus"},
-        { image: "2024_samulnori", caption: "samulnori"},
-        { image: "2024_senior", caption: "senior_dance"},
-        { image: "2024_taekwondo", caption: "taekwondo"},
-        { image: "2024_tinikling", caption: "tinikling"},
-        { image: "2024_watersleeves", caption: "watersleeves"},
-        { image: "2024_yoyo", caption: "yoyo"},
-        { image: "backstage_one", caption: "backstage_one"},
-        { image: "backstage_two", caption: "backstage_two"},
-        { image: "curtain-call", caption: "curtain-call"},
-        { image: "chinese_contemp", caption: "chinese_contemp"},
-        { image: "dai", caption: "dai"},
-        { image: "kfan", caption: "kfan"},
-        { image: "lion", caption: "lion"},
-        { image: "lotus", caption: "lotus"},
-        { image: "senior-dance", caption: "senior-dance"},
-        { image: "sensasions", caption: "sensasions"},
-        { image: "standing", caption: "standing"},
-        { image: "taekwondo", caption: "taekwondo"},
-        { image: "taekwondo_one", caption: "taekwondo_one"},
-        { image: "tinikles_girls", caption: "tinikles_girls"},
-        { image: "tinikling_end", caption: "tinikling_end"},
-        { image: "watersleeves", caption: "watersleeves"},
-        { image: "yoyo", caption: "yoyo"},
+        { image: "2024_lion", caption: "Lion Dance" },
+        { image: "2024_dai", caption: "Dai" },
+        { image: "2024_standing", caption: "Standing Drums" },
+        { image: "2024_chinese_contemp", caption: "chinese_contemp" },
+        { image: "2024_fashionshow", caption: "fashion_show" },
+        { image: "2024_juggling", caption: "juggling" },
+        { image: "2024_kfan", caption: "kfan" },
+        { image: "2024_lotus", caption: "lotus" },
+        { image: "2024_samulnori", caption: "samulnori" },
+        { image: "2024_senior", caption: "senior_dance" },
+        { image: "2024_taekwondo", caption: "taekwondo" },
+        { image: "2024_tinikling", caption: "tinikling" },
+        { image: "2024_watersleeves", caption: "watersleeves" },
+        { image: "2024_yoyo", caption: "yoyo" },
+        { image: "backstage_one", caption: "backstage_one" },
+        { image: "backstage_two", caption: "backstage_two" },
+        { image: "curtain-call", caption: "curtain-call" },
+        { image: "chinese_contemp", caption: "chinese_contemp" },
+        { image: "dai", caption: "dai" },
+        { image: "kfan", caption: "kfan" },
+        { image: "lion", caption: "lion" },
+        { image: "lotus", caption: "lotus" },
+        { image: "senior-dance", caption: "senior-dance" },
+        { image: "sensasions", caption: "sensasions" },
+        { image: "standing", caption: "standing" },
+        { image: "taekwondo", caption: "taekwondo" },
+        { image: "taekwondo_one", caption: "taekwondo_one" },
+        { image: "tinikles_girls", caption: "tinikles_girls" },
+        { image: "tinikling_end", caption: "tinikling_end" },
+        { image: "watersleeves", caption: "watersleeves" },
+        { image: "yoyo", caption: "yoyo" },
       ],
       videos: [
-        {link: "https://www.youtube.com/embed/Kw91dbtjtEc?si=fMv-HQsciqZWvCTw",},
-        {link: "https://www.youtube.com/embed/Mm4hct7hbJk?si=6GBychD59p9n96KX",},
-        {link: "https://www.youtube.com/embed/Ol1HRSY6Vw0?si=LgtLTuPUSHHA0Ra2",},
-        {link: "https://www.youtube.com/embed/8v1Uq4HlSqs?si=iK5zx6jyuKXDPxGv",},
-        {link: "https://www.youtube.com/embed/Lf94GmRdHkI?si=r5A1XbszXAC3JXeB",},
-        {link: "https://www.youtube.com/embed/uii1T0CZiDM?si=yk7Xwo7Y9VUFEdqi",},
-        {link: "https://www.youtube.com/embed/1R7FMHiNlCs?si=j-mT6lwUB9EyJDzv",},
-        {link: "https://www.youtube.com/embed/LEcB1Zf1K-0?si=kg0UvPCIOwZMrwE9",},
-        {link: "https://www.youtube.com/embed/bnGW3G-DiT8?si=Mwdx9sQP3h-9tJtN",},
-        {link: "https://www.youtube.com/embed/sw5Tr0V0mTw?si=BRQQSKVx-W7AFFCV",},
-        {link: "https://www.youtube.com/embed/asftPbpUkcM?si=lxxjNFVXP2CsTwpA",},
-        {link: "https://www.youtube.com/embed/xani_y29DUs?si=Igd29xBYkosGvRC5",},
-        {link: "https://www.youtube.com/embed/QK9Y_1UU11E?si=M7HpCg0W5BwTcqTW",},
-        {link: "https://www.youtube.com/embed/tOXkPKdFj5I?si=xsY3CQhV9qSh-hfy",},
-        {link: "https://www.youtube.com/embed/CG5wx44Zt5A?si=MhKcGzlsun1CU8r8",},
-        {link: "https://www.youtube.com/embed/VkmbbAuj1a0?si=kQ7Ty70F4n142ZsN",},
-        {link: "https://www.youtube.com/embed/k-Z31jzyWcI?si=kj4D8TOE5ksJa13V",},
+        { link: "https://www.youtube.com/embed/Kw91dbtjtEc?si=fMv-HQsciqZWvCTw", },
+        { link: "https://www.youtube.com/embed/Mm4hct7hbJk?si=6GBychD59p9n96KX", },
+        { link: "https://www.youtube.com/embed/Ol1HRSY6Vw0?si=LgtLTuPUSHHA0Ra2", },
+        { link: "https://www.youtube.com/embed/8v1Uq4HlSqs?si=iK5zx6jyuKXDPxGv", },
+        { link: "https://www.youtube.com/embed/Lf94GmRdHkI?si=r5A1XbszXAC3JXeB", },
+        { link: "https://www.youtube.com/embed/uii1T0CZiDM?si=yk7Xwo7Y9VUFEdqi", },
+        { link: "https://www.youtube.com/embed/1R7FMHiNlCs?si=j-mT6lwUB9EyJDzv", },
+        { link: "https://www.youtube.com/embed/LEcB1Zf1K-0?si=kg0UvPCIOwZMrwE9", },
+        { link: "https://www.youtube.com/embed/bnGW3G-DiT8?si=Mwdx9sQP3h-9tJtN", },
+        { link: "https://www.youtube.com/embed/sw5Tr0V0mTw?si=BRQQSKVx-W7AFFCV", },
+        { link: "https://www.youtube.com/embed/asftPbpUkcM?si=lxxjNFVXP2CsTwpA", },
+        { link: "https://www.youtube.com/embed/xani_y29DUs?si=Igd29xBYkosGvRC5", },
+        { link: "https://www.youtube.com/embed/QK9Y_1UU11E?si=M7HpCg0W5BwTcqTW", },
+        { link: "https://www.youtube.com/embed/tOXkPKdFj5I?si=xsY3CQhV9qSh-hfy", },
+        { link: "https://www.youtube.com/embed/CG5wx44Zt5A?si=MhKcGzlsun1CU8r8", },
+        { link: "https://www.youtube.com/embed/VkmbbAuj1a0?si=kQ7Ty70F4n142ZsN", },
+        { link: "https://www.youtube.com/embed/k-Z31jzyWcI?si=kj4D8TOE5ksJa13V", },
       ],
     },
     2023: {
@@ -1272,10 +1146,10 @@ const text = {
         <StyledHeader variant="h6">Auditions</StyledHeader>
         <Table>
           <tr>
-            <th style={{width: '150px'}}>Date</th>
-            <th style={{width: '110px'}}>Time</th>
-            <th style={{width: '110px'}}>Location</th>
-            <th style={{width: '150px'}}>Act</th>
+            <th style={{ width: '150px' }}>Date</th>
+            <th style={{ width: '110px' }}>Time</th>
+            <th style={{ width: '110px' }}>Location</th>
+            <th style={{ width: '150px' }}>Act</th>
           </tr>
           <tr>
             <td rowspan="7">Saturday 9/14</td>
@@ -1352,11 +1226,11 @@ const text = {
         </Table>
         <StyledHeader variant="h6">Makeups</StyledHeader>
         <Table>
-        <tr>
-            <th style={{width: '150px'}}>Date</th>
-            <th style={{width: '110px'}}>Time</th>
-            <th style={{width: '110px'}}>Location</th>
-            <th style={{width: '150px'}}>Act</th>
+          <tr>
+            <th style={{ width: '150px' }}>Date</th>
+            <th style={{ width: '110px' }}>Time</th>
+            <th style={{ width: '110px' }}>Location</th>
+            <th style={{ width: '150px' }}>Act</th>
           </tr>
           <tr>
             <td rowspan="3">Monday 9/16</td>
@@ -1380,7 +1254,7 @@ const text = {
             <td>McMillan Cafe</td>
             <td>Juggling</td>
           </tr>
-          <tr>  
+          <tr>
             <td>8PM - 10PM</td>
             <td>McMillan Cafe</td>
             <td>Tinikling</td>

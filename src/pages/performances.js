@@ -1,16 +1,22 @@
-import React from "react";
-import Layout from "../components/Layout";
-import InnerPage from "../components/InnerPage";
-import text from "../text";
-import StyledImage from "../components/StyledImage";
-import convertImgArrToMap from "../utils/convertImgArrToMap";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import React from "react";
 import styled from "styled-components";
-import Typography from "../components/Typography";
+import InnerPage from "../components/InnerPage";
+import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import StyledImage from "../components/StyledImage";
+import Typography from "../components/Typography";
+import text from "../text";
+import convertImgArrToMap from "../utils/convertImgArrToMap";
 
 const StyledHeader = styled(Typography)`
+  /* text-align: center;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
+
   margin-top: 20px;
   margin-bottom: 5px;
 `;
@@ -46,6 +52,7 @@ const PerformanceContent = styled.div`
 const PerformanceContainer = styled.div`
   display: flex;
   margin-bottom: 20px;
+  margin-right: 100px;
   flex-direction: column;
   @media (min-width: 600px) {
     flex-direction: row;
@@ -77,7 +84,17 @@ const PerformancesPage = ({ data }) => {
             </ImageContainer>
             <PerformanceContent>
               <StyledHeader variant="h6">{p.title}</StyledHeader>
-              <Typography>{p.performers.join(", ")}</Typography>
+              <Typography>
+                {p.performers.map((performer, index) => {
+                  const isChoreo = performer.includes("(choreo)");
+                  return (
+                    <span key={index}>
+                      {isChoreo ? <strong>{performer}</strong> : performer}
+                      {index < p.performers.length - 1 && ", "}
+                    </span>
+                  );
+                })}
+              </Typography>
             </PerformanceContent>
           </PerformanceContainer>
         ))}
