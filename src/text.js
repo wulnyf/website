@@ -332,7 +332,7 @@ const text = {
       title: "Juggling",
       image: "juggling",
       performers: [
-        "Daniel Chen (choreo)", "Jeremy Cho (choreo)", "Grant Kaplan (choreo)", "Logan Sumitani", "Justin Xu", "Kevin Yan", "Lizzie Wagner", "Mandar Brahmbhatt", "Synoma Perea"
+        "Daniel Chen (choreo)", "Jeremy Cho (choreo)", "Grant Kaplan (choreo)", "Logan Sumitani", "Justin Xu", "Lizzie Wagner", "Mandar Brahmbhatt", "Sandro Xiao", "Synoma Perea"
       ],
     },
     {
