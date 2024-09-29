@@ -339,7 +339,7 @@ const text = {
       title: "Korean Fan",
       image: "kfan",
       performers: [
-        "Sarah Cao (choreo)", "Kalea Lee (choreo)", "Vicky Cadena (choreo)", "Andrea Ham", "Audrey Tsai", "Eric Montufar-Morales", "Frank Jiang", "Jamie Shin", "Jessica Lee", "Kaitlyn Wang", "Katie Zhou", "Min Suh Kwak", "Miranda Lee"
+        "Sarah Cao (choreo)", "Kalea Lee (choreo)", "Vicky Cadena (choreo)", "Audrey Tsai", "Eric Montufar-Morales", "Frank Jiang", "Jamie Shin", "Jessica Lee", "Kaitlyn Wang", "Min Suh Kwak", "Miranda Lee"
       ],
     },
     {
@@ -369,7 +369,7 @@ const text = {
       title: "Samulnori",
       image: "samulnori",
       performers: [
-        "Emily So (choreo)", "Sebastian Lee (choreo)", "Alex Zhang", "Alyssa Kim", "Andy Mun", "Chelsea Chun", "Elaine Yoo", "Emily Shen", "Jane Zhang", "Jasmine Li", "Jeremy Lin", "Juneseo Lee", "Justin Baek", "Nevin Song", "Sol Bae", "Steven Tao", "Yoon Shin"
+        "Emily So (choreo)", "Sebastian Lee (choreo)", "Alex Zhang", "Alyssa Kim", "Andy Mun", "Chelsea Chun", "Elaine Yoo", "Emily Shen", "Jane Zhang", "Jasmine Li", "Jeremy Lin", "Juneseo Lee", "Nevin Song", "Sol Bae", "Steven Tao", "Yoon Shin"
       ],
     },
     {
