@@ -182,7 +182,7 @@ const text = {
       caption: "Due 11:59 pm",
       description:
         "Apply to choreograph a dance in the upcoming 2025 show!",
-    }, */
+    }, 
     {
       month: "Sep",
       day: "8",
@@ -190,7 +190,7 @@ const text = {
       caption: "3 PM @ Ursa's",
       description:
         "Come join our first GBM to find out more about how we celebrate Lunar New Year through performance, fundraising, and other events!",
-    },
+    },*/
     // {
     //   month: "Sep",
     //   day: "15",
@@ -199,7 +199,7 @@ const text = {
     //   description:
     //     "Come to the LNYF Booth to play games and learn more about LNYF!",
     // },
-    {
+    /*{
       month: "Sep",
       day: "14-15",
       title: "Auditions",
@@ -214,15 +214,39 @@ const text = {
       caption: "More info on the Auditions Page and LNYF's Instagram!",
       description:
         "In case you missed it, or for a second chance!",
+    }, */
+    {
+      month: "Nov",
+      day: "9",
+      title: "Performer Banquet",
+      caption: "6-8 PM @ Umrath Lounge",
+      description:
+        "Join your fellow performers for a night of fun activities and delicious food!",
     },
-    // {
-    //   month: "Feb",
-    //   day: "9-10",
-    //   title: "LNYF Show",
-    //   caption: "Find more info on our instagram!",
-    //   description:
-    //     "Come watch our show!",
-    // },
+    {
+      month: "Nov",
+      day: "11",
+      title: "Philanth. MedQ Event",
+      caption: "6 PM @ Seigle 303",
+      description:
+        "Join us for SQSH's MEDQ Philanthropy Event to learn more about the LGBTQ+ community in healthcare!",
+    },
+    {
+      month: "Jan",
+      day: "31",
+      title: "LNYF Show 1",
+      caption: "7 pm",
+      description:
+        "Come watch our show! Find more info on our instagram!",
+    },
+    {
+      month: "Feb",
+      day: "1",
+      title: "LNYF Shows 2 & 3",
+      caption: "2 & 7 pm",
+      description:
+        "Come watch our show! Find more info on our instagram!",
+    }
     // {
     //   month: "April",
     //   day: "21",
@@ -231,6 +255,7 @@ const text = {
     //   description:
     //     "Come to learn more!",
     // },
+
   ],
   philanthropy: {
     2025: {
@@ -404,7 +429,7 @@ const text = {
       title: "Watersleeves",
       image: "watersleeves",
       performers: [
-        "Celina Liu (choreo)", "Andria Luo (choreo)", "Caleb Lee", "Cynthia Chen", "Cynthia Zhi", "Ella Jang", "Esther Wang", "Jocelyn Liao", "Keyuan Song", "Vicki Truong"
+        "Celina Liu (choreo)", "Andria Luo (choreo)", "Caleb Lee", "Cynthia Chen", "Cynthia Zhi", "Ella Jang", "Esther Wang", "Jocelyn Liao", "Vicki Truong"
       ],
     },
     {
@@ -416,8 +441,10 @@ const text = {
     },
   ],
   store: {
+    // "The store is closed temporarily. Please check back soon. Apologies for any inconvenience.""
+    // "Welcome to the LNYF Store!",
     caption:
-      "The store is closed temporarily. Please check back soon. Apologies for any inconvenience.",
+      "Welcome to the LNYF Store!",
     items: [
       {
         title: "COMING SOON",
@@ -425,7 +452,7 @@ const text = {
           { image: "coming-soon", alt: "Coming Soon" },
         ],
         subImages: undefined,
-        price: "free",
+        price: "0.00",
         soldOut: false,
       },
       /*{

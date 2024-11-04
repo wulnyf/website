@@ -1,16 +1,16 @@
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
-import Layout from "../components/Layout";
-import InnerPage from "../components/InnerPage";
-import ImageOverlay from "../components/ImageOverlay";
-import StoreThumbnail from "../components/StoreThumbnail";
-import Seo from "../components/Seo";
+import styled from "styled-components";
 import Button from "../components/Button";
+import ImageOverlay from "../components/ImageOverlay";
+import InnerPage from "../components/InnerPage";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
+import StoreThumbnail from "../components/StoreThumbnail";
+import Typography from "../components/Typography";
 import text from "../text";
 import convertImgArrToMap from "../utils/convertImgArrToMap";
-import { graphql } from "gatsby";
-import styled from "styled-components";
-import Typography from "../components/Typography";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Grid = styled.div`
   display: grid;
