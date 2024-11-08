@@ -124,7 +124,8 @@ const text = {
     facebook: "https://www.facebook.com/WULNYF/",
     instagram: "https://www.instagram.com/wu.lnyf/?hl=en",
     youtube: "https://www.youtube.com/user/LNYF",
-    store: "https://commerce.cashnet.com/SULUNAR",
+    // store: "https://commerce.cashnet.com/SULUNAR",
+    store: "https://docs.google.com/forms/d/e/1FAIpQLScHw56q-6mb2jUH9Wx5KhdkTjk4KWjdP0uwR0uTIa_9DWlXIw/viewform",
   },
   index: {
     jumbotronTop: "Lunar New Year Festival 2025",
@@ -255,7 +256,6 @@ const text = {
     //   description:
     //     "Come to learn more!",
     // },
-
   ],
   philanthropy: {
     2025: {
@@ -443,10 +443,9 @@ const text = {
   store: {
     // "The store is closed temporarily. Please check back soon. Apologies for any inconvenience.""
     // "Welcome to the LNYF Store!",
-    caption:
-      "Welcome to the LNYF Store!",
+    //caption: "The store is closed temporarily. Please check back soon. Apologies for any inconvenience.",
     items: [
-      {
+      /*{
         title: "COMING SOON",
         images: [
           { image: "coming-soon", alt: "Coming Soon" },
@@ -454,46 +453,51 @@ const text = {
         subImages: undefined,
         price: "0.00",
         soldOut: false,
-      },
-      /*{
+      },*/
+      {
         title: "Long Sleeve Shirt",
         images: [
-          { image: "shirt-pic", alt: "Long Sleeve" },
-          { image: "shirt-pic-2", alt: "Long Sleeve" },
+          { image: "shirt-boys", alt: "Long Sleeve" },
+          { image: "shirt-girls", alt: "Long Sleeve" },
+          { image: "shirt-tote-girls", alt: "Long Sleeve" },
         ],
         subImages: undefined,
-        price: "$27.00",
-        soldOut: true,
+        price: "$26.00",
+        soldOut: false,
       },
       {
         title: "Tote Bag",
         images: [
-          { image: "tote-pic", alt: "LNYF Tote" },
-          { image: "tote-pic-2", alt: "LNYF Tote" },
+          { image: "tote-bag", alt: "LNYF Tote" },
+          { image: "tote-bag-1", alt: "LNYF Tote" },
+          { image: "tote-bag-girls", alt: "LNYF Tote" },
+          { image: "tote-bag-boys", alt: "LNYF Tote" },
         ],
         subImages: undefined,
-        price: "$18.00",
-        soldOut: true,
+        price: "$17.00",
+        soldOut: false,
       },
+      // {
+      //   title: "Sweatpants",
+      //   images: [
+      //     { image: "pants-pic", alt: "Sweatpants" },
+      //     { image: "pants-pic-2", alt: "Sweatpants" },
+      //   ],
+      //   subImages: undefined,
+      //   price: "$45.00",
+      //   soldOut: true,
+      // },
       {
-        title: "Sweatpants",
+        title: "Snake Pin",
         images: [
-          { image: "pants-pic", alt: "Sweatpants" },
-          { image: "pants-pic-2", alt: "Sweatpants" },
+          { image: "pins", alt: "Pin" },
+          { image: "pins-1", alt: "Pin" },
+          { image: "pins-2", alt: "Pin" },
         ],
         subImages: undefined,
-        price: "$45.00",
-        soldOut: true,
+        price: "$7.00",
+        soldOut: false,
       },
-      {
-        title: "Keychain",
-        images: [
-          { image: "keychain-pic", alt: "Keychain" },
-        ],
-        subImages: undefined,
-        price: "$5.00",
-        soldOut: true,
-      },*/
     ],
   },
   people: {
