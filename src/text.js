@@ -124,8 +124,8 @@ const text = {
     facebook: "https://www.facebook.com/WULNYF/",
     instagram: "https://www.instagram.com/wu.lnyf/?hl=en",
     youtube: "https://www.youtube.com/user/LNYF",
-    // store: "https://commerce.cashnet.com/SULUNAR",
-    store: "https://docs.google.com/forms/d/e/1FAIpQLScHw56q-6mb2jUH9Wx5KhdkTjk4KWjdP0uwR0uTIa_9DWlXIw/viewform",
+    store: "https://commerce.cashnet.com/SULUNAR",
+    //store: "https://docs.google.com/forms/d/e/1FAIpQLScHw56q-6mb2jUH9Wx5KhdkTjk4KWjdP0uwR0uTIa_9DWlXIw/viewform",
   },
   index: {
     jumbotronTop: "Lunar New Year Festival 2025",
@@ -215,7 +215,7 @@ const text = {
       caption: "More info on the Auditions Page and LNYF's Instagram!",
       description:
         "In case you missed it, or for a second chance!",
-    }, */
+    }, 
     {
       month: "Nov",
       day: "9",
@@ -231,6 +231,14 @@ const text = {
       caption: "6 PM @ Seigle 303",
       description:
         "Join us for SQSH's MEDQ Philanthropy Event to learn more about the LGBTQ+ community in healthcare!",
+    }, */
+    {
+      month: "Jan",
+      day: "25",
+      title: "AMC Fireworks",
+      caption: "7 pm",
+      description:
+        "Watch beautiful fireworks and a variety of dances at our collaboration event with Asian Multicultural Council!",
     },
     {
       month: "Jan",
