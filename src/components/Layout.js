@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Typography from "../components/Typography";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import Container from "../components/Container";
-import { AnimateState } from "./Menu.js";
+import Typography from "../components/Typography";
 import text from "../text";
-import Waves from "./Waves";
 import theme from "../theme";
 import Menu from "./Menu";
+import { AnimateState } from "./Menu.js";
+import Waves from "./Waves";
 
 const LogoSection = styled.div`
   margin-left: 15px;
@@ -90,9 +90,9 @@ const StyledWaves = styled(Waves)`
 
 function debounce(func, wait, immediate) {
   var timeout;
-  return function() {
+  return function () {
     var context = this, args = arguments;
-    var later = function() {
+    var later = function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
@@ -103,7 +103,7 @@ function debounce(func, wait, immediate) {
   };
 };
 
-const Header = ({transparent}) => {
+const Header = ({ transparent }) => {
   const [visible, setVisible] = useState(true);
   const [prevPos, setPrevPos] = useState(0);
 
@@ -141,15 +141,15 @@ const Header = ({transparent}) => {
   const [open, setOpen] = useState(false);
   const [animate, setAnimate] = useState(AnimateState.INITIAL);
   const onMenuClick = () => {
-      setOpen((prevOpen) => !prevOpen);
-      setAnimate(
+    setOpen((prevOpen) => !prevOpen);
+    setAnimate(
       animate === AnimateState.INITIAL || animate === AnimateState.CLOSED
-          ? AnimateState.OPEN
-          : AnimateState.CLOSED
-      );
+        ? AnimateState.OPEN
+        : AnimateState.CLOSED
+    );
   };
   if (open) {
-      transparent = false;
+    transparent = false;
   }
 
   const navbarStyles = {
@@ -183,6 +183,11 @@ const Header = ({transparent}) => {
               </NavOverlayLink>
             )}
             <NavOverlayLink variant="h4">
+              <StyledLink to="https://ci.ovationtix.com/35674/production/1219675" onClick={onMenuClick}>
+                BUY TICKETS NOW
+              </StyledLink>
+            </NavOverlayLink>
+            <NavOverlayLink variant="h4">
               <StyledLink to="/performances" onClick={onMenuClick}>
                 Performers
               </StyledLink>
@@ -207,11 +212,11 @@ const Header = ({transparent}) => {
                 Events
               </StyledLink>
             </NavOverlayLink>
-            <NavOverlayLink variant="h4">
+            {/* <NavOverlayLink variant="h4">
               <StyledLink to="/store" onClick={onMenuClick}>
                 Donate
               </StyledLink>
-            </NavOverlayLink>
+            </NavOverlayLink> */}
             <NavOverlayLink variant="h4">
               <StyledLink to="/store" onClick={onMenuClick}>
                 Store
@@ -222,12 +227,12 @@ const Header = ({transparent}) => {
       )}
       <div style={{ ...navbarStyles, top: visible ? '0px' : '-60px' }}>
         <LogoSection>
-            <Link to="/">
-                <GatsbyImage
-                  image={redIconImg}
-                  alt="icon"
-                />
-            </Link>
+          <Link to="/">
+            <GatsbyImage
+              image={redIconImg}
+              alt="icon"
+            />
+          </Link>
         </LogoSection>
         <Menu
           onClick={onMenuClick}
@@ -243,6 +248,11 @@ const Header = ({transparent}) => {
             </NavBarLink>
           )}
           <NavBarLink variant="linkfont">
+            <StyledLink to="https://ci.ovationtix.com/35674/production/1219675">
+              BUY TICKETS NOW
+            </StyledLink>
+          </NavBarLink>
+          <NavBarLink variant="linkfont">
             <StyledLink to="/performances">
               Performers
             </StyledLink>
@@ -257,11 +267,11 @@ const Header = ({transparent}) => {
               Exec
             </StyledLink>
           </NavBarLink>
-          <NavBarLink variant="linkfont">
+          {/* <NavBarLink variant="linkfont">
             <StyledLink to="/store">
               Donate
             </StyledLink>
-          </NavBarLink>
+          </NavBarLink> */}
           <NavBarLink variant="linkfont">
             <StyledLink to="/store">
               Store
@@ -276,47 +286,47 @@ const Header = ({transparent}) => {
 const Layout = ({ children, transparent, noWaves }) => {
   return (
     <Page>
-      <Header transparent/>
+      <Header transparent />
       <Content>{children}</Content>
       <Footer>
         <FooterDiv>
-          <Typography variant="footertitle" style={{marginBottom: '10px'}}>Pages</Typography>
-          <Link to="/events" style={{color: 'white', textDecoration: 'none'}}>
+          <Typography variant="footertitle" style={{ marginBottom: '10px' }}>Pages</Typography>
+          <Link to="/events" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Events</Typography>
           </Link>
-          <Link to="/performances" style={{color: 'white', textDecoration: 'none'}}>
+          <Link to="/performances" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Performances</Typography>
           </Link>
-          <Link to="/gallery" style={{color: 'white', textDecoration: 'none'}}>
+          <Link to="/gallery" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Gallery</Typography>
           </Link>
-          <Link to="/people" style={{color: 'white', textDecoration: 'none'}}>
+          <Link to="/people" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Exec</Typography>
           </Link>
-          <Link to="/store" style={{color: 'white', textDecoration: 'none'}}>
+          {/* <Link to="/store" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Donate</Typography>
-          </Link>
-          <Link to="/store" style={{color: 'white', textDecoration: 'none'}}>
+          </Link> */}
+          <Link to="/store" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Store</Typography>
           </Link>
-          <Link to="/philanthropy" style={{color: 'white', textDecoration: 'none'}}>
+          <Link to="/philanthropy" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Philanthropy</Typography>
           </Link>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{marginBottom: '10px'}}>Socials</Typography>
-          <a href={text.links.instagram} style={{color: 'white', textDecoration: 'none'}}>
+          <Typography variant="footertitle" style={{ marginBottom: '10px' }}>Socials</Typography>
+          <a href={text.links.instagram} style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Instagram</Typography>
           </a>
-          <a href={text.links.youtube} style={{color: 'white', textDecoration: 'none'}}>
+          <a href={text.links.youtube} style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">YouTube</Typography>
           </a>
-          <a href={text.links.facebook} style={{color: 'white', textDecoration: 'none'}}>
+          <a href={text.links.facebook} style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Facebook</Typography>
           </a>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{marginBottom: '10px'}}>Contact Us</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px' }}>Contact Us</Typography>
           <Typography variant="footerlink">wu.lnyf@gmail.com</Typography>
         </FooterDiv>
       </Footer>

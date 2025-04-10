@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import Layout from "../components/Layout";
-import InnerPage from "../components/InnerPage";
-import text from "../text";
-import StyledImage from "../components/StyledImage";
-import ButtonDropdown from "../components/ButtonDropdown";
-import convertImgArrToMap from "../utils/convertImgArrToMap";
 import { graphql } from "gatsby";
-import Seo from "../components/Seo";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Typography from "../components/Typography";
-import ImageOverlay from "../components/ImageOverlay";
-import { GatsbyImage } from "gatsby-plugin-image";
 import Button from "../components/Button";
+import ButtonDropdown from "../components/ButtonDropdown";
+import ImageOverlay from "../components/ImageOverlay";
+import InnerPage from "../components/InnerPage";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
+import StyledImage from "../components/StyledImage";
+import Typography from "../components/Typography";
+import text from "../text";
+import convertImgArrToMap from "../utils/convertImgArrToMap";
 
 const Grid = styled.div`
   display: grid;

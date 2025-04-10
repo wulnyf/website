@@ -103,7 +103,16 @@ const StorePage = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>Purchase</Button>
+                <Button>Buy Drop 1</Button>
+              </a>
+            )}
+            {text.links.store2 && (
+              <a
+                href={text.links.store2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>Buy Drop 2</Button>
               </a>
             )}
             {text.store.caption && (

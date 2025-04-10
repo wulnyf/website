@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Typography from "../components/Typography";
 import styled from "styled-components";
-import text from "../text";
 import InnerPage from "../components/InnerPage";
-import TwoColumn from "../components/TwoColumn";
+import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import TwoColumn from "../components/TwoColumn";
+import Typography from "../components/Typography";
+import text from "../text";
 
 const EventContainer = styled.div`
   box-shadow: ${({ theme }) => theme.decoration.boxShadow};
@@ -23,12 +23,13 @@ const DateContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 20px;
+  /* padding: 20px 20px; */
   min-width: 170px;
 `;
 
 const EventContent = styled.div`
-  padding: 20px 20px;
+  margin-top: 0px;
+  padding: 5px 20px;
 `;
 
 const Description = styled.div`

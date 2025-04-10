@@ -125,10 +125,11 @@ const text = {
     instagram: "https://www.instagram.com/wu.lnyf/?hl=en",
     youtube: "https://www.youtube.com/user/LNYF",
     store: "https://commerce.cashnet.com/SULUNAR",
+    store2: "https://docs.google.com/forms/d/e/1FAIpQLScCqjMIVtSPz-8_1roqnXly6q6xMPj0dJ_kQCcw_wQlGOX5uw/viewform?usp=dialog",
     //store: "https://docs.google.com/forms/d/e/1FAIpQLScHw56q-6mb2jUH9Wx5KhdkTjk4KWjdP0uwR0uTIa_9DWlXIw/viewform",
   },
   index: {
-    jumbotronTop: "Lunar New Year Festival 2025",
+    jumbotronTop: "Lunar New Year Festival 2026",
     jumbotronMiddle: "Interwoven",
     jumbotronBottom: undefined,
     jumbotronButtons: (
@@ -246,7 +247,7 @@ const text = {
       title: "LNYF Show 1",
       caption: "7 pm",
       description:
-        "Come watch our show! Find more info on our instagram!",
+        "Come watch our show. Find more info on our instagram!",
     },
     {
       month: "Feb",
@@ -254,7 +255,7 @@ const text = {
       title: "LNYF Shows 2 & 3",
       caption: "2 & 7 pm",
       description:
-        "Come watch our show! Find more info on our instagram!",
+        "Come watch our show. Find more info on our instagram!",
     }
     // {
     //   month: "April",
@@ -341,7 +342,7 @@ const text = {
   },
   performances: [
     {
-      title: "Chinese Contemporary Fan",
+      title: "Contemporary Chinese Fan",
       image: "ccfan",
       performers: [
         "Rachel Wei (choreo)", "Jennifer Li (choreo)", "Alex Liu", "Catherine Zhao", "Eilene Liu", "Helen Ma", "Jessica Hu", "Julia Li", "Kathleen Weng", "Lisa Ji", "Maggie Cheng", "Ran Duan"
@@ -504,6 +505,27 @@ const text = {
         ],
         subImages: undefined,
         price: "$7.00",
+        soldOut: false,
+      },
+      {
+        title: "Short Sleeve T-Shirt",
+        images: [
+          { image: "t-shirt-1", alt: "Short Sleeve" },
+          { image: "t-shirt-2", alt: "Short Sleeve" },
+          { image: "t-shirt-3", alt: "Short Sleeve" },
+        ],
+        subImages: undefined,
+        price: "$14.00",
+        soldOut: false,
+      },
+      {
+        title: "Coffee Mug",
+        images: [
+          { image: "mug-main", alt: "Mug" },
+          { image: "mug-slides", alt: "Mug" },
+        ],
+        subImages: undefined,
+        price: "$14.00",
         soldOut: false,
       },
     ],
@@ -1170,7 +1192,7 @@ const text = {
     },
   },
   schedule: {
-    active: true,
+    active: false,
     content: (
       <>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSef97k_fA8FsUM8l63CSOiV2jQECn65NckuCTybw1MRFO-69g/viewform?usp=sf_link">
