@@ -3,22 +3,12 @@
   "version": "1.3.0",
   "private": true,
   "description": "LNYF",
-  "author": {
-    "name": "Zachary Young"
-  },
+  "author": "Zachary Young",
   "contributors": [
-    {
-      "name": "Jiwon Choi"
-    },
-    {
-      "name": "Harry Gao"
-    },
-    {
-      "name": "Jane Liang"
-    },
-    {
-      "name": "John Paul Pineda"
-    }
+    "Jiwon Choi",
+    "Harry Gao",
+    "Jane Liang",
+    "John Paul Pineda"
   ],
   "keywords": [
     "gatsby"
@@ -35,7 +25,6 @@
     "@mdx-js/react": "^3.0.1",
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.5",
-    "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-mdx": "^5.13.1",
@@ -60,7 +49,9 @@
     "webpack-virtual-modules": "^0.3.2"
   },
   "resolutions": {
-    "gatsby-plugin-sharp/probe-image-size": "^7.0.0"
+    "gatsby-plugin-sharp/probe-image-size": "^7.0.0",
+    "gatsby-plugin-mdx/@mdx-js/react": "^3.1.0",
+    "gatsby-plugin-mdx/@mdx-js/mdx":   "^3.0.1"
   },
   "main": "gatsby-browser.js",
   "repository": {

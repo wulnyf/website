@@ -184,7 +184,7 @@ const Header = ({ transparent }) => {
             )}
             <NavOverlayLink variant="h4">
               <StyledLink to="https://ci.ovationtix.com/35674/production/1219675" onClick={onMenuClick}>
-                BUY TICKETS NOW
+                BUY TICKETS
               </StyledLink>
             </NavOverlayLink>
             <NavOverlayLink variant="h4">
@@ -247,11 +247,11 @@ const Header = ({ transparent }) => {
               </StyledLink>
             </NavBarLink>
           )}
-          <NavBarLink variant="linkfont">
+          {/* <NavBarLink variant="linkfont">
             <StyledLink to="https://ci.ovationtix.com/35674/production/1219675">
               BUY TICKETS NOW
             </StyledLink>
-          </NavBarLink>
+          </NavBarLink> */}
           <NavBarLink variant="linkfont">
             <StyledLink to="/performances">
               Performers
@@ -272,11 +272,11 @@ const Header = ({ transparent }) => {
               Donate
             </StyledLink>
           </NavBarLink> */}
-          <NavBarLink variant="linkfont">
+          {/* <NavBarLink variant="linkfont">
             <StyledLink to="/store">
               Store
             </StyledLink>
-          </NavBarLink>
+          </NavBarLink> */}
         </LinkSection>
       </div>
     </div>
@@ -290,44 +290,44 @@ const Layout = ({ children, transparent, noWaves }) => {
       <Content>{children}</Content>
       <Footer>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px' }}>Pages</Typography>
-          <Link to="/events" style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Events</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Pages</Typography>
+          <Link to="/events" style={{ color: 'white', textDecoration: 'none'}}>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Events</Typography>
           </Link>
           <Link to="/performances" style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Performances</Typography>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Performances</Typography>
           </Link>
           <Link to="/gallery" style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Gallery</Typography>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Gallery</Typography>
           </Link>
           <Link to="/people" style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Exec</Typography>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Exec</Typography>
           </Link>
           {/* <Link to="/store" style={{ color: 'white', textDecoration: 'none' }}>
             <Typography variant="footerlink">Donate</Typography>
           </Link> */}
-          <Link to="/store" style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Store</Typography>
-          </Link>
+          {/* <Link to="/store" style={{ color: 'white', textDecoration: 'none' }}>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Store</Typography>
+          </Link> */}
           <Link to="/philanthropy" style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Philanthropy</Typography>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Philanthropy</Typography>
           </Link>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px' }}>Socials</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Socials</Typography>
           <a href={text.links.instagram} style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Instagram</Typography>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Instagram</Typography>
           </a>
           <a href={text.links.youtube} style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">YouTube</Typography>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>YouTube</Typography>
           </a>
           <a href={text.links.facebook} style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink">Facebook</Typography>
+            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Facebook</Typography>
           </a>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px' }}>Contact Us</Typography>
-          <Typography variant="footerlink">wu.lnyf@gmail.com</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Contact Us</Typography>
+          <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>wu.lnyf@gmail.com</Typography>
         </FooterDiv>
       </Footer>
     </Page>

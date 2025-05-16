@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: `https://lnyf.wustl.edu`,
     title: "LNYF",
     description: "A website for the LNYF Festival at WashU",
-    author: "Zachary Young, Harry Gao, Jane Liang",
+    author: "Zachary Young, Harry Gao, Jane Liang, John Paul Pineda",
   },
   plugins: [
     "gatsby-plugin-styled-components",
