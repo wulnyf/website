@@ -314,20 +314,51 @@ const Layout = ({ children, transparent, noWaves }) => {
           </Link>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Socials</Typography>
-          <a href={text.links.instagram} style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Instagram</Typography>
-          </a>
-          <a href={text.links.youtube} style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>YouTube</Typography>
-          </a>
-          <a href={text.links.facebook} style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Facebook</Typography>
-          </a>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Contact Us</Typography>
+          <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '10px'}}>wu.lnyf@gmail.com</Typography>
+          <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+            <a href={text.links.instagram} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+              <i className="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href={text.links.youtube} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+              <i className="fab fa-youtube fa-2x"></i>
+            </a>
+            <a href={text.links.facebook} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+              <i className="fab fa-facebook fa-2x"></i>
+            </a>
+          </div>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Contact Us</Typography>
-          <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>wu.lnyf@gmail.com</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Sign Up For Our Newsletter</Typography>
+          <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Stay up to date with LNYF!</Typography>
+          <form name='submit-to-google-sheet' style={{ display: 'flex', width: '100%', maxWidth: '800px', marginBottom: '20px', fontFamily: '"Oswald", sans-serif', gap: '12px' }}>
+            <input type="email" name="Email" placeholder="Email Address" style={{flex: 1, padding: '14px 16px', s: '10px', borderRadius: '5px', border: 'none', fontSize: '1rem', outline: 'none', marginTop: '10px'}}></input>
+            <button type="submit"
+              style={{
+                height: '48px',
+                padding: '0px 24px',
+                backgroundColor: 'transparent',
+                color: 'white',
+                border: '2px solid white',
+                borderRadius: '5px',
+                fontSize: '1rem',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                fontFamily: '"Oswald", sans-serif',
+                marginTop: '10px',
+              }}
+              onMouseEnter={e => {
+                e.target.style.backgroundColor = 'white';
+                e.target.style.color = 'black';
+              }}
+              onMouseLeave={e => {
+                e.target.style.backgroundColor = 'transparent';
+                e.target.style.color = 'white';
+              }}
+            >
+              Subscribe</button>
+          </form>
+          <span id="msg"></span>
         </FooterDiv>
       </Footer>
     </Page>
