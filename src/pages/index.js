@@ -482,7 +482,7 @@ const IndexPage = ({ data }) => {
           <Typography style={{"text-shadow": "2px 2px 5px rgba(0, 0, 0, 0.52)"}} variant="h5" color="white">
             {text.index.jumbotronTop}
           </Typography>
-          <Typography style={{"text-shadow": "2px 2px 5px rgba(0, 0, 0, 0.52)"}} variant="h1" color="white">
+          <Typography style={{"white-space": "pre-line", "text-shadow": "2px 2px 5px rgba(0, 0, 0, 0.52)"}} variant="h1" color="white">
             {text.index.jumbotronMiddle}
           </Typography>
           {text.index.jumbotronBottom && (
@@ -605,7 +605,7 @@ const IndexPage = ({ data }) => {
             </ButtonContainer>
           </ContentColumn>
           <ImageColumn>
-            <GatsbyImage image={philanthropyImg} alt="SQSH"></GatsbyImage>
+            <GatsbyImage image={philanthropyImg} alt="EarthDance"></GatsbyImage>
           </ImageColumn>
         </TwoColumn>
       </ContentContainer>
@@ -646,9 +646,9 @@ export const query = graphql`
       }
     }
     philanthropyData: file(
-      name: { eq: "philanthropy" }
+      name: { eq: "EarthDance" }
       sourceInstanceName: { eq: "images" }
-      relativeDirectory: { eq: "misc" }
+      relativeDirectory: { eq: "philanthropy" }
     ) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)

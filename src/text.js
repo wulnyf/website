@@ -130,7 +130,7 @@ const text = {
   },
   index: {
     jumbotronTop: "Lunar New Year Festival 2026",
-    jumbotronMiddle: "Interwoven",
+    jumbotronMiddle: "Boundless\nHorizons",
     jumbotronBottom: undefined,
     jumbotronButtons: (
       <>
@@ -147,26 +147,26 @@ const text = {
         </Typography>
       </>
     ),
-    philanthropyTitle: "SQSH",
+    philanthropyTitle: "EarthDance",
     philanthropyText: (
       <>
         <Typography>
-          LNYF is proud to partner with St. Louis Queer Support & Healing (SQSH) as its philanthropy for the Year of the Snake.
+          LNYF is proud to partner with EarthDance as its philanthropy for the Year of the Horse.
         </Typography>
 
         <Typography style={{ "font-weight": "bold" }}> About the Philanthropy: </Typography>
 
         <Typography>
-          A group of dedicated queer St. Louisans founded SQSH on June 1, 2019, after a community needs assessment demonstrated that the St. Louis LGBTQIA+ community faces increased rates of violence, discrimination, substance use, and insecurity in employment and housing; disparities in medical, mental, and sexual health; and barriers to accessing the identity-affirming resources needed to meet those needs.
+          Based in Ferguson, Missouri, EarthDance operates on the oldest organic farm west of the Mississippi and is nationally recognized for its hands-on, justice-focused approach to farming education. By reconnecting people to the land and one another, EarthDance teaches community members of all ages where their food comes from and how to grow it themselves, fostering deeper relationships with both food and community.
         </Typography>
         <Typography>
-          SQSH’s mission is to strengthen the St. Louis queer community by building collective skills for peer support, active listening, and navigating conflict. It operates a telephone support line five days a week, builds deep connections within the local community, and partners with civil rights organizations to advocate for LGBTQIA+ needs. SQSH aims to create alternative models, strategies, and practices that moves the LGBTQIA+ community closer to collective liberation.
+          EarthDance makes fresh, locally grown produce accessible through a Pay-What-You-Can model at their Farm Stand and Ferguson Farmers Market booth, partnerships with local food pantries and grocers, and affordable gardening education. With about 60% of their customers living in North St. Louis County—an area facing historic and ongoing barriers to healthy food access—their sliding-scale systems ensure that nourishment is treated as a right, not a privilege, in service of a more regenerative, inclusive future.
         </Typography>
 
 
       </>
     ),
-    philanthropyLink: "https://www.thesqsh.org/",
+    philanthropyLink: "https://earthdancefarms.org/",
   },
   events: [
     {
@@ -177,14 +177,15 @@ const text = {
       description:
         "Come find the LNYF booth and sign up to be on our mailing list!",
     },
-    // {
-    //   month: "Aug",
-    //   day: "31",
-    //   title: "Choreo Apps",
-    //   caption: "Due 11:59 pm",
-    //   description:
-    //     "Apply to choreograph a dance in the upcoming 2026 show!",
-    // }, 
+    {
+      month: "Aug",
+      day: "31",
+      title: "Choreo Apps",
+      caption: "Due 11:59 pm",
+      description:
+        "Apply to choreograph a dance in the upcoming 2026 show!",
+      link: "https://docs.google.com/document/d/1fPwDiHwoEnvHn7a3U0Pa0dJshJN13q4eGg8ZCsJtBxc/edit?tab=t.0",
+    },
     {
       month: "Sept",
       day: "7",
@@ -275,6 +276,14 @@ const text = {
     // },
   ],
   philanthropy: {
+    2026: {
+      image: "earthdance",
+      title: "EarthDance",
+      money: undefined,
+      description:
+        'EarthDance is a non-profit organization that operates on the oldest organic farm west of the Mississippi and is nationally recognized for its hands-on, justice-focused approach to farming education. By reconnecting people to the land and one another, EarthDance teaches community members of all ages where their food comes from and how to grow it themselves, fostering deeper relationships with both food and community.',
+      link: "https://earthdancefarms.org/",
+    },
     2025: {
       image: "SQSH",
       title: "St. Louis Queer SUpport &amp Healing",
