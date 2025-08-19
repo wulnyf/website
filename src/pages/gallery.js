@@ -10,6 +10,7 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import StyledImage from "../components/StyledImage";
 import Typography from "../components/Typography";
+import FadeInOnScroll from "../components/FadeInOnScroll";
 import text from "../text";
 import convertImgArrToMap from "../utils/convertImgArrToMap";
 
@@ -100,59 +101,65 @@ const GalleryPage = ({ data }) => {
       <InnerPage
         title="Gallery"
         buttons={
-          <>
-            <StyledLabel variant="subtitle">Year</StyledLabel>
-            <ButtonDropdown
-              value={year}
-              setValue={setYear}
-              options={sortedYears.map((p) => ({
-                value: p,
-                label: p,
-              }))}
-              active
-            />
-            <MediaLabel variant="subtitle">Media</MediaLabel>
-            {"photos" in text.gallery[year] && (
-              <StyledButton white
-                onClick={() => setMedia("photos")}
-                active={media === "photos"}
-              >
-                Photo
-              </StyledButton>
-            )}
-            {"videos" in text.gallery[year] && (
-              <Button white
-                onClick={() => setMedia("videos")}
-                active={media === "videos"}
-              >
-                Video
-              </Button>
-            )}
-          </>
+          <FadeInOnScroll direction="up" delay={0}>
+            <>
+              <StyledLabel variant="subtitle">Year</StyledLabel>
+              <ButtonDropdown
+                value={year}
+                setValue={setYear}
+                options={sortedYears.map((p) => ({
+                  value: p,
+                  label: p,
+                }))}
+                active
+              />
+              <MediaLabel variant="subtitle">Media</MediaLabel>
+              {"photos" in text.gallery[year] && (
+                <StyledButton white
+                  onClick={() => setMedia("photos")}
+                  active={media === "photos"}
+                >
+                  Photo
+                </StyledButton>
+              )}
+              {"videos" in text.gallery[year] && (
+                <Button white
+                  onClick={() => setMedia("videos")}
+                  active={media === "videos"}
+                >
+                  Video
+                </Button>
+              )}
+            </>
+          </FadeInOnScroll>
         }
       >
         <Grid>
           {text.gallery[year][media].map((p, i) =>
             media === "photos" ? (
-              <ImageContainer key={i}>
-                <ImageThumbnail
-                  onClick={() => handleClick(p)}
-                  image={getImage(imgDataMap[p.image])}
-                  alt={p.caption}
-                  clickable="true"
-                />
-              </ImageContainer>
+              <FadeInOnScroll key={i} direction="up" delay={i * 10}>
+                <ImageContainer>
+                  <ImageThumbnail
+                    onClick={() => handleClick(p)}
+                    image={getImage(imgDataMap[p.image])}
+                    alt={p.caption}
+                    clickable="true"
+                  />
+                </ImageContainer>
+              </FadeInOnScroll>
             ) : (
-              <VideoContainer key={i}>
-                <Video
-                  key={i}
-                  src={p.link}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></Video>
-              </VideoContainer>
+              <FadeInOnScroll key={i} direction="up" delay={i * 100}>
+                <VideoContainer>
+                  <Video
+                    key={i}
+                    src={p.link}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></Video>
+                </VideoContainer>
+              </FadeInOnScroll>
             )
           )}
         </Grid>

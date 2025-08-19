@@ -5,7 +5,9 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import TwoColumn from "../components/TwoColumn";
 import Typography from "../components/Typography";
+import FadeInOnScroll from "../components/FadeInOnScroll";
 import text from "../text";
+import { useTheme } from "styled-components";
 
 const EventContainer = styled.div`
   box-shadow: ${({ theme }) => theme.decoration.boxShadow};
@@ -28,7 +30,7 @@ const EventContainer = styled.div`
     
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px ${({ theme }) => theme.palette.background}26;
     }
   `}
 `;
@@ -73,6 +75,7 @@ const Description = styled.div`
 `;
 
 const EventsPage = () => {
+  const theme = useTheme();
   const handleEventClick = (event) => {
     if (event.link) {
       window.open(event.link, '_blank', 'noopener,noreferrer');
@@ -83,15 +86,16 @@ const EventsPage = () => {
     <Layout>
       <Seo title="Events" />
       <InnerPage title="Events">
+        <FadeInOnScroll direction="up" delay={0}>
         {text.events.map((e, i) => {
           const isClickable = !!e.link;
           
           return (
-            <EventContainer 
-              key={i} 
-              clickable={isClickable}
-              onClick={() => isClickable && handleEventClick(e)}
-            >
+            <FadeInOnScroll key={i} direction="up" delay={i * 20}>
+              <EventContainer 
+                clickable={isClickable}
+                onClick={() => isClickable && handleEventClick(e)}
+              >
               <TwoColumn>
                 <DateContainer>
                   <Typography variant="h6">{e.month}</Typography>
@@ -107,10 +111,11 @@ const EventsPage = () => {
                     <Typography 
                       variant="caption" 
                       style={{ 
-                        color: '#007bff', 
+                        color: '#0000EE', 
                         marginTop: '8px',
                         fontSize: '0.85rem',
-                        display: 'block'
+                        display: 'block',
+                        fontWeight: 450
                       }}
                     >
                       Click to apply →
@@ -119,8 +124,10 @@ const EventsPage = () => {
                 </EventContent>
               </TwoColumn>
             </EventContainer>
+            </FadeInOnScroll>
           );
         })}
+        </FadeInOnScroll>
       </InnerPage>
     </Layout>
   );

@@ -101,6 +101,7 @@ const StyledBackgroundImage = styled(GatsbyImage)`
   left: 0;
   right: 0;
   z-index: 0;
+  transition: opacity 0.3s ease-out;
 `;
 
 const ButtonContainer = styled.div`
@@ -132,7 +133,7 @@ const FloatingPageNav = styled.div`
 
 const FloatingButton = styled(Button)`
   border: none;
-  background-color: rgba(0, 0, 0, 0.32);
+          background-color: ${({ theme }) => theme.palette.background}52;
   text-align: center;
   padding: 30px 0;
   width: 120px;
@@ -144,7 +145,7 @@ const FloatingButton = styled(Button)`
     display: none;
   }
   &:hover {
-    background-color: rgba(0, 0, 0, 0.52);
+    background-color: ${({ theme }) => theme.palette.background}85;
     border: none;
     color: ${theme.palette.font};
   }
@@ -164,10 +165,10 @@ const FloatingDivider = styled.div`
 
 const EventPane = styled.div`
   width: 78vw;
-  background-color: rgba(255, 255, 255, .15);  
+          background-color: ${({ theme }) => theme.palette.secondary1}26;  
   backdrop-filter: blur(5px);
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: ${({ theme }) => theme.palette.background}4D 0px 19px 38px, ${({ theme }) => theme.palette.background}38 0px 15px 12px;
   transition: all .3s; 
   @media (max-width: 1000px) {
     width: 96vw;
@@ -186,7 +187,7 @@ const EventBar = styled.div`
     width: 0.8em;
   }
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 6px ${({ theme }) => theme.palette.background}4D;
     border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb {
@@ -289,7 +290,7 @@ const BlackoutBackground = styled.img`
 const TimerPane = styled.div`
   width: 400px;
   padding: 15px;
-  background-color: rgb(9 9 9 / 33%);  
+          background-color: ${({ theme }) => theme.palette.background}54;  
   backdrop-filter: blur(5px);
   border-radius: 20px;
   z-index: 1;
@@ -424,7 +425,7 @@ const MovingSpotlight = () => {
     top: scrollTicker + 'px', 
     right: '0',
     zIndex: '1',
-    backgroundColor: 'rgba(251,243,237,0.4)',
+            backgroundColor: `${theme.palette.secondary1}66`,
     borderRadius: '15px',
     transition: 'all 0.3s ease-out'
   }
@@ -470,19 +471,29 @@ const IndexPage = ({ data }) => {
     <Layout transparent noWaves>
       <Seo title="Home" />
       <BlackoutBackground src={currBackground}/>
-      <div style={{opacity: scrollPos/300}}>
+      <div style={{
+        opacity: Math.min(scrollPos / 400, 1),
+        transition: 'opacity 0.3s ease-out'
+      }}>
         <StyledBackgroundImage
           style={{"top": "0px"}}
           image={blurredImg}
           alt="Image"
         />
       </div>
-      <JumbotronContainer id="section-1">
+      <JumbotronContainer 
+        id="section-1"
+        style={{
+          animation: 'fadeInUp 0.8s ease-out forwards',
+          opacity: 0,
+          transform: 'translateY(30px)'
+        }}
+      >
         <TitleContainer>
-          <Typography style={{"text-shadow": "2px 2px 5px rgba(0, 0, 0, 0.52)"}} variant="h5" color="white">
+          <Typography style={{"text-shadow": `2px 2px 5px ${theme.palette.background}85`}} variant="h5" color="white">
             {text.index.jumbotronTop}
           </Typography>
-          <Typography style={{"white-space": "pre-line", "text-shadow": "2px 2px 5px rgba(0, 0, 0, 0.52)"}} variant="h1" color="white">
+          <Typography style={{"white-space": "pre-line", "text-shadow": `2px 2px 5px ${theme.palette.background}85`}} variant="h1" color="white">
             {text.index.jumbotronMiddle}
           </Typography>
           {text.index.jumbotronBottom && (
@@ -538,7 +549,14 @@ const IndexPage = ({ data }) => {
           </BottomFloatingButton>
         </a>
       </FloatingPageNav>
-      <ContentContainer id="section-2">
+      <ContentContainer 
+        id="section-2"
+        style={{
+          animation: 'fadeInUp 0.8s ease-out 0.2s forwards',
+          opacity: 0,
+          transform: 'translateY(30px)'
+        }}
+      >
         <TwoColumn spacing={0}>
         <EmptyColumn></EmptyColumn>
           <ContentColumn>
@@ -588,7 +606,14 @@ const IndexPage = ({ data }) => {
         </EventLink>
         </div>
       </ContentContainer>
-      <ContentContainer id="section-4">
+      <ContentContainer 
+        id="section-4"
+        style={{
+          animation: 'fadeInUp 0.8s ease-out 0.4s forwards',
+          opacity: 0,
+          transform: 'translateY(30px)'
+        }}
+      >
         <TwoColumn spacing={0}>
         <EmptyColumn></EmptyColumn>
           <ContentColumn>

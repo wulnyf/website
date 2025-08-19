@@ -1,21 +1,37 @@
 const theme = {
   palette: {
-    primary1: "#376d9c",
-    primary2: "#dfb255",
-    secondary1: "#fef7f7",
-    secondary2: "#fef7f7",
-    background: "#050812",
-    secondarybackground: "#fef7f7",
-    font: "#fef7f7",
-    secondaryfont: "#030303",
-    gradient: "linear-gradient(90deg, #007993 0%,#88b4a8 50%, #dfb255 100%)",
+    // Primary colors - using the warm, earthy tones
+    primary1: "#BD5527",        // Burnt Orange/Terracotta
+    primary2: "#F4E27B",        // Light Yellow/Cream
+    
+    // Secondary colors - using the lighter, neutral tones
+    secondary1: "#FFFFF2",      // Off-White/Cream
+    secondary2: "#F4E27B",      // Light Yellow/Cream
+    
+    // Background colors - using the darker tones
+    background: "#4D7F84",      // Dark Brown/Black
+    secondarybackground: "#FFFFF2", // Off-White/Cream
+    
+    // Font colors - using contrasting colors for readability
+    font: "#FFFFF2",            // Off-White/Cream (light text on dark backgrounds)
+    secondaryfont: "#2A1A0F",   // Dark Brown/Black (dark text on light backgrounds)
+    
+    // Accent colors - using the blue and green tones
+    accent1: "#73C37B",         // Muted Green/Sage
+    accent2: "#3493AD",         // Medium Blue/Teal
+    accent3: "#4D7F84",         // Desaturated Blue-Gray/Slate
+    
+    // Gradient using the palette colors
+    gradient: "linear-gradient(90deg, #BD5527 0%, #F4E27B 50%, #73C37B 100%)",
+    
+    // Alert color - keeping a bright red for warnings
     alert: "#FF3F3F",
   },
   decoration: {
-    border: "5px solid #fef7f7",
-    borderHover: "5px solid #376d9c",
-    boxShadowHover: "5px 5px 0px #0CB1BC",
-    boxShadow: "5px 5px 0px #000",
+    border: "5px solid #FFFFF2",        // Off-White/Cream borders
+    borderHover: "5px solid #3493AD",   // Burnt Orange on hover
+    boxShadowHover: "5px 5px 0px #3493AD", // Medium Blue/Teal shadow on hover
+    boxShadow: "5px 5px 0px #3493AD",      // Dark Brown/Black shadow
   },
 };
 

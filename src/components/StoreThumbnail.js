@@ -45,7 +45,7 @@ const SoldOut = styled.div`
 
 const StyledI = styled.i`
   color: white;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 0 0 3px ${({ theme }) => theme.palette.background};
 `;
 
 const StoreThumbnail = ({

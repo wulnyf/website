@@ -12,6 +12,46 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.palette.font};
     background-color: ${theme.palette.background};
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  #___gatsby, #gatsby-focus-wrapper {
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: transparent;
+  }
+  
+  /* Smooth page transitions */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
   }
 `;
 

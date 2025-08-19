@@ -29,14 +29,17 @@ const NavBarLink = styled(Typography)`
   margin-left: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.52);
+  text-shadow: 1px 1px 3px ${({ theme }) => theme.palette.background}85;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s ease;
+  
   &:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
+    transform: translateY(-2px);
   }
 `;
 
@@ -47,12 +50,34 @@ const NavOverlay = styled.div`
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: ${theme.palette.background};
-  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(77, 127, 132, 0.85); /* theme.palette.accent3 with opacity */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 0 0 24px 24px;
+  padding: 32px 0 32px 0;
 `;
 
 const NavOverlayLink = styled(Typography)`
-  margin-bottom: 10px;
+  margin-bottom: 28px;
+  padding: 0 32px;
+  font-weight: 400;
+  font-size: 2.1rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  
+  &:hover {
+    background: rgba(255,255,255,0.08);
+    color: #F4E27B; /* theme.palette.primary2 */
+    text-decoration: underline;
+    transform: scale(1.04);
+  }
 `;
 
 const Page = styled.main`
@@ -68,13 +93,31 @@ const Content = styled.div`
 const Footer = styled.div`
   padding-left: 15vw;
   padding-right: 15vw;
-  height: 350px;
+  height: auto;
+  min-height: 350px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   z-index: 1;
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(0,0,0,0.5328256302521008) 61%, rgba(0,0,0,1) 100%);  
+  background: ${({ theme }) => theme.palette.background};
+  background: linear-gradient(180deg, ${({ theme }) => theme.palette.background}00 0%, ${({ theme }) => theme.palette.background}88 61%, ${({ theme }) => theme.palette.background} 100%);
+  
+  @media (max-width: 1200px) {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-bottom: 30px;
+  }
+  
+  @media (max-width: 600px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 `;
 
 const FooterDiv = styled.div`
@@ -82,6 +125,34 @@ const FooterDiv = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 50px;
+  
+  @media (max-width: 1200px) {
+    margin-right: 40px;
+  }
+  
+  @media (max-width: 900px) {
+    margin-right: 0;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
+  }
+`;
+
+const NewsletterForm = styled.form`
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+  gap: 12px;
+  
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 8px;
+  }
 `;
 
 const StyledWaves = styled(Waves)`
@@ -161,7 +232,7 @@ const Header = ({ transparent }) => {
     alignItems: 'center',
     justifyContent: 'space-between',
     background: transparent ? 'transparent' : theme.palette.background,
-    'background-color': 'rgba(0, 0, 0, 0.45)',
+    'background-color': `${theme.palette.background}73`,
     transition: 'top 0.6s',
   }
 
@@ -182,11 +253,11 @@ const Header = ({ transparent }) => {
                 </StyledLink>
               </NavOverlayLink>
             )}
-            <NavOverlayLink variant="h4">
+            {/* <NavOverlayLink variant="h4">
               <StyledLink to="https://ci.ovationtix.com/35674/production/1219675" onClick={onMenuClick}>
                 BUY TICKETS
               </StyledLink>
-            </NavOverlayLink>
+            </NavOverlayLink> */}
             <NavOverlayLink variant="h4">
               <StyledLink to="/performances" onClick={onMenuClick}>
                 Performers
@@ -217,11 +288,11 @@ const Header = ({ transparent }) => {
                 Donate
               </StyledLink>
             </NavOverlayLink> */}
-            <NavOverlayLink variant="h4">
+            {/* <NavOverlayLink variant="h4">
               <StyledLink to="/store" onClick={onMenuClick}>
                 Store
               </StyledLink>
-            </NavOverlayLink>
+            </NavOverlayLink> */}
           </Container>
         </NavOverlay>
       )}
@@ -290,7 +361,7 @@ const Layout = ({ children, transparent, noWaves }) => {
       <Content>{children}</Content>
       <Footer>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Pages</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '500', color: 'white'}}>Pages</Typography>
           <Link to="/events" style={{ color: 'white', textDecoration: 'none'}}>
             <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Events</Typography>
           </Link>
@@ -314,7 +385,7 @@ const Layout = ({ children, transparent, noWaves }) => {
           </Link>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Contact Us</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '500', color: 'white'}}>Contact Us</Typography>
           <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '10px'}}>wu.lnyf@gmail.com</Typography>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
             <a href={text.links.instagram} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
@@ -329,9 +400,9 @@ const Layout = ({ children, transparent, noWaves }) => {
           </div>
         </FooterDiv>
         <FooterDiv>
-          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '200' }}>Sign Up For Our Newsletter</Typography>
+          <Typography variant="footertitle" style={{ marginBottom: '10px', fontSize: '1.4rem', fontWeight: '500', color: 'white'}}>Sign Up For Our Newsletter</Typography>
           <Typography variant="footerlink" style={{ fontSize: '1.1rem', marginBottom: '1px'}}>Stay up to date with LNYF!</Typography>
-          <form name='submit-to-google-sheet' style={{ display: 'flex', width: '100%', maxWidth: '800px', marginBottom: '20px', fontFamily: '"Oswald", sans-serif', gap: '12px' }}>
+          <NewsletterForm name='submit-to-google-sheet'>
             <input type="email" name="Email" placeholder="Email Address" style={{flex: 1, padding: '14px 16px', s: '10px', borderRadius: '5px', border: 'none', fontSize: '1rem', outline: 'none', marginTop: '10px'}}></input>
             <button type="submit"
               style={{
@@ -357,7 +428,7 @@ const Layout = ({ children, transparent, noWaves }) => {
               }}
             >
               Subscribe</button>
-          </form>
+          </NewsletterForm>
           <span id="msg"></span>
         </FooterDiv>
       </Footer>

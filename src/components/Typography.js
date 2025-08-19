@@ -159,7 +159,7 @@ const FooterTitle = styled.p`
   margin: 0;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  color: #B8B3B0;
+  color: ${({ theme }) => theme.palette.accent3};
   font-weight: 300;
   @media (min-width: 800px) {
     font-size: 14px;
@@ -180,7 +180,7 @@ const FooterLink = styled.p`
 const CreditFont = styled.p`
   font-size: 10px;
   margin: 0;
-  color: #CFCBC9;
+  color: ${({ theme }) => theme.palette.accent3};
   font-weight: 200;
   font-family: "Oswald", sans-serif;
   text-align: center;

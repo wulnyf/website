@@ -9,6 +9,7 @@ import StyledImage from "../components/StyledImage";
 import Typography from "../components/Typography";
 import text from "../text";
 import convertImgArrToMap from "../utils/convertImgArrToMap";
+import FadeInOnScroll from "../components/FadeInOnScroll";
 
 const StyledHeader = styled(Typography)`
   /* text-align: center;
@@ -75,28 +76,30 @@ const PerformancesPage = ({ data }) => {
       <Seo title="Performances" />
       <InnerPage title="Performances">
         {text.performances.map((p, i) => (
-          <PerformanceContainer key={i}>
-            <ImageContainer>
-              <ImageThumbnail
-                image={getImage(imgDataMap[p.image])}
-                alt={p.title}
-              />
-            </ImageContainer>
-            <PerformanceContent>
-              <StyledHeader variant="h6">{p.title}</StyledHeader>
-              <Typography>
-                {p.performers.map((performer, index) => {
-                  const isChoreo = performer.includes("(choreo)");
-                  return (
-                    <span key={index}>
-                      {isChoreo ? <strong>{performer}</strong> : performer}
-                      {index < p.performers.length - 1 && ", "}
-                    </span>
-                  );
-                })}
-              </Typography>
-            </PerformanceContent>
-          </PerformanceContainer>
+          <FadeInOnScroll key={i} direction="up" delay={i * 15}>
+            <PerformanceContainer>
+              <ImageContainer>
+                <ImageThumbnail
+                  image={getImage(imgDataMap[p.image])}
+                  alt={p.title}
+                />
+              </ImageContainer>
+              <PerformanceContent>
+                <StyledHeader variant="h6">{p.title}</StyledHeader>
+                <Typography>
+                  {p.performers.map((performer, index) => {
+                    const isChoreo = performer.includes("(choreo)");
+                    return (
+                      <span key={index}>
+                        {isChoreo ? <strong>{performer}</strong> : performer}
+                        {index < p.performers.length - 1 && ", "}
+                      </span>
+                    );
+                  })}
+                </Typography>
+              </PerformanceContent>
+            </PerformanceContainer>
+          </FadeInOnScroll>
         ))}
       </InnerPage>
     </Layout>

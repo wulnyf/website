@@ -8,6 +8,7 @@ import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Typography from "../components/Typography";
 import FlipCard from "../components/FlipCard";
+import FadeInOnScroll from "../components/FadeInOnScroll";
 import Seo from "../components/Seo";
 
 const Grid = styled.div`
@@ -54,68 +55,84 @@ const PeoplePage = ({ data }) => {
     <Layout>
       <Seo title="People" />
       <InnerPage title="People">
-        <StyledTitle variant="h4">Board of Directors</StyledTitle>
+        <FadeInOnScroll direction="up" delay={0}>
+          <StyledTitle variant="h4">Board of Directors</StyledTitle>
+        </FadeInOnScroll>
         <Grid>
           {text.people.bod.map((p, i) => (
-            <ImageContainer key={i}>
-              <FlipCard
-                image={getImage(imgDataMap[p.image])}
-                alt={p.name + " portrait"}
-                major={p.major}
-                zodiac={p.zodiac}
-                facts={p.facts}
-              />
-              <StyledHeader variant="subtitle">{p.name}</StyledHeader>
-              <Typography variant="caption">{p.position}</Typography>
-            </ImageContainer>
+            <FadeInOnScroll key={i} direction="up" delay={i * 10}>
+              <ImageContainer>
+                <FlipCard
+                  image={getImage(imgDataMap[p.image])}
+                  alt={p.name + " portrait"}
+                  major={p.major}
+                  zodiac={p.zodiac}
+                  facts={p.facts}
+                />
+                <StyledHeader variant="subtitle">{p.name}</StyledHeader>
+                <Typography variant="caption">{p.position}</Typography>
+              </ImageContainer>
+            </FadeInOnScroll>
           ))}
         </Grid>
-        <StyledTitle variant="h4">Communications Committee</StyledTitle>
+        <FadeInOnScroll direction="up" delay={0}>
+          <StyledTitle variant="h4">Communications Committee</StyledTitle>
+        </FadeInOnScroll>
         <Grid>
           {text.people.comm.map((p, i) => (
-            <ImageContainer key={i}>
-              <FlipCard
-                image={getImage(imgDataMap[p.image])}
-                alt={p.name + " portrait"}
-                major={p.major}
-                zodiac={p.zodiac}
-                facts={p.facts}
-              />
-              <StyledHeader variant="subtitle">{p.name}</StyledHeader>
-              <Typography variant="caption">{p.position}</Typography>
-            </ImageContainer>
+            <FadeInOnScroll key={i} direction="up" delay={i * 100}>
+              <ImageContainer>
+                <FlipCard
+                  image={getImage(imgDataMap[p.image])}
+                  alt={p.name + " portrait"}
+                  major={p.major}
+                  zodiac={p.zodiac}
+                  facts={p.facts}
+                />
+                <StyledHeader variant="subtitle">{p.name}</StyledHeader>
+                <Typography variant="caption">{p.position}</Typography>
+              </ImageContainer>
+            </FadeInOnScroll>
           ))}
         </Grid>
-        <StyledTitle variant="h4">Development Committee</StyledTitle>
+        <FadeInOnScroll direction="up" delay={0}>
+          <StyledTitle variant="h4">Development Committee</StyledTitle>
+        </FadeInOnScroll>
         <Grid>
           {text.people.dev.map((p, i) => (
-            <ImageContainer key={i}>
-              <FlipCard
-                image={getImage(imgDataMap[p.image])}
-                alt={p.name + " portrait"}
-                major={p.major}
-                zodiac={p.zodiac}
-                facts={p.facts}
-              />
-              <StyledHeader variant="subtitle">{p.name}</StyledHeader>
-              <Typography variant="caption">{p.position}</Typography>
-            </ImageContainer>
+            <FadeInOnScroll key={i} direction="up" delay={i * 100}>
+              <ImageContainer>
+                <FlipCard
+                  image={getImage(imgDataMap[p.image])}
+                  alt={p.name + " portrait"}
+                  major={p.major}
+                  zodiac={p.zodiac}
+                  facts={p.facts}
+                />
+                <StyledHeader variant="subtitle">{p.name}</StyledHeader>
+                <Typography variant="caption">{p.position}</Typography>
+              </ImageContainer>
+            </FadeInOnScroll>
           ))}
         </Grid>
-        <StyledTitle variant="h4">Performance Committee</StyledTitle>
+        <FadeInOnScroll direction="up" delay={0}>
+          <StyledTitle variant="h4">Performance Committee</StyledTitle>
+        </FadeInOnScroll>
         <Grid>
           {text.people.perf.map((p, i) => (
-            <ImageContainer key={i}>
-              <FlipCard
-                image={getImage(imgDataMap[p.image])}
-                alt={p.name + " portrait"}
-                major={p.major}
-                zodiac={p.zodiac}
-                facts={p.facts}
-              />
-              <StyledHeader variant="subtitle">{p.name}</StyledHeader>
-              <Typography variant="caption">{p.position}</Typography>
-            </ImageContainer>
+            <FadeInOnScroll key={i} direction="up" delay={i * 100}>
+              <ImageContainer>
+                <FlipCard
+                  image={getImage(imgDataMap[p.image])}
+                  alt={p.name + " portrait"}
+                  major={p.major}
+                  zodiac={p.zodiac}
+                  facts={p.facts}
+                />
+                <StyledHeader variant="subtitle">{p.name}</StyledHeader>
+                <Typography variant="caption">{p.position}</Typography>
+              </ImageContainer>
+            </FadeInOnScroll>
           ))}
         </Grid>
       </InnerPage>
