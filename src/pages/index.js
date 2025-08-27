@@ -630,7 +630,7 @@ const IndexPage = ({ data }) => {
             </ButtonContainer>
           </ContentColumn>
           <ImageColumn>
-            <GatsbyImage image={philanthropyImg} alt="EarthDance"></GatsbyImage>
+            <GatsbyImage image={philanthropyImg} alt="earthdance"></GatsbyImage>
           </ImageColumn>
         </TwoColumn>
       </ContentContainer>
@@ -671,7 +671,7 @@ export const query = graphql`
       }
     }
     philanthropyData: file(
-      name: { eq: "EarthDance" }
+      name: { eq: "earthdance" }
       sourceInstanceName: { eq: "images" }
       relativeDirectory: { eq: "philanthropy" }
     ) {
