@@ -169,23 +169,23 @@ const text = {
     philanthropyLink: "https://earthdancefarms.org/",
   },
   events: [
-    {
-      month: "Aug",
-      day: "29",
-      title: "Activities Fair",
-      caption: "3-5 PM @ Mudd Field",
-      description:
-        "Come find the LNYF booth and sign up to be on our mailing list!",
-    },
-    {
-      month: "Aug",
-      day: "31",
-      title: "Choreo Apps",
-      caption: "Due 11:59 pm",
-      description:
-        "Apply to choreograph a dance in the upcoming 2026 show!",
-      link: "https://docs.google.com/document/d/1fPwDiHwoEnvHn7a3U0Pa0dJshJN13q4eGg8ZCsJtBxc/edit?tab=t.0",
-    },
+    // {
+    //   month: "Aug",
+    //   day: "29",
+    //   title: "Activities Fair",
+    //   caption: "3-5 PM @ Mudd Field",
+    //   description:
+    //     "Come find the LNYF booth and sign up to be on our mailing list!",
+    // },
+    // {
+    //   month: "Aug",
+    //   day: "31",
+    //   title: "Choreo Apps",
+    //   caption: "Due 11:59 pm",
+    //   description:
+    //     "Apply to choreograph a dance in the upcoming 2026 show!",
+    //   link: "https://docs.google.com/document/d/1fPwDiHwoEnvHn7a3U0Pa0dJshJN13q4eGg8ZCsJtBxc/edit?tab=t.0",
+    // },
     {
       month: "Sept",
       day: "7",
@@ -194,14 +194,14 @@ const text = {
       description:
         "Come join our first GBM to find out more about how we celebrate Lunar New Year through performance, fundraising, and other events!",
     },
-    // {
-    //   month: "Sept",
-    //   day: "15",
-    //   title: "LNYF @ AMC's Mid-Autumn Festival",
-    //   caption: "3-5 PM @ Ursa's",
-    //   description:
-    //     "Come to the LNYF Booth to play games and learn more about LNYF!",
-    // },
+    {
+      month: "Sept",
+      day: "12",
+      title: "LNYF @ AMC's Mid-Autumn Festival",
+      caption: "3-5 PM @ Ursa's",
+      description:
+        "Come to the LNYF Booth to play games and learn more about LNYF!",
+    },
     {
       month: "Sept",
       day: "8-12",
@@ -225,6 +225,22 @@ const text = {
       caption: "More info on the Auditions Page and LNYF's Instagram!",
       description:
         "In case you missed it, or for a second chance!",
+    }, 
+    {
+      month: "Sept",
+      day: "24",
+      title: "KBOP Fundraiser",
+      caption: "6-8PM @ BD",
+      description:
+        "Help us raise money for our philanthropy!",
+    }, 
+    {
+      month: "Sept",
+      day: "25",
+      title: "KBOP Fundraiser",
+      caption: "11AM-2PM @ DUC",
+      description:
+        "Help us raise money for our philanthropy!",
     }, 
     // {
     //   month: "Nov",
